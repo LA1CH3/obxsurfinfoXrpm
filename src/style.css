@@ -71,8 +71,8 @@ body {
   font-family: "Helvetica Neue", Helvetica, Arial, "Open Sans", sans-serif;
   font-size: 140%;
   line-height: 1.5;
-  color: #444444;
-  background-color: white;
+  color: #444;
+  background-color: #fff;
 }
 
 img {
@@ -81,7 +81,7 @@ img {
 }
 
 a {
-  color: #444444;
+  color: #444;
   text-decoration: none;
 }
 a:focus, a:hover {
@@ -95,14 +95,14 @@ input[type="search"] {
 }
 
 ::-moz-selection {
-  background-color: #04a4cc;
-  color: white;
+  background-color: #04A4CC;
+  color: #fff;
   text-shadow: none;
 }
 
 ::selection {
-  background-color: #04a4cc;
-  color: white;
+  background-color: #04A4CC;
+  color: #fff;
   text-shadow: none;
 }
 
@@ -138,7 +138,7 @@ input[type="search"] {
  * Gallery & images
  */
 .wp-caption {
-  background: white;
+  background: #fff;
   border: thin solid #F0F0F0;
   max-width: 95%;
   padding: 5px 5px;
@@ -191,7 +191,7 @@ input[type="search"] {
 }
 
 /**
- * partial/header
+ * partials/header
  * ---
  */
 /**
