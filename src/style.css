@@ -72,7 +72,12 @@ body {
   font-size: 140%;
   line-height: 1.5;
   color: #444;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   background-color: #fff;
+  background-image: url("img/bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 img {
@@ -86,6 +91,11 @@ a {
 }
 a:focus, a:hover {
   text-decoration: underline;
+}
+
+ul {
+  -webkit-margin-before: 0em;
+  -webkit-margin-after: 0em;
 }
 
 input[type="text"],
@@ -194,6 +204,69 @@ input[type="search"] {
  * partials/header
  * ---
  */
+.header {
+  height: auto;
+  padding-top: 15px;
+}
+.header div {
+  float: left;
+}
+.header .socials {
+  position: relative;
+  max-width: 426px;
+  width: -webkit-calc(100%/3);
+  width: calc(100%/3);
+}
+.header .socials ul {
+  list-style-type: none;
+  position: absolute;
+  top: 0;
+  right: 100px;
+}
+.header .socials ul li {
+  float: left;
+}
+.header .socials ul li a {
+  display: block;
+  width: 31px;
+  height: 31px;
+  margin: 0px 2.5px;
+  background-image: url("img/sprite-social.png");
+  background-position: -10px -12px;
+}
+.header .socials ul li a.fb:hover {
+  background-position: -10px 44px;
+}
+.header .socials ul li a.twit {
+  background-position: -42px -12px;
+}
+.header .socials ul li a.twit:hover {
+  background-position: -42px 44px;
+}
+.header .socials ul li a.rss {
+  background-position: -74px -12px;
+}
+.header .socials ul li a.rss:hover {
+  background-position: -74px 44px;
+}
+.header .socials ul li a.ig {
+  background-position: -106px -12px;
+}
+.header .socials ul li a.ig:hover {
+  background-position: -106px 44px;
+}
+.header .subscribe {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.logo {
+  width: -webkit-calc(100%/3);
+  width: calc(100%/3);
+  max-width: 426px;
+}
+
 /**
  * partials/nav
  * ---
@@ -276,5 +349,27 @@ input[type="search"] {
   h2,
   h3 {
     page-break-after: avoid;
+  }
+}
+/**
+ * partials/base
+ * ---
+ * Base classes
+ */
+.obxad {
+  background-color: grey;
+  max-width: 426px;
+  width: -webkit-calc(100%/3);
+  width: calc(100%/3);
+  height: 108px;
+  text-align: center;
+  color: white;
+  text-transform: uppercase;
+  line-height: 70px;
+  display: none;
+}
+@media screen and (min-width: 885px) {
+  .obxad {
+    display: block;
   }
 }

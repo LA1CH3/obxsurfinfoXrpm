@@ -5,9 +5,68 @@
 
 
 // Header container
-.header {}
+.header {
+	height: auto;
+	padding-top: 15px;
+	div {
+		float: left;
+	}
+	.socials {
+		position: relative;
+		max-width: 426px;
+		width: calc(100%/3);
+		ul {
+			list-style-type: none;
+			position: absolute;
+			top: 0;
+			right: 100px;
+			li {
+				float: left;
+				a {
+					display: block;
+					width: 31px;
+					height: 31px;
+					margin: 0px 2.5px;
+					background-image: url("img/sprite-social.png");
+					background-position: -10px -12px;
+					&.fb:hover {
+						background-position: -10px 44px;
+					}
+					&.twit {
+						background-position: -42px -12px;
+						&:hover {
+							background-position: -42px 44px;
+						}
+					}
+					&.rss {
+						background-position: -74px -12px;
+						&:hover {
+							background-position: -74px 44px;
+						}
+					}
+					&.ig {
+						background-position: -106px -12px;
+						&:hover {
+							background-position: -106px 44px;
+						}
+					}
+				}
+			}
+		}
+	}
+	.subscribe {
+		position: absolute;
+		top: 0;
+		right: 0;
+	}
+}
 
 // Logo
-.logo {}
+.logo {
+	width: calc(100%/3);
+	max-width: 426px;
+}
 
 .logo-img {}
+
+

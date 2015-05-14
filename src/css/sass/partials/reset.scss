@@ -25,7 +25,12 @@ body {
   font-size: $font-size-base;
   line-height: $line-height-base;
   color: $text-color;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   background-color: $body-bg;
+  background-image: url("img/bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 img {
@@ -45,6 +50,11 @@ a {
   }
 
   &:active {}
+}
+
+ul {
+  -webkit-margin-before: 0em;
+  -webkit-margin-after: 0em;
 }
 
 input[type="text"],
