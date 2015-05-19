@@ -16,6 +16,9 @@
 
 		<?php wp_footer(); ?>
 
+		<!-- slick slider JS -->
+		<script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.5.5/slick.min.js"></script>
+
 		<!-- analytics -->
 		<script>
 		(function(f,i,r,e,s,h,l){i['GoogleAnalyticsObject']=s;f[s]=f[s]||function(){

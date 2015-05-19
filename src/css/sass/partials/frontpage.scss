@@ -1,0 +1,75 @@
+/**
+ * partials/frontpage
+ * ---
+ * Front page styles
+ */
+
+.before-content {
+	clear: both;
+	width: 100%;
+}
+
+.vid-info {
+	display: none;
+ 	width: 33%;
+ 	float: left;
+ 	@media screen and (min-width: 768px){
+ 		display: block;
+ 	}
+ 	div {
+ 		float: left;
+ 		padding: 5px;
+ 		span {
+ 			display: block;
+ 			font-size: 11px;
+ 				@media screen and (min-width: 1024px){
+ 					font-size: 14px;
+ 				}
+ 			&.vid-title {
+ 				font-size: 8px;
+ 				text-transform: uppercase;
+ 				margin-bottom: -5px;
+ 				@media screen and (min-width: 1024px){
+ 					font-size: 10px;
+ 				}
+ 			}
+ 			&.vid-location {
+ 				color: $orange;
+ 			}
+ 		}
+ 		&.wind {
+ 			width: 45%;
+ 		}
+ 		&.location {
+ 			width: 35%;
+ 		}
+ 		&.last {
+ 			img {
+ 				float: left;
+ 				width: 50%;
+ 			}
+ 			text-align: right;
+ 			width: 20%;
+ 		}
+ 	}
+ }
+
+ .slider {
+ 	width: 64%;
+ 	clear: both;
+ 	img {
+ 		width: 100%;
+ 	}
+ 	.slider-container {
+ 		position: relative;
+ 	}
+ 	.slider-overlay {
+ 		background-color: $bluefade;
+ 		height: 100px;
+ 		width: 100%;
+ 		position: absolute;
+ 		bottom: 0;
+ 		padding-left: 50px;
+ 		padding-top: 10px;
+ 	}
+ }

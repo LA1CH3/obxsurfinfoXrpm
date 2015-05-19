@@ -69,3 +69,17 @@ input[type="search"] {
   color: $body-bg;
   text-shadow: none;
 }
+
+//// Custom resets
+
+// slick slider resets
+.slick-dots {
+  bottom: 75px;
+  button:before {
+    content: "";
+    background-color: black;
+    width: 40px;
+    height: 5px;
+  }
+}
+

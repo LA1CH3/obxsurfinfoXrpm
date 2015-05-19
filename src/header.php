@@ -23,6 +23,10 @@
             tests: {}
         });
         </script>
+		
+		<!-- slick slider css -->
+        <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.5.5/slick.css"/>
+        <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.5.5/slick-theme.css"/>
 
 	</head>
 	<body <?php body_class(); ?>>
@@ -34,21 +38,22 @@
 			<header class="header clear" role="banner">
 
 					<!-- logo -->
-					<div class="logo">
+					<div class="logo header-container">
 						<a href="<?php echo home_url(); ?>">
-							<!-- svg logo - toddmotto.com/mastering-svg-use-for-a-retina-web-fallbacks-with-png-script -->
-							<img src="<?php echo get_template_directory_uri(); ?>/img/logo.png" alt="Logo" class="logo-img">
+							<h1>
+								<img src="<?php echo get_template_directory_uri(); ?>/img/logo.png" alt="OBX Surf Info" class="logo-img">
+							</h1>
 						</a>
 					</div>
 					<!-- /logo -->
 
 					<!-- ad -->
-					<div class="obxad">
+					<div class="obxad header-container">
 						<p>ad space here</p>
 					</div>
 					<!-- /ad -->
 
-					<div class="socials">
+					<div class="socials header-container">
 						<ul>
 							<li>
 								<a class="soc-icon fb" href="#"></a>
@@ -63,13 +68,22 @@
 								<a class="soc-icon ig" href="#"></a>
 							</li>
 						</ul>
-						<a class="subscribe" href="#">Subscribe</a>
+						<a class="subscribe" href="#"><span>Subscribe</span></a>
 					</div>
 
 					<!-- nav -->
-					<!-- <nav class="nav" role="navigation">
-						<?php html5blank_nav(); ?>
-					</nav> -->
+					<nav class="nav mobile" role="navigation">
+						<div class="nav-trigger">
+							<h2 class="words">Home</h2>
+							<span class="hamburger">
+								<img src="<?php echo get_template_directory_uri() . '/img/hamburger.png'; ?>" alt="Mobile Navigation">
+							</span>
+						</div>
+						<div class="mobile-overlay">
+							<span class="hide">X</span>
+							<?php html5blank_mobilenav(); ?>
+						</div>
+					</nav> 
 					<!-- /nav -->
 
 			</header>

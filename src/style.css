@@ -71,7 +71,7 @@ body {
   font-family: "Helvetica Neue", Helvetica, Arial, "Open Sans", sans-serif;
   font-size: 140%;
   line-height: 1.5;
-  color: #444;
+  color: #fff;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: #fff;
@@ -86,7 +86,7 @@ img {
 }
 
 a {
-  color: #444;
+  color: #fff;
   text-decoration: none;
 }
 a:focus, a:hover {
@@ -114,6 +114,16 @@ input[type="search"] {
   background-color: #04A4CC;
   color: #fff;
   text-shadow: none;
+}
+
+.slick-dots {
+  bottom: 75px;
+}
+.slick-dots button:before {
+  content: "";
+  background-color: black;
+  width: 40px;
+  height: 5px;
 }
 
 /**
@@ -195,9 +205,19 @@ input[type="search"] {
  */
 .wrapper {
   max-width: 1280px;
-  padding: 0 15px;
+  padding: 0;
   margin: 0 auto;
   position: relative;
+  height: 100%;
+}
+@media screen and (min-width: 768px) {
+  .wrapper {
+    padding: 0 15px;
+  }
+}
+
+main {
+  background-color: black;
 }
 
 /**
@@ -207,21 +227,25 @@ input[type="search"] {
 .header {
   height: auto;
   padding-top: 15px;
+  margin-bottom: 10px;
 }
-.header div {
+.header .header-container {
   float: left;
 }
 .header .socials {
+  display: none;
   position: relative;
-  max-width: 426px;
-  width: -webkit-calc(100%/3);
-  width: calc(100%/3);
+}
+@media screen and (min-width: 1024px) {
+  .header .socials {
+    display: block;
+    width: 33%;
+  }
 }
 .header .socials ul {
   list-style-type: none;
   position: absolute;
   top: 0;
-  right: 100px;
 }
 .header .socials ul li {
   float: left;
@@ -256,15 +280,52 @@ input[type="search"] {
   background-position: -106px 44px;
 }
 .header .subscribe {
+  display: none;
   position: absolute;
   top: 0;
-  right: 0;
+  right: 35px;
+  width: 117px;
+  height: 32px;
+  background-image: url("img/bg-subscribe.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.header .subscribe span {
+  position: absolute;
+  color: white;
+  text-transform: uppercase;
+  top: 7px;
+  left: 14px;
+  font-size: 0.75em;
+}
+@media screen and (min-width: 1024px) {
+  .header .subscribe {
+    display: block;
+  }
 }
 
 .logo {
-  width: -webkit-calc(100%/3);
-  width: calc(100%/3);
-  max-width: 426px;
+  width: 100%;
+}
+.logo h1 {
+  margin: 0;
+  line-height: 0;
+  -webkit-margin-before: 0em;
+  -webkit-margin-after: 0em;
+}
+@media screen and (min-width: 768px) {
+  .logo {
+    width: 50%;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .logo {
+    width: 33%;
+  }
+}
+.logo img {
+  margin: 0 auto;
+  display: block;
 }
 
 /**
@@ -272,6 +333,118 @@ input[type="search"] {
  * ---
  * Menus
  */
+.nav {
+  display: block;
+  width: 100%;
+  clear: both;
+}
+@media screen and (min-width: 768px) {
+  .nav.mobile {
+    display: none;
+  }
+}
+.nav.desktop {
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .nav.desktop {
+    display: block;
+  }
+}
+
+.nav-trigger {
+  position: relative;
+  width: 100%;
+  height: 50px;
+  background: #3768b9;
+  /* Old browsers */
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #3768b9), color-stop(44%, #3160ae), color-stop(100%, #143f83));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #3768b9 0%, #3160ae 44%, #143f83 100%);
+  /* Chrome10+,Safari5.1+ */
+  /* Opera 11.10+ */
+  /* IE10+ */
+  background: linear-gradient(to bottom, #3768b9 0%, #3160ae 44%, #143f83 100%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3768b9', endColorstr='#143f83',GradientType=0 );
+  /* IE6-9 */
+}
+.nav-trigger:hover {
+  cursor: pointer;
+}
+.nav-trigger .words {
+  position: absolute;
+  left: 20px;
+  top: 10px;
+  text-transform: uppercase;
+  -webkit-margin-before: 0em;
+  -webkit-margin-after: 0em;
+}
+.nav-trigger .hamburger {
+  position: absolute;
+  right: 20px;
+  top: 10px;
+}
+
+.mobile-overlay {
+  display: none;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(55, 104, 185, 0.9);
+  text-align: center;
+  padding-top: 30%;
+}
+.mobile-overlay ul {
+  list-style-type: none;
+  -webkit-margin-before: 0;
+  -webkit-margin-after: 0;
+  -webkit-padding-start: 0;
+}
+.mobile-overlay li, .mobile-overlay span {
+  padding: 1% 0;
+  text-transform: uppercase;
+  font-size: 2em;
+}
+@media screen and (min-width: 768px) {
+  .mobile-overlay {
+    margin: 0 -15px;
+  }
+}
+
+nav.desktop {
+  width: 66%;
+}
+nav.desktop ul {
+  list-style-type: none;
+  -webkit-padding-start: 0em;
+}
+nav.desktop ul li {
+  margin: 1px;
+  padding-top: 9px;
+  float: left;
+  width: 24%;
+  height: 40px;
+  text-align: center;
+  border-top: 3px solid black;
+  border-left: 3px solid black;
+  background: #45484d;
+  /* Old browsers */
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #45484d), color-stop(100%, #1c1c1c));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #45484d 0%, #1c1c1c 100%);
+  /* Chrome10+,Safari5.1+ */
+  /* Opera 11.10+ */
+  /* IE10+ */
+  background: linear-gradient(to bottom, #45484d 0%, #1c1c1c 100%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#45484d', endColorstr='#1c1c1c',GradientType=0 );
+  /* IE6-9 */
+}
+
 /**
  * partials/sidebar
  * ---
@@ -356,11 +529,63 @@ input[type="search"] {
  * ---
  * Base classes
  */
+h1 {
+  font-family: Verdana, Geneva, sans-serif;
+  font-size: 24px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 700;
+  line-height: 26.3999996185303px;
+}
+
+h3 {
+  font-family: Verdana, Geneva, sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 700;
+  line-height: 15.3999996185303px;
+}
+
+p {
+  font-family: Verdana, Geneva, sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+a, span {
+  font-family: Verdana, Geneva, sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: bold;
+  line-height: 20px;
+}
+
+blockquote {
+  font-family: Verdana, Geneva, sans-serif;
+  font-size: 21px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 400;
+  line-height: 30px;
+}
+
+pre {
+  font-family: Verdana, Geneva, sans-serif;
+  font-size: 13px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 400;
+  line-height: 18.5714302062988px;
+}
+
 .obxad {
   background-color: grey;
-  max-width: 426px;
-  width: -webkit-calc(100%/3);
-  width: calc(100%/3);
+  width: 50%;
   height: 108px;
   text-align: center;
   color: white;
@@ -368,8 +593,94 @@ input[type="search"] {
   line-height: 70px;
   display: none;
 }
-@media screen and (min-width: 885px) {
+@media screen and (min-width: 768px) {
   .obxad {
     display: block;
   }
+}
+@media screen and (min-width: 1024px) {
+  .obxad {
+    width: 33%;
+  }
+}
+
+/**
+ * partials/frontpage
+ * ---
+ * Front page styles
+ */
+.before-content {
+  clear: both;
+  width: 100%;
+}
+
+.vid-info {
+  display: none;
+  width: 33%;
+  float: left;
+}
+@media screen and (min-width: 768px) {
+  .vid-info {
+    display: block;
+  }
+}
+.vid-info div {
+  float: left;
+  padding: 5px;
+}
+.vid-info div span {
+  display: block;
+  font-size: 11px;
+}
+@media screen and (min-width: 1024px) {
+  .vid-info div span {
+    font-size: 14px;
+  }
+}
+.vid-info div span.vid-title {
+  font-size: 8px;
+  text-transform: uppercase;
+  margin-bottom: -5px;
+}
+@media screen and (min-width: 1024px) {
+  .vid-info div span.vid-title {
+    font-size: 10px;
+  }
+}
+.vid-info div span.vid-location {
+  color: #fb5701;
+}
+.vid-info div.wind {
+  width: 45%;
+}
+.vid-info div.location {
+  width: 35%;
+}
+.vid-info div.last {
+  text-align: right;
+  width: 20%;
+}
+.vid-info div.last img {
+  float: left;
+  width: 50%;
+}
+
+.slider {
+  width: 64%;
+  clear: both;
+}
+.slider img {
+  width: 100%;
+}
+.slider .slider-container {
+  position: relative;
+}
+.slider .slider-overlay {
+  background-color: rgba(55, 104, 185, 0.9);
+  height: 100px;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  padding-left: 50px;
+  padding-top: 10px;
 }

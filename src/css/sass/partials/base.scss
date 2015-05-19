@@ -4,17 +4,69 @@
  * Base classes
  */
 
+h1 {
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 24px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 700;
+	line-height: 26.3999996185303px;
+}
+h3 {
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 14px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 700;
+	line-height: 15.3999996185303px;
+}
+p {
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 14px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 400;
+	line-height: 20px;
+}
+a, span {
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 14px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: bold;
+	line-height: 20px;
+}
+blockquote {
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 21px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 400;
+	line-height: 30px;
+}
+pre {
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 13px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 400;
+	line-height: 18.5714302062988px;
+}
+
+
 .obxad {
 	background-color: grey;
-	max-width: 426px;
-	width: calc(100%/3);
+	width: 50%;
 	height: 108px;
 	text-align: center;
 	color: white;
 	text-transform: uppercase;
 	line-height: 70px;
 	display: none;
-	@media screen and (min-width: 885px){
+	@media screen and (min-width: 768px){
 		display: block;
+	}
+	@media screen and (min-width: 1024px){
+		width: 33%;
 	}
 }
