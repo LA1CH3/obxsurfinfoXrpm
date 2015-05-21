@@ -10,13 +10,13 @@
 	width: 100%;
 	clear: both;
 	&.mobile {
-		@media screen and (min-width: 768px){
+		@media screen and (min-width: 1024px){
 			display: none;
 		}
 	}
 	&.desktop {
 		display: none;
-		@media screen and (min-width: 768px){
+		@media screen and (min-width: 1024px){
 			display: block;
 		}
 	}
@@ -55,6 +55,7 @@
 .mobile-overlay {
 	display: none;
 	position: absolute;
+	z-index: 100;
 	top: 0;
 	width: 100%;
 	height: 100%;
@@ -72,7 +73,7 @@
 		text-transform: uppercase;
 		font-size: 2em;
 	}
-	@media screen and (min-width: 768px){
+	@media screen and (min-width: 1024px){
 		margin: 0 -15px;
 	}
 }

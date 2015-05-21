@@ -73,13 +73,54 @@ input[type="search"] {
 //// Custom resets
 
 // slick slider resets
+.slick-slider {
+  margin-bottom: 5px !important;
+}
+
+.slick-next, .slick-prev {
+  display: none !important;
+}
+
+#mediaspace_wrapper, .jwplayer {
+  display: inline-block !important;
+  position: absolute !important;
+  width: 100% !important;
+  margin-top: 50px;
+  @media screen and (min-width: 1024px){
+    margin-top: 0px;
+    width: 35% !important;
+    margin-top: 40px;
+    margin-left: 5px;
+  }
+}
+
+.jwplayer {
+  display: block !important;
+  margin-top: 50px;
+  @media screen and (min-width: 1024px){
+    display: inline-block !important;
+    margin-top: 40px !important;
+    float: left;
+  }
+}
+
+
 .slick-dots {
-  bottom: 75px;
+  bottom: 80px !important;
+  li {
+    margin: 0 17px !important;
+    &.slick-active {
+      button:before {
+        background-color: $orange !important;
+        opacity: 1;
+      }
+    }
+  }
   button:before {
-    content: "";
+    content: "" !important;
     background-color: black;
-    width: 40px;
-    height: 5px;
+    width: 50px !important;
+    height: 10px !important;
   }
 }
 

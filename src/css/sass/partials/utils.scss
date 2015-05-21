@@ -21,3 +21,21 @@
 .reset-box {
   @include reset-box;
 }
+
+.full {
+	position: relative;
+	width: 100% !important;
+	height:204px !important;
+	display: inline-block !important;
+	margin-top: 210px;
+	@media screen and (min-width: 1024px){
+		margin-top: 0px;
+		min-height: 175px !important;
+		height: 30.5% !important;
+		width: 63.9% !important;
+		top: -10%;
+	}
+	@media screen and (min-width: 1200px){
+		top: -3%;
+	}
+}

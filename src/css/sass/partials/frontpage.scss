@@ -9,12 +9,24 @@
 	width: 100%;
 }
 
+.mosaic-top {
+	height: 750px;
+}
+
 .vid-info {
 	display: none;
- 	width: 33%;
+ 	width: 100%;
  	float: left;
- 	@media screen and (min-width: 768px){
+ 	position: relative;
+ 	&.cloned {
  		display: block;
+ 		@media screen and (min-width: 1024px){
+ 			display: none;
+ 		}
+ 	}
+ 	@media screen and (min-width: 1024px){
+ 		display: block;
+ 		width: 33%;
  	}
  	div {
  		float: left;
@@ -55,8 +67,13 @@
  }
 
  .slider {
- 	width: 64%;
+ 	width: 100%;
  	clear: both;
+ 	display: inline-block !important;
+ 	@media screen and (min-width: 1024px){
+ 		width: 63.8%;
+ 		float: left;
+ 	}
  	img {
  		width: 100%;
  	}
@@ -73,3 +90,23 @@
  		padding-top: 10px;
  	}
  }
+
+ .weather-wrapper {
+ 	display: none;
+ 	width: 100%;
+ 	position: relative;
+ 	top: 210px;
+ 	@media screen and (min-width: 1024px){
+ 		width: 35.6%;
+ 		display: inline-block !important;
+ 		left: 5px;
+ 	}
+ 	.aw-widget-36hour-inner {
+ 		min-width: 100% !important;
+ 	}
+ }
+
+ .aw-fc-status, .aw-six-hours, .aw-more-block, .aw-more-sep-2, .aw-more-sep-3, .aw-more-sep-4 {
+ 	display: none;
+ }
+
