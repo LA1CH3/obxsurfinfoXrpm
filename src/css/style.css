@@ -232,16 +232,21 @@ input[type="search"] {
 @media screen and (min-width: 1024px) {
   .full {
     margin-top: 0px;
-    min-height: 175px !important;
-    height: 30.5% !important;
+    min-height: 160px !important;
+    height: 24.5% !important;
     width: 63.9% !important;
     top: -10%;
   }
 }
 @media screen and (min-width: 1200px) {
   .full {
-    top: -3%;
+    top: 0%;
   }
+}
+
+.desktop-main {
+  width: 64%;
+  float: left;
 }
 
 /**
@@ -587,7 +592,7 @@ nav.desktop ul li {
  * ---
  * Base classes
  */
-h1 {
+h1, h2 {
   font-family: Verdana, Geneva, sans-serif;
   font-size: 24px;
   font-style: normal;
@@ -673,7 +678,7 @@ pre {
 }
 
 .mosaic-top {
-  height: 750px;
+  height: 700px;
 }
 
 .vid-info {
@@ -783,6 +788,35 @@ pre {
 
 .aw-fc-status, .aw-six-hours, .aw-more-block, .aw-more-sep-2, .aw-more-sep-3, .aw-more-sep-4 {
   display: none;
+}
+
+.mosaic-bottom {
+  background-color: black;
+}
+
+.latest-posts {
+  background-color: black;
+  padding-left: 15px;
+}
+
+.recent-featured-left, .recent-featured-right {
+  width: 50%;
+  float: left;
+}
+.recent-featured-left .image-contain, .recent-featured-right .image-contain {
+  position: relative;
+}
+.recent-featured-left .image-contain .date-overlay, .recent-featured-right .image-contain .date-overlay {
+  position: absolute;
+  bottom: 0;
+  height: 20px;
+  background-color: black;
+  color: white;
+  width: 100%;
+}
+.recent-featured-left .image-contain .date-overlay p, .recent-featured-right .image-contain .date-overlay p {
+  padding: 0;
+  margin: 0;
 }
 
 /*# sourceMappingURL=style.css.map */

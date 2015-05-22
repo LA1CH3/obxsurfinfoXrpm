@@ -10,7 +10,7 @@
 }
 
 .mosaic-top {
-	height: 750px;
+	height: 700px;
 }
 
 .vid-info {
@@ -109,4 +109,36 @@
  .aw-fc-status, .aw-six-hours, .aw-more-block, .aw-more-sep-2, .aw-more-sep-3, .aw-more-sep-4 {
  	display: none;
  }
+
+// mosaic bottom
+.mosaic-bottom {
+	background-color: black;
+}
+
+.latest-posts {
+	background-color: black;
+	padding-left: 15px;
+}
+
+
+ .recent-featured-left, .recent-featured-right {
+ 	width: 50%;
+ 	float: left;
+ 	.image-contain {
+ 		position: relative;
+ 		.date-overlay {
+ 			position: absolute;
+ 			bottom: 0;
+ 			height: 20px;
+ 			background-color: black;
+ 			color: white;
+ 			width: 100%;
+ 			p {
+ 				padding: 0;
+ 				margin: 0;
+ 			}
+ 		}
+ 	}
+ }
+
 

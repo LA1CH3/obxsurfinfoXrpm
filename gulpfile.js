@@ -101,14 +101,14 @@ gulp.task( "styles", [ "sass" ], function() {
 		.pipe( gulp.dest( "src" ) );
 });
 
-/** JSHint */
-gulp.task( "jshint", function () {
-	/** Test all `js` files exclude those in the `lib` folder */
-	return gulp.src( "src/js/{!(lib)/*.js,*.js}" )
-		.pipe( $.jshint() )
-		.pipe( $.jshint.reporter( "jshint-stylish" ) )
-		.pipe( $.jshint.reporter( "fail" ) );
-});
+// /** JSHint */
+// gulp.task( "jshint", function () {
+// 	/** Test all `js` files exclude those in the `lib` folder */
+// 	return gulp.src( "src/js/{!(lib)/*.js,*.js}" )
+// 		.pipe( $.jshint() )
+// 		.pipe( $.jshint.reporter( "jshint-stylish" ) )
+// 		.pipe( $.jshint.reporter( "fail" ) );
+// });
 
 /** Templates */
 gulp.task( "template", function() {
@@ -135,7 +135,7 @@ gulp.task( "envProduction", function() {
 });
 
 /** Livereload */
-gulp.task( "watch", [ "template", "styles", "jshint" ], function() {
+gulp.task( "watch", [ "template", "styles" ], function() {
 	var server = $.livereload();
 
 	/** Watch for livereoad */
@@ -164,7 +164,7 @@ gulp.task( "build", [
 	"clean",
 	"template",
 	"styles",
-	"jshint",
+	// "jshint",
 	"copy",
 	"uglify"
 ], function () {
