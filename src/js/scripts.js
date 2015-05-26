@@ -53,20 +53,37 @@
 			type: "GET",
 			contentType: 'text/plain',
 			dataType: 'JSON',
-			jsonpCallback: 'callback', 
 			cache: false,
-			url: "http://tidesandcurrents.noaa.gov/api/datagetter?date=latest&station=8651370&product=water_level&datum=STND&units=english&time_zone=gmt&format=json",
+			url: "http://magicseaweed.com/api/qZh1LXwV0O0V5vT9K68Cal6uQJXiMyy7/forecast/?spot_id=397",
 			data: { },
 			success: function(resp){
+
+				// wave data
 				console.log(resp);
-				var test = resp.data[0].s;
-				console.log(test);
-				$(".duck-wind").html(test);
+				var feet = resp[0].swell.components.combined.height;
+				var dir = resp[0].swell.components.combined.compassDirection;
+				var interval = resp[0].swell.components.combined.period;
+
+				var swellString =
+					feet +=
+					'\' ';
+				swellString += dir;
+				swellString += " @ ";
+				swellString += interval;
+				swellString += " SEC";
+
+				// temperature data
+				var temp = resp[0].condition.temperature;
+				temp += "°";
+
+				
+					
+				$(".duck-swell").html(swellString);
+				$(".duck-temp").html(temp);
 			},
 			error: function(xhr, status, error){
 				var err = JSON.parse(xhr.responseText);
 				console.log(err);
-				console.log("hello");
 			}
 
 		});

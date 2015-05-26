@@ -15,7 +15,7 @@
 			</div>
 			<div class="wind">
 				<span class="vid-title">Duck Research Pier</span>
-				<span class="duck-wind"></span>
+				<span class="duck-swell"></span>
 			</div>
 			<div class="temp last">
 				<img src="<?php echo get_template_directory_uri() . '
