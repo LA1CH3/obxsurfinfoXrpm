@@ -9,6 +9,9 @@
 	display: block;
 	width: 100%;
 	clear: both;
+	h2 {
+		color: white;
+	}
 	&.mobile {
 		@media screen and (min-width: 1024px){
 			display: none;
@@ -100,12 +103,13 @@ nav.desktop {
 			background: -ms-linear-gradient(top,  #45484d 0%,#1c1c1c 100%); /* IE10+ */
 			background: linear-gradient(to bottom,  #45484d 0%,#1c1c1c 100%); /* W3C */
 			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#45484d', endColorstr='#1c1c1c',GradientType=0 ); /* IE6-9 */
+			a {
+				&:hover {
+					color: $orange;
+					text-decoration: none;
+				}
+			}
 		}
 	}
 }
 
-.menu {}
-
-.sub-menu {}
-
-.menu-item {}

@@ -72,7 +72,7 @@
 				</div>
 				<div class="wind">
 					<span class="vid-title">Duck Research Pier</span>
-					<span class="duck-wind"></span>
+					<span class="duck-swell"></span>
 				</div>
 				<div class="temp last">
 					<img src="<?php echo get_template_directory_uri() . '
@@ -157,7 +157,154 @@
 
 		<div class="latest-posts desktop-main">
 			<h2>Latest</h2>
+			<?php
+
+				$args = array(
+					'post_type' => 'post',
+					'posts_per_page' => '2'
+					);
+
+				$latestquery = new WP_Query($args);
+
+				$i = 0;
+
+
+				if( $latestquery->have_posts() ) : while( $latestquery->have_posts() ) : $latestquery->the_post();
+
+				if($i == 0){ ?>
+
+					<div class="recent-featured-left">
+						<div class="image-contain">
+							<img src="<?php echo get_template_directory_uri() . '/img/placeholder-latest.jpg'; ?>" alt="hey">
+							<div class="date-overlay">
+								<p>Dec 21, 2015</p>
+							</div>
+						</div>
+						<h3>Premiere for The Invisible Woman</h3>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+					</div>
+
+					<?php $i++; ?>
+
+				<?php } else if( $i == 1 ){ ?>
+
+					<div class="recent-featured-right">
+						<div class="image-contain">
+							<img src="<?php echo get_template_directory_uri() . '/img/placeholder-latest1.jpg'; ?>" alt="hey">
+							<div class="date-overlay">
+								<p>Dec 21, 2015</p>
+							</div>
+						</div>
+						<h3>Premiere for The Invisible Woman</h3>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+					</div>
+
+				<?php }
+
+				endwhile; endif; wp_reset_postdata(); ?>
+			<div class="sub-list recent-list-left">
+				<div class="blog-snippet">
+					<div class="blog-image">
+						<img src="<?php echo get_template_directory_uri() . '/img/thumb.png'; ?>">
+					</div>
+					<div class="blog-content">
+						<span>Dec 16, 2013</span>
+						<h3>Blog Title Here</h3>
+					</div>
+				</div>
+				<div class="blog-snippet">
+					<div class="blog-image">
+						<img src="<?php echo get_template_directory_uri() . '/img/thumb.png'; ?>">
+					</div>
+					<div class="blog-content">
+						<span>Dec 16, 2013</span>
+						<h3>Blog Title Here</h3>
+					</div>
+				</div>
+			</div>
+			<div class="sub-list recent-list-right">
+				<div class="blog-snippet">
+					<div class="blog-image">
+						<img src="<?php echo get_template_directory_uri() . '/img/thumb.png'; ?>">
+					</div>
+					<div class="blog-content">
+						<span>Dec 16, 2013</span>
+						<h3>Blog Title Here</h3>
+					</div>
+				</div>
+				<div class="blog-snippet">
+					<div class="blog-image">
+						<img src="<?php echo get_template_directory_uri() . '/img/thumb.png'; ?>">
+					</div>
+					<div class="blog-content">
+						<span>Dec 16, 2013</span>
+						<h3>Blog Title Here</h3>
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+		<div class="desktop-secondary">
+			<!--
+		Add the code below to the bottom of your page, just before the closing </body> tag.
+		Edit myLatlng and the other variables.
+
+		Find syntax for Features that can be styled here:
+
+		https://developers.google.com/maps/documentation/javascript/reference#MapTypeStyleFeatureType
+
+		Or use a service such as:
+
+		http://software.stadtwerk.org/google_maps_colorizr/#
+		http://gmaps-samples-v3.googlecode.com/svn/trunk/styledmaps/wizard/index.html
+		https://developers.google.com/maps/documentation/javascript/tutorial
+		-->
+		
+		<h2 class="header-break">Find Your Break<span>click below for reports and data</span></h2>
+		<iframe src="http://mapsengine.google.com/map/embed?mid=zLwzMpoYZbnw.kEvGYE-B2rHw" height="700" width="100%" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe>
+		<div class="subscribe-box subscribe-desktop">
+			<img src="<?php echo get_template_directory_uri() . '/img/header-subscribe.png'; ?>" alt="#">
+			<p>Be informed on what's happening on the Outer Banks and never miss an event. Subscribe today and we'll deliver all the goods directly to your email account. It's easy.</p>
+			<div class="subscribe-input">
+				<h3>Enter Your Email Here:</h3>
+				<form class="search-bar" role="search">
+				  <input type="search" placeholder="Enter Search" />
+				  <button type="submit">
+				    Subscribe
+				  </button>
+				</form>
+			</div>
+		</div>
+		<div class="obxad obx-sidebar-ad">
+			Ad Space Here
+		</div>
+		<div class="obxad obx-sidebar-ad">
+			Ad Space Here
+		</div>
+		<div class="obxad obx-sidebar-ad">
+			Ad Space Here
+		</div>
+		<div class="subscribe-box subscribe-mobile">
+			<img src="<?php echo get_template_directory_uri() . '/img/header-subscribe.png'; ?>" alt="#">
+			<p>Be informed on what's happening on the Outer Banks and never miss an event. Subscribe today and we'll deliver all the goods directly to your email account. It's easy.</p>
+			<div class="subscribe-input">
+				<h3>Enter Your Email Here:</h3>
+				<form class="search-bar" role="search">
+				  <input type="search" placeholder="Enter Search" />
+				  <button type="submit">
+				    Subscribe
+				  </button>
+				</form>
+			</div>
+		</div>
+
+
+		</div>
+
+		<div class="latest-posts desktop-main local-and-travel">
 			<div class="recent-featured-left">
+				<h2>Local</h2>
 				<div class="image-contain">
 					<img src="<?php echo get_template_directory_uri() . '/img/placeholder-latest.jpg'; ?>" alt="hey">
 					<div class="date-overlay">
@@ -165,9 +312,10 @@
 					</div>
 				</div>
 				<h3>Premiere for The Invisible Woman</h3>
-				<p>Excerpt goes here</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
 			</div>
 			<div class="recent-featured-right">
+				<h2>Travel</h2>
 				<div class="image-contain">
 					<img src="<?php echo get_template_directory_uri() . '/img/placeholder-latest1.jpg'; ?>" alt="hey">
 					<div class="date-overlay">
@@ -175,13 +323,84 @@
 					</div>
 				</div>
 				<h3>Premiere for The Invisible Woman</h3>
-				<p>Excerpt goes here</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
 			</div>
-			<div class="recent-list-left">
-				
+			<div class="sub-list recent-list-left">
+				<div class="blog-snippet">
+					<div class="blog-image">
+						<img src="<?php echo get_template_directory_uri() . '/img/thumb.png'; ?>">
+					</div>
+					<div class="blog-content">
+						<span>Dec 16, 2013</span>
+						<h3>Blog Title Here</h3>
+					</div>
+				</div>
+				<div class="blog-snippet">
+					<div class="blog-image">
+						<img src="<?php echo get_template_directory_uri() . '/img/thumb.png'; ?>">
+					</div>
+					<div class="blog-content">
+						<span>Dec 16, 2013</span>
+						<h3>Blog Title Here</h3>
+					</div>
+				</div>
 			</div>
-			<div class="recent-list-right"></div>
+			<div class="sub-list recent-list-right">
+				<div class="blog-snippet">
+					<div class="blog-image">
+						<img src="<?php echo get_template_directory_uri() . '/img/thumb.png'; ?>">
+					</div>
+					<div class="blog-content">
+						<span>Dec 16, 2013</span>
+						<h3>Blog Title Here</h3>
+					</div>
+				</div>
+				<div class="blog-snippet">
+					<div class="blog-image">
+						<img src="<?php echo get_template_directory_uri() . '/img/thumb.png'; ?>">
+					</div>
+					<div class="blog-content">
+						<span>Dec 16, 2013</span>
+						<h3>Blog Title Here</h3>
+					</div>
+				</div>
+
+			</div>
 		</div>
+
+		<div class="partners desktop-main">
+			<h2>Partners</h2>
+			<div class="slider-partners">
+				<div>
+					<img src="<?php echo get_template_directory_uri() . '/img/partners/logo-wf.png'; ?>" alt="Wave Force">
+				</div>
+				<div>
+					<img src="<?php echo get_template_directory_uri() . '/img/partners/logo-wf.png'; ?>" alt="Wave Force">
+				</div>
+				<div>
+					<img src="<?php echo get_template_directory_uri() . '/img/partners/logo-wf.png'; ?>" alt="Wave Force">
+				</div>
+				<div>
+					<img src="<?php echo get_template_directory_uri() . '/img/partners/logo-wf.png'; ?>" alt="Wave Force">
+				</div>
+				<div>
+					<img src="<?php echo get_template_directory_uri() . '/img/partners/logo-wf.png'; ?>" alt="Wave Force">
+				</div>
+				<div>
+					<img src="<?php echo get_template_directory_uri() . '/img/partners/logo-wf.png'; ?>" alt="Wave Force">
+				</div>
+				<div>
+					<img src="<?php echo get_template_directory_uri() . '/img/partners/logo-wf.png'; ?>" alt="Wave Force">
+				</div>
+				<div>
+					<img src="<?php echo get_template_directory_uri() . '/img/partners/logo-wf.png'; ?>" alt="Wave Force">
+				</div>
+			</div>
+		</div>
+
+
+
+		
 
 
 

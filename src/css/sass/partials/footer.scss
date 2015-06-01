@@ -3,5 +3,30 @@
  * ---
  */
 
-
-.footer {}
+footer {
+	.footer-desktop {
+		display: none;
+		margin-top: 15px;
+		@include clearfix;
+		background-color: $darkblue;
+		padding: 15px;
+		padding-bottom: 50px;
+		div {
+			@include span-columns(2.4);
+			h3 {
+				color: $gold;
+				text-shadow: 1px 1px black;
+			}
+			ul {
+				list-style-type: none;
+				-webkit-padding-start: 0;
+			}
+			img {
+				padding-top: 40px;
+			}
+		}
+		@include media(1024px){
+			display: block;
+		}
+	}
+}

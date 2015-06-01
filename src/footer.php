@@ -1,12 +1,45 @@
 			<!-- footer -->
 			<footer class="footer" role="contentinfo">
 
-				<!-- copyright -->
-				<p class="copyright">
-					&copy; <?php echo date('Y'); ?> Copyright <?php bloginfo('name'); ?>. <?php _e('Powered by', 'html5blank'); ?>
-					<a href="//wordpress.org" title="WordPress">WordPress</a> &amp; <a href="//html5blank.com" title="HTML5 Blank">HTML5 Blank</a>.
-				</p>
-				<!-- /copyright -->
+				<div class="footer-desktop">
+					<div>
+						<h3>About</h3>
+						<ul>
+							<li>Team</li>
+							<li>Technology</li>
+							<li>Our Story</li>
+							<li>Lee's Lil Shore Breakers</li>
+						</ul>
+					</div>
+					<div>
+						<h3>Media</h3>
+						<ul>
+							<li>Surf Cams</li>
+							<li>Photo Galleries</li>
+							<li>Videos</li>
+						</ul>
+					</div>
+					<div>
+						<h3>More</h3>
+						<ul>
+							<li>Where To Stay</li>
+							<li>Where To Eat</li>
+						</ul>
+					</div>
+					<div>
+						<h3>Contact</h3>
+						<ul>
+							<li>Email Us</li>
+							<li>Advertise</li>
+							<li>PO 125</li>
+							<li>Kill Devil Hills, NC 27948</li>
+						</ul>
+					</div>
+					<div>
+						<img src="<?php echo get_template_directory_uri() . '/img/logo-blue.png'; ?>" alt="">
+					</div>
+				</div>
+				<div class="footer-mobile"></div>
 
 			</footer>
 			<!-- /footer -->

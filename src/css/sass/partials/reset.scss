@@ -5,6 +5,30 @@
  * NOTE: also `normalize.css` is used
  */
 
+ /* Reset `button` and button-style `input` default styles */
+input[type="submit"],
+input[type="reset"],
+input[type="button"],
+button {
+    background: none;
+    border: 0;
+    color: inherit;
+    /* cursor: default; */
+    font: inherit;
+    line-height: normal;
+    overflow: visible;
+    padding: 0;
+    -webkit-appearance: button; /* for input */
+    -webkit-user-select: none; /* for button */
+       -moz-user-select: none;
+        -ms-user-select: none;
+}
+input::-moz-focus-inner,
+button::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+}
+
 
 // Global box-sizing
 *,
@@ -31,6 +55,18 @@ body {
   background-image: url("img/bg.png");
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+section {
+  @include clearfix;
+}
+
+ul {
+  padding-left: 0;
+}
+
+h2 {
+  padding-left: 5px;
 }
 
 img {
@@ -61,6 +97,7 @@ input[type="text"],
 input[type="search"] {
   font-size: inherit;
   line-height: inherit;
+  color: black !important;
 }
 
 // Text selection
@@ -84,13 +121,12 @@ input[type="search"] {
 #mediaspace_wrapper, .jwplayer {
   display: inline-block !important;
   position: absolute !important;
-  width: 100% !important;
+  width: 96% !important;
   margin-top: 50px;
   @media screen and (min-width: 1024px){
     margin-top: 0px;
     width: 35% !important;
     margin-top: 40px;
-    margin-left: 5px;
   }
 }
 
@@ -121,6 +157,20 @@ input[type="search"] {
     background-color: black;
     width: 50px !important;
     height: 10px !important;
+  }
+}
+
+// firefox only fixes...
+@-moz-document url-prefix() { 
+  nav.desktop li {
+     margin-left: -40px;
+     width: 25%;
+  }
+  #mediaspace_wrapper {
+    margin-left: -410px !important;
+  }
+  .slick-dots {
+    bottom: 60px !important;
   }
 }
 

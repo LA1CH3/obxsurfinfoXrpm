@@ -27,13 +27,13 @@
 	width: 100% !important;
 	height:204px !important;
 	display: inline-block !important;
-	margin-top: 210px;
+	margin-top: 260px;
 	@media screen and (min-width: 1024px){
 		margin-top: 0px;
 		min-height: 160px !important;
 		height: 24.5% !important;
 		width: 63.9% !important;
-		top: -10%;
+		top: -3%;
 	}
 	@media screen and (min-width: 1200px){
 		top: 0%;
@@ -41,6 +41,76 @@
 }
 
 .desktop-main {
-	width: 64%;
+	width: 100%;
 	float: left;
+	@media screen and (min-width: 1024px){
+		width: 64%;
+	}
 }
+
+.desktop-secondary {
+	width: 100%;
+	background-color: black;
+	clear: both;
+	@media screen and (min-width: 1024px){
+		width: 36%;
+		float: right;
+		clear: none;
+	}
+}
+
+// Google Map Related
+#map_canvas {
+  height: 558px;
+  width: 98%;
+  margin: 0 auto;
+  display: none;
+  @media screen and (min-width: 1024px){
+  	display: block;
+  }
+}
+
+#map_canvas img { 
+  max-width: none; // to prevent UI control bug
+}
+
+#map_canvas .content {
+  padding: 0 0.5em 1em 0.5em;
+}
+
+#map_canvas .firstHeading {
+  font-size: 1em;
+  line-height: 1em;
+  font-weight: bold;
+  margin: 0;
+}
+
+#map_canvas #bodyContent p {
+  font-size: 1em;
+  margin: 0;
+}
+
+.local-and-travel {
+	display: none;
+	@media screen and (min-width: 1024px){
+		display: block;
+	}
+}
+
+.obx-sidebar-ad {
+	display: block !important;
+	width: 98% !important;
+	margin: 5px auto;
+}
+
+.subscribe-box {
+	input {
+		width: 65%;
+	}
+	h3 {
+		text-transform: uppercase;
+		color: $orange;
+	}
+}
+
+
