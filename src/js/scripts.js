@@ -9,6 +9,7 @@
 		$cache.mobileOverlay = $(".mobile-overlay");
 		$cache.mobileTrigger = $(".hamburger img");
 		$cache.mobileHide = $(".mobile-overlay .hide");
+		$cache.partnerImage = $(".slider-partners a");
 
 
 
@@ -108,6 +109,18 @@
 		//// show mobile overlay on click
 		clickAppear($cache.mobileTrigger, $cache.mobileOverlay);
 		clickAppear($cache.mobileHide, $cache.mobileOverlay);
+
+		// partner logo hovers
+		$cache.partnerImage.hover(function(e){
+
+			var $hoverImg = $(this).children('img').attr('data-hover');
+			var $regImg = $(this).children('img').attr('src');
+
+			$(this).children('img').attr('data-hover', $regImg);
+			$(this).children('img').attr('src', $hoverImg);
+
+
+		});
 
 
 	});

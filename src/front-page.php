@@ -434,30 +434,28 @@
 		<div class="partners desktop-main">
 			<h2>Partners</h2>
 			<div class="slider-partners">
+
+			<?php
+
+			if(have_posts()) : while(have_posts()) : the_post();
+
+				if( have_rows('partners')) :
+
+					while( have_rows('partners')) : the_row();
+
+					$partnerlogo = get_sub_field('plain_logo');
+					$partnerhoverlogo = get_sub_field('hover_logo');
+					$partnerlink = get_sub_field('link');
+			 ?>
 				<div>
-					<img src="<?php echo get_template_directory_uri() . '/img/partners/logo-wf.png'; ?>" alt="Wave Force">
+					<a href="<?php echo $partnerlink; ?>">
+					<img src="<?php echo $partnerlogo; ?>" data-hover="<?php echo $partnerhoverlogo; ?>" alt="Wave Force">
+					</a>
 				</div>
-				<div>
-					<img src="<?php echo get_template_directory_uri() . '/img/partners/logo-wf.png'; ?>" alt="Wave Force">
-				</div>
-				<div>
-					<img src="<?php echo get_template_directory_uri() . '/img/partners/logo-wf.png'; ?>" alt="Wave Force">
-				</div>
-				<div>
-					<img src="<?php echo get_template_directory_uri() . '/img/partners/logo-wf.png'; ?>" alt="Wave Force">
-				</div>
-				<div>
-					<img src="<?php echo get_template_directory_uri() . '/img/partners/logo-wf.png'; ?>" alt="Wave Force">
-				</div>
-				<div>
-					<img src="<?php echo get_template_directory_uri() . '/img/partners/logo-wf.png'; ?>" alt="Wave Force">
-				</div>
-				<div>
-					<img src="<?php echo get_template_directory_uri() . '/img/partners/logo-wf.png'; ?>" alt="Wave Force">
-				</div>
-				<div>
-					<img src="<?php echo get_template_directory_uri() . '/img/partners/logo-wf.png'; ?>" alt="Wave Force">
-				</div>
+
+			<?php endwhile; endif; ?>
+
+			<?php endwhile; endif; wp_reset_postdata(); ?>
 			</div>
 		</div>
 

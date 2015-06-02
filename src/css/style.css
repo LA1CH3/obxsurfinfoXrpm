@@ -1023,7 +1023,6 @@ pre {
   border-left: 4px solid #fb5701;
 }
 .latest-posts .sub-list {
-  border-top: 1px solid #a5a3a8;
   width: 80%;
 }
 @media screen and (min-width: 768px) {
@@ -1048,17 +1047,24 @@ pre {
 .latest-posts .sub-list .blog-snippet {
   width: 100%;
   height: auto;
+  border-top: 1px solid #a5a3a8;
+}
+.latest-posts .sub-list .blog-snippet::after {
+  clear: both;
+  content: "";
+  display: table;
+}
+.latest-posts .sub-list .blog-snippet:last-child {
+  border-bottom: 1px solid #a5a3a8;
 }
 .latest-posts .sub-list .blog-snippet .blog-image {
   float: left;
   clear: left;
   padding: 10px 0 9px;
-  border-bottom: 1px solid #a5a3a8;
 }
 .latest-posts .sub-list .blog-snippet .blog-content {
   padding-left: 15px;
   padding: 10px 0 20px 80px;
-  border-bottom: 1px solid #a5a3a8;
   width: 100%;
 }
 @media screen and (min-width: 768px) {
