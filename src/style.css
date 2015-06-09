@@ -185,7 +185,8 @@ input[type="search"] {
 @media screen and (min-width: 1024px) {
   #mediaspace_wrapper, .jwplayer {
     margin-top: 0px;
-    width: 35% !important;
+    width: 34.5% !important;
+    margin-left: 5px;
     margin-top: 40px;
   }
 }
@@ -930,14 +931,14 @@ pre {
   color: #fb5701;
 }
 .vid-info div.wind {
-  width: 45%;
+  width: 50%;
 }
 .vid-info div.location {
-  width: 35%;
+  width: 25%;
 }
 .vid-info div.last {
   text-align: right;
-  width: 20%;
+  width: 24%;
 }
 .vid-info div.last img {
   float: left;

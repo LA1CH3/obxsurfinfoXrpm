@@ -44,7 +44,7 @@
 		// turn our degrees from NOAA into compass directions
 		function degToDirection(deg){
 
-			var val = Math.floor((deg/22.5) + 11.25);
+			var val = Math.floor((deg/22.5) + 11.25 + 360);
 			var arr = ["N","NNE","NE","ENE","E","ESE", "SE", "SSE","S","SSW","SW","WSW","W","WNW","NW","NNW"];
 			var result = arr[val % 16];
 			return result;
@@ -83,9 +83,9 @@
 			url: "http://sdf.ndbc.noaa.gov/sos/server.php?request=GetObservation&service=SOS&version=1.0.0&offering=urn:ioos:station:wmo:44095&observedproperty=Waves&responseformat=text/csv&eventtime=latest",
 			success: function(resp){
 
-				// wave data
 				var dataR = csvJSON(resp);
 				dataR = JSON.parse(dataR);
+				console.log(dataR);
 
 				var swellHeight = dataR[0]['\"sea_surface_wave_significant_height (m)\"'];
 				var swellDir = dataR[0]['\"sea_surface_wind_wave_to_direction (degree)\"'];
@@ -95,13 +95,30 @@
 				var swellString = swellHeight + "' " + degToDirection(swellDir) + " @ " + swellInt + "SEC";
 
 				$(".duck-swell").html(swellString);
-				$(".duck-temp").html(swellTemp);
 			},
 			error: function(xhr, status, error){
 				var err = JSON.parse(xhr.responseText);
 				console.log(err);
 			}
 
+		});
+
+		// outside air temp from wunderground
+		$.ajax({
+			type: "GET",
+			cache: false,
+			url: "http://api.wunderground.com/api/3658c7c53d19beaf/conditions/q/NC/Nags_Head.json",
+			success: function(resp){
+				console.log(resp);
+				var swellTemp = resp["current_observation"];
+				swellTemp = swellTemp["feelslike_f"];
+				swellTemp = swellTemp + "°F";
+				$(".duck-temp").html(swellTemp);
+			},
+			error: function(xhr, status, error){
+				var err = JSON.parse(xhr.responseText);
+				console.log(err);
+			}
 		});
 
 		// DOM ready, take it away

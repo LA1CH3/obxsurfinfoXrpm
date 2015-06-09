@@ -89,7 +89,11 @@
 			jwplayer('mediaspace').setup({
 				'author': 'OBXSURFINFO',
 				'description': 'OBXsurfinfo.com Cam: Nags Head, NC',
-				'image': 'http://www.obxsurfinfo.com/wp-content/uploads/2012/04/logo.png ',
+				'image': 'http://localhost:8888/obxsurf/wp-content/uploads/2015/06/logo_video.png',
+				'logo' : {
+					file: "http://obxsurfinfo.com/wp-content/uploads/2015/06/logo-video-black.png",
+					position: 'top-left'
+				},
 				'title': 'OBXsurfinfo.com Cam: Nags Head, NC',
 				'backcolor': 'CCCCCC',
 				'frontcolor': '0000FF',
@@ -97,8 +101,9 @@
 				'streamer':  'rtmp://64.34.175.240:1935/cameras/camera3.stream',
 				'autostart': 'true',
 				'controlbar': 'bottom',
-				'width': '360',
+				'width': '320',
 				'height': '210',
+				'stretching': 'fill',
 				sources: [{
 					file: 'rtmp://64.34.175.240:1935/cameras/camera3.stream'
 				},{
