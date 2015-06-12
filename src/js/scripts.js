@@ -74,6 +74,12 @@
 			autoplay: true
 		});
 
+		$(".report-slider").slick({
+			infinite: true,
+			slidesToShow: 3, 
+			slidesToScroll: 3,
+		});
+
 		//// API Calls
 
 		// Swell & Temp data from NOAA
@@ -89,7 +95,7 @@
 
 				var swellHeight = dataR[0]['\"sea_surface_wave_significant_height (m)\"'];
 				var swellDir = dataR[0]['\"sea_surface_wind_wave_to_direction (degree)\"'];
-				var swellInt = dataR[0]['\"sea_surface_wave_mean_period (s)\"'];
+				var swellInt = dataR[0]['\"sea_surface_wave_peak_period (s)\"'];
 				var swellTemp = dataR[0]['\"sea_water_temperature (c)\"'];
 
 				var swellString = swellHeight + "' " + degToDirection(swellDir) + " @ " + swellInt + "SEC";

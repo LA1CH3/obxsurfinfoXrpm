@@ -28,8 +28,32 @@
         <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.5.5/slick.css"/>
         <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.5.5/slick-theme.css"/>
 
+        <?php if(is_page_template('page-report.php')){ ?>
+
+          <script src="<?php echo get_template_directory_uri(); ?>/static/components/d3/d3.js"></script>
+		  <!-- <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/static/components/bootstrap/dist/css/bootstrap.min.css">
+		  <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/static/components/bootstrap/dist/css/bootstrap-theme.min.css"> -->
+		 
+		  <link href="<?php echo get_template_directory_uri(); ?>/static/components/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+		  <script src="<?php echo get_template_directory_uri(); ?>/static/components/bootstrap/dist/js/bootstrap.min.js"></script>  
+		  <script src="<?php echo get_template_directory_uri(); ?>/static/components/moment/moment.js"></script>  
+
+		  <link href="<?php echo get_template_directory_uri(); ?>/static/css/plot_css.css" rel="stylesheet">
+		  <link href="<?php echo get_template_directory_uri(); ?>/static/css/other_plot.css" rel="stylesheet">
+
+		  <script src="<?php echo get_template_directory_uri(); ?>/static/js/plot_function.js"></script>  
+		  <script src="<?php echo get_template_directory_uri(); ?>/static/js/plot_man.js"></script>  
+		  <script src="<?php echo get_template_directory_uri(); ?>/static/js/suncalc.js"></script>  
+		  <script src="<?php echo get_template_directory_uri(); ?>/static/js/utilities.js"></script>  
+		  <script src="<?php echo get_template_directory_uri(); ?>/static/js/water-temp.js"></script>  
+		  <script src="<?php echo get_template_directory_uri(); ?>/static/js/plot_tide.js"></script> 
+		  <script src="<?php echo get_template_directory_uri(); ?>/static/js/main.js"></script> 
+
+        	<?php } ?>
+
 	</head>
 	<body <?php body_class(); ?>>
+	
 
 		<!-- wrapper -->
 		<div class="wrapper">

@@ -118,7 +118,7 @@ input[type="search"] {
   display: none !important;
 }
 
-#mediaspace_wrapper, .jwplayer {
+.home #mediaspace_wrapper, .home .jwplayer {
   display: inline-block !important;
   position: absolute !important;
   width: 96% !important;
@@ -131,7 +131,7 @@ input[type="search"] {
   }
 }
 
-.jwplayer {
+.home .jwplayer {
   display: block !important;
   margin-top: 50px;
   @media screen and (min-width: 1024px){
@@ -167,7 +167,7 @@ input[type="search"] {
      margin-left: -40px;
      width: 25%;
   }
-  #mediaspace_wrapper {
+  .home #mediaspace_wrapper {
     margin-left: -410px !important;
   }
   .slick-dots {

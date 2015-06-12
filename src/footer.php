@@ -46,11 +46,12 @@
 
 		</div>
 		<!-- /wrapper -->
+		<script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.5.5/slick.min.js"></script>
 
 		<?php wp_footer(); ?>
 
 		<!-- slick slider JS -->
-		<script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.5.5/slick.min.js"></script>
+		
 
 		<!-- analytics -->
 		<script>

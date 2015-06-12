@@ -1,0 +1,177 @@
+#widget {
+  font: 10px sans-serif;
+}
+
+.green{
+    fill: rgb(54,180,63);
+}
+
+.yellow{
+    fill: rgb(237,145,45);
+}
+
+.red{
+    fill: rgb(183,13,49);
+}
+
+/*
+SUN
+*/
+.sunupdown {
+  fill: yellow; 
+  font-family: "FontAwesome";
+  font-size:10px;
+}
+.sunupdownText {
+  fill: white;
+  font-weight:bold;
+  font-family: "FontAwesome";
+  font-size:10px;
+}
+/*
+DAY
+*/
+.day_row {
+  fill: url(#dayGradient);
+  stroke-width: 05px;
+}
+
+.dayLabelText{
+  font-size:10px;
+  font-family:"Verdana";
+  fill:white;
+  font-weight:bold;
+  text-align:center;
+  text-anchor:middle;
+}
+
+/*
+GRADIENTS
+*/
+.dayTitleRect{
+ fill-opacity: 0.8;
+ fill:url(#dayTitleGradient);
+}
+
+.tideBlueTitleBackgound{
+  fill:url(#waveHeightTitleColor);
+}
+
+.blueTitleBackgound{
+  stroke:black;
+  fill:url(#waveHeightTitleColor);
+}
+
+.titleBlackTitleBackgound{
+  stroke:black;
+  fill:url(#windspeedTitleColor);
+}
+
+.blackTitleBackgound{  
+  fill:url(#windspeedTitleColor);
+}
+
+
+
+/* RECT COLOR  */
+.metadataTitleBackgound{  
+  fill:url(#metadataGradient);
+}
+
+.metadataTitleBackgoundRed{
+  fill:url(#metadataGradientRed);
+}
+
+.metadataTitleBackgoundYellow{
+  fill:url(#metadataGradientYellow);
+}
+
+.metadataTitleBackgoundGreen{
+  fill:url(#metadataGradientGreen);
+}
+
+
+#waterlevel{   
+    fill:url(#waveHeightColor); 
+}
+
+/*
+LABELS
+*/
+.windTypeLabel{
+  font-size:10px;
+  font-family:"Helvetica Neue";
+  fill:black;
+}
+
+.waterTempLabel{
+  font-size:24px;
+  font-family:"Helvetica Neue";
+  fill:white;
+  text-shadow: 2px 2px #5F6B7F;
+  font-weight:bold;
+}
+
+.waterTempLabelRect{
+  fill:url(#waterTempGradient); 
+}
+
+.smallWaterTempLabel{
+  font-size:10px;
+  font-family:"Verdana";
+  fill:white;
+  font-weight:bold;
+}
+
+/*
+META DATA LABELS
+*/
+
+.metaLabel{  
+  font-family:"Verdana";
+  fill:black;
+  font-weight: 900;
+}
+.metaLabelTitle{  
+  font-family:"Verdana";
+  fill:black;
+  font-weight:bold;
+}
+
+.gustLabel{
+  font-size:18px;
+  font-family:"Verdana";
+  fill:black;
+  font-weight: bolder;
+}
+
+.gustLabelTitle{
+  font-size:10px;
+  font-family:"Verdana";
+  fill:black;
+  font-weight: 900;
+}
+
+.gustLabelTitleSmall{
+  font-size:9px;
+  font-family:"Verdana";
+  fill:black;
+  font-weight: 700;
+}
+
+.gustMarker{  
+  fill-opacity: 0.9;
+  fill: rgb(218,0,36);        
+}
+
+.windDirMarker{  
+  fill-opacity: 1;
+  fill:white;
+}
+
+.whiteTextLabel{
+  font-size:9px;
+  font-family:"Verdana";
+  fill:white;
+  font-weight: 700;
+}

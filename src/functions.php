@@ -489,8 +489,14 @@ add_filter( 'excerpt_more', 'new_excerpt_more' );
 add_image_size("front_thumb", 303, 188);
 add_image_size("tiny_thumb", 61, 52);
 add_image_size("slider_size", 771, 454);
+add_image_size("report_size", 258, 189);
+add_image_size("report_slider_size", 327, 190);
 
 // theme settings
 require_once(TEMPLATEPATH . '/modules/admin-menu.php');
+
+// disable emojis -- yeah, i know, wordpress and emojis, da fuk?...
+remove_action( 'wp_head', 'print_emoji_detection_script', 7 );
+remove_action( 'wp_print_styles', 'print_emoji_styles' );
 
 ?>

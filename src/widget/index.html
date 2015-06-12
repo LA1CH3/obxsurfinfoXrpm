@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<head>
+  <!-- EXAMPLE PAGE FOR WEB GRAPHIC-->
+  <script src="static/components/d3/d3.js"></script>
+  <link rel="stylesheet" href="static/components/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="static/components/bootstrap/dist/css/bootstrap-theme.min.css">
+  <script src="static/components/jquery/dist/jquery.min.js"></script>
+  <link href="static/components/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <script src="static/components/bootstrap/dist/js/bootstrap.min.js"></script>  
+  <script src="static/components/moment/moment.js"></script>  
+
+  <link href="static/css/plot_css.css" rel="stylesheet">
+  <link href="static/css/other_plot.css" rel="stylesheet">
+
+  <script src="static/js/plot_function.js"></script>  
+  <script src="static/js/plot_man.js"></script>  
+  <script src="static/js/suncalc.js"></script>  
+  <script src="static/js/utilities.js"></script>  
+  <script src="static/js/water-temp.js"></script>  
+  <script src="static/js/plot_tide.js"></script> 
+  <script src="static/js/main.js"></script>  
+  <title>ello wave!</title>
+
+</head>
+
+<body>
+
+<div class="container">
+  <div id="man">        
+  </div>
+</div>
+
+<div class="container">
+  <div class="row" style="margin-top:20px;">
+    <div class="col-md-4">
+      <select id="stationList" class="form-control">                    
+      </select>
+    </div>   
+    <div class="col-md-4">
+      <button id="beach_overview" type="button" class="btn btn-primary btn-md" data-toggle="popover" data-placement="bottom" title="Beach Overview">
+        <span class="glyphicon glyphicon-map-marker"></span> Plot Beach Overview
+      </button>
+    </div>
+
+  </div>
+
+  <div class="row">
+    <div id="widget">      
+      <div id="tooltip" class="tooltipMenu" style="">
+    </div>
+  </div>
+</div>
+
+
+
+
+<script>
+var d;
+getStationData();
+updateWidget("kill_devil_hills");
+
+$('#stationList').html("");
+station_list = Object.keys(d)
+for (var i = 0; i < station_list.length; i++) {
+  shortname = d[station_list[i]]['shortname']
+  $('#stationList').append('<option shortname="'+shortname+'">'+station_list[i]+'</option>')
+};
+
+$('#stationList').on("change", function() {
+  var optionSelected = $(this).find('option:selected').attr('shortname');
+  $( "#mainwidget" ).remove();
+  updateWidget(optionSelected);
+});
+
+
+$('#beach_overview').popover({
+  html:true,
+  content: function () {      
+      var optionSelected = $("#stationList").find('option:selected').attr('shortname');
+      var image = '<img height="200" width="200" src="static/images/'+optionSelected+".jpg"+'"">';
+      console.log(optionSelected)
+      return image;
+    }
+});
+
+
+</script>
+</body>

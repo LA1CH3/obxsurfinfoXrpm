@@ -1,0 +1,184 @@
+.tooltipMenu{
+  white-space:pre-wrap;
+  position:absolute;
+  z-index:2;
+  width:140px !important;
+  visibility:hidden;
+  font-size: 12px;
+}
+
+.transparentMarker{
+  opacity: 1;
+  fill:transparent;
+}
+
+.transparentShape{
+  fill:transparent;
+}
+
+.windTextMarkerInvis{
+  fill:transparent;
+}
+.windTextMarker{
+  font-size:12px;
+  fill:white;
+  font-weight: 600;
+}
+
+.line {
+  shape-rendering: geometricPrecision;
+  opacity: .9;
+  stroke: #0066CC;
+  stroke-width:5;
+  fill:none;
+
+}
+
+.waveline{  
+  shape-rendering: geometricPrecision;
+  opacity: 1;
+  stroke: rgb(74,100,148);
+  stroke-width:4;
+  fill:none;
+
+}
+
+.dot {
+  shape-rendering: geometricPrecision;
+  opacity: .9;
+  fill: rgb(74,100,148);
+}
+
+.dotselected{
+  opacity: .9;
+  stroke: red;
+  fill:white;
+  stroke-width:2;
+}
+
+.currentline{
+  shape-rendering: crispEdges;
+  opacity: .9;
+  stroke: red;
+  stroke-width:1.0;
+  fill:none;
+}
+
+
+#tooltip {
+  opacity: .9;
+  position: absolute;
+  width: 200px;
+  height: auto;
+  padding: 10px;
+  background-color: #7388AA;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  -webkit-box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
+  pointer-events: none;
+  stroke:red;
+  stroke-width:2px; 
+  color: white;
+  font-weight:bold;
+}
+
+#tooltip.hidden {
+  display: none;
+}
+
+
+#tooltip p {
+  margin: 0;
+  font-size: 12px;
+  line-height: 20px;
+}
+
+
+.plotAxisLabels{
+  font-size:12px;  
+  fill:black;
+  opacity: 1; 
+  font-weight:bold;
+}
+/*
+GRID LINES
+*/
+.ygrid .tick {
+    stroke: white;
+    opacity: 0.7;
+}
+.grid path {
+      stroke-width: 0;
+}
+
+.xgrid .tick {
+    /*  SHOWS THE DATE TIME DAYS LINES    
+    stroke: orange;
+    opacity: 0.7;
+    */
+}
+
+.xgridTide .tick {    
+    stroke: white;
+    opacity: 0.7;
+}
+
+/*
+PLOT AXIS
+*/
+.hsarea {
+    fill: lightsteelblue;
+    stroke-width: 0;
+    opacity: 0.6;   
+  }
+
+.wsarea {
+    stroke-width: 0;
+    opacity: 0.8;
+    fill:url(#wsGradient); 
+  }
+
+.axis{
+  font-size:8px;  
+}
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: geometricPrecision;  
+}
+
+.tideTextLabel{
+ shape-rendering: geometricPrecision;
+ text-anchor:middle;
+ font-weight: bold;
+ text-shadow: 1px 1px white;
+}
+
+.tideLine {
+  fill: none;
+  stroke: white;
+  stroke-width: 1.5px;
+  shape-rendering: geometricPrecision; 
+}
+
+.tideChart {  
+  fill:url(#tideGradient);  
+}
+
+.tideArea {
+  opacity: 1;
+  fill:url(#waterTempGradient); 
+}
+
+.tideText{
+  font-size:9px;
+  text-anchor:middle;          
+  fill:white;
+  font-weight: lighter; 
+  text-shadow: 1px 1px black;
+  shape-rendering: geometricPrecision;        
+}

@@ -71,3 +71,321 @@ pre {
 		width: 33%;
 	}
 }
+
+.report {
+	margin-top: -20px;
+	@include media(769px){
+		margin-top: 0;
+	}
+	h2 {
+		display: inline-block;
+		width: 60%;
+		clear: both;
+	}
+	.report-title {
+		display: block;
+		padding: 20px 0 0 10px;
+		position: relative;
+	}
+	.row {
+		@include clearfix;
+		padding: 3px;
+		iframe {
+			display: none;
+			@include media(769px){
+				display: block;
+				@include span-columns(3.79);
+				margin-right: -0.5%;
+			}
+			@include media(1280px){
+				@include span-columns(3.935);
+				margin-right: 0;
+			}
+		}
+		#widget{
+			width: 110%;
+			height: 345px;
+			overflow-x: scroll;
+			margin: -10px -20px -10px -40px;
+			#tooltip {
+				display: none;
+			}
+			#mainwidget {
+				height: 340px;
+			}
+			@include media(769px){
+				height: 375px;
+				@include span-columns(9);
+				margin: -30px -30px -30px -40px;
+				#mainwidget {
+					@include span-columns(12);
+					height: 375px;
+					margin-bottom: -30px;
+				}
+			}
+		}
+		.obxad-report-long {
+			width: 100%;
+			display: block;
+			@include media(769px){
+				@include span-columns(8);
+				margin-right: 0.5%;
+			}
+		}
+		.obxad-report-short {
+			display: none;
+			@include media(769px){
+				display: block;
+				@include span-columns(4.2);
+				margin-right: 0;
+				margin-bottom: 7px;
+				&:last-child {
+					margin-bottom: 0;
+				}
+			}
+		}
+		.obxad-report-post {
+			width: 100%;
+			float: left;
+		}
+		.mobile-only {
+			display: block;
+			width: 100%;
+			@include media(769px){
+				display: none;
+			}
+		}
+		#mediaspace_wrapper, .jwplayer {
+			width: 100% !important;
+			@include media(769px){
+				float: left;
+				width: 65.9% !important;
+				margin-right: 0.5%;
+			}
+		}
+		.subscribe-box {
+			width: 100%;
+			input {
+				width: 50%;
+			}
+			@include media(769px){
+				@include span-columns(4);
+				padding: 10px 0 0 10px;
+				input {
+					width: 65%;
+				}
+			}
+		}
+		article {
+			background-color: white;
+			height: auto;
+			width: 100%;
+			padding: 5px;
+			margin-right: 0.5% !important;
+			h2 {
+				color: black;
+				display: block;
+				@include media(769px){
+					display: inline-block;
+				}
+			}
+			@include media(769px){
+				@include span-columns(8);
+			}
+		}
+		.socials {
+			float: right;
+			clear: both;
+			ul {
+				right: 5%;
+				margin-top: 15px !important;
+			}
+		}
+		.reporter {
+			@include clearfix;
+			article {
+				@include clearfix;
+			}
+		}
+		.headshot {
+			@include span-columns(3);
+			height: auto;
+			background-color: grey;
+			padding-top: 10px;
+			text-align: center;
+			img {
+				display: block;
+				margin: 0 auto;
+				width: 60%;
+			}
+			h3 {
+				text-transform: uppercase;
+				color: black;
+				font-size: 8px;
+				line-height: 8px;
+				&.author {
+					text-transform: capitalize;
+				}
+			}
+			a {
+				display: block;
+				font-size: 8px;
+				line-height: 8px;
+				margin-bottom: 8px;
+				text-transform: uppercase;
+			}
+			h3, a {
+				@include media(769px){
+					font-size: initial;
+					line-height: initial;
+				}
+			}
+		}
+		.report-pic {
+			@include span-columns(4.4);
+			background-color: grey;
+			padding: 5px;
+			margin-right: 2%;
+			img {
+				display: block;
+				margin: 0 auto;
+			}
+		}
+		.subscribe-mobile {
+			@include media(769px){
+				display: none;
+			}
+		}
+		h5 {
+			float: left;
+			display: block;
+			text-align: right;
+			width: 100%;
+			color: black;
+			text-transform: uppercase;
+			-webkit-margin-before: 0;
+			-webkit-margin-after: 0;
+			padding-right: 15px;
+		}
+		.post {
+			h5 {
+				display: inline-block;
+				@include span-columns(3);
+				text-align: left;
+			}
+			p {
+				@include span-columns(12);
+				color: black;
+			}
+		}
+		.about {
+			@include linear-gradient(to top, #02132f, #052363);
+			@include span-columns(12);
+			h2 {
+				color: white;
+			}
+			h3 {
+				text-align: center;
+				color: $gold;
+				text-transform: uppercase;
+			}
+			.report-slider {
+				width: 90%;
+				margin: 0 auto;
+				img {
+					margin: 0;
+				}
+			}
+			.surf-break, .nearby {
+				padding: 15px;
+				@include span-columns(6);
+				p {
+					line-height: 10px;
+					font-size: 10px;
+					@include media(769px){
+						font-size: 14px;
+						line-height: 14px;
+					}
+				}
+			}
+			.surf-break {
+				border-right: 1px solid white;
+				text-align: right;
+				h3 {
+					text-align: right;
+				}
+			}
+			.nearby {
+				padding: 15px 15px 15px 15px;
+				@include media(769px){
+					padding: 15px 15px 15px 0px;
+				}
+				margin-left: -10px;
+				text-align: left;
+				h3 {
+					text-align: left;
+				}
+			}
+		}
+		.final-ads {
+			@include span-columns(12);
+			a {
+				margin-bottom: 3px;
+			}
+		}
+
+	}
+}
+
+// team page
+.team {
+	padding: 15px;
+	@include clearfix;
+	.team-member {
+		@include clearfix;
+		@include span-columns(12);
+		margin-bottom: 50px;
+		.bio-pic {
+			@include span-columns(12);
+			img {
+				display: block;
+				margin: 0 auto;
+				opacity: 0.8;
+			}
+			@include media(769px){
+				@include span-columns(2);
+			}
+		}
+		article {
+			.header-wrapper {
+				position: relative;
+			}
+			a, h2 {
+				-webkit-margin-before: 0;
+				display: inline-block;
+				font-size: 20px;
+			}
+			h2 {
+				position: relative;
+				bottom: 5px;
+				left: 5px;
+			}
+			h3 {
+				position: absolute;
+				top: 5px;
+				left: 45px;
+				font-style: italic;
+				color: grey;
+			}
+			p {
+				font-size: 12px;
+				line-height: 14px;
+			}
+			@include span-columns(12);
+			@include media(769px){
+				@include span-columns(10);
+			}
+		}
+	}
+
+}
