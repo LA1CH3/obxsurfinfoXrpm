@@ -1,45 +1,40 @@
 <?php get_header(); ?>
 
 	<main role="main">
+
+		<div class="before-content">
+
+			<nav class="nav desktop" role="navigation">
+				<?php html5blank_nav(); ?>
+			</nav>
+
+			<div class="vid-info">
+				<div class="location">
+					<span class="vid-title">Currently:</span>
+					<span class="vid-location">Nags Head</span>
+				</div>
+				<div class="wind">
+					<span class="vid-title">Duck Research Pier</span>
+					<span class="duck-swell"></span>
+				</div>
+				<div class="temp last">
+					<img src="<?php echo get_template_directory_uri() . '
+					/img/mysparklyhappysunshinecloud.png'; ?>" alt="Temperature">
+					<span class="vid-title">Air:</span>
+					<span class="duck-temp"></span>
+				</div>
+			</div>
+
+		</div>
 		<!-- section -->
-		<section>
-
-			<h1><?php the_title(); ?></h1>
-
-		<?php if (have_posts()): while (have_posts()) : the_post(); ?>
-
-			<!-- article -->
-			<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-
-				<?php the_content(); ?>
-
-				<?php comments_template( '', true ); // Remove if you don't want comments ?>
-
-				<br class="clear">
-
-				<?php edit_post_link(); ?>
-
-			</article>
-			<!-- /article -->
-
-		<?php endwhile; ?>
-
-		<?php else: ?>
-
-			<!-- article -->
-			<article>
-
-				<h2><?php _e( 'Sorry, nothing to display.', 'html5blank' ); ?></h2>
-
-			</article>
-			<!-- /article -->
-
-		<?php endif; ?>
-
-		</section>
+		<div class="row">
+			<?php if(have_posts()) : 
+				while(have_posts()) : the_post(); ?>
+					<h2><?php the_title(); ?></h2>
+					<?php the_content(); ?>
+			<?php endwhile; endif; wp_reset_postdata(); ?>
+		</div>
 		<!-- /section -->
 	</main>
-
-<?php get_sidebar(); ?>
 
 <?php get_footer(); ?>

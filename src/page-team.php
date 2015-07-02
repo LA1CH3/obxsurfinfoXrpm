@@ -6,7 +6,31 @@
 get_header(); ?>
 
 <main role="main" class="team">
+<div class="before-content">
 
+		<nav class="nav desktop" role="navigation">
+			<?php html5blank_nav(); ?>
+		</nav>
+
+		<div class="vid-info">
+			<div class="location">
+				<span class="vid-title">Currently:</span>
+				<span class="vid-location">Nags Head</span>
+			</div>
+			<div class="wind">
+				<span class="vid-title">Duck Research Pier</span>
+				<span class="duck-swell"></span>
+			</div>
+			<div class="temp last">
+				<img src="<?php echo get_template_directory_uri() . '
+				/img/mysparklyhappysunshinecloud.png'; ?>" alt="Temperature">
+				<span class="vid-title">Air:</span>
+				<span class="duck-temp"></span>
+			</div>
+		</div>
+
+</div>
+<div class="team-content">
 	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam ipsa beatae, numquam delectus necessitatibus ab fuga maxime soluta, repellat libero iste! Amet nisi sit animi aliquid quo ex dolorum quos!</p>
 
 	<?php 
@@ -53,7 +77,7 @@ get_header(); ?>
 
 	 ?>
 
-
+</div>
 </main>
 
 <?php get_footer(); ?>

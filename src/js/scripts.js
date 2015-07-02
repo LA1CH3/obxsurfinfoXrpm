@@ -10,10 +10,26 @@
 		$cache.mobileTrigger = $(".hamburger img");
 		$cache.mobileHide = $(".mobile-overlay .hide");
 		$cache.partnerImage = $(".slider-partners a");
+		$cache.desktopnavItem = $("nav.desktop .menu-item");
 
 
 
-		//// Helper functions
+		/// Helper functions
+
+		// submenu nav hovering
+		function hoverAppear($trigger){
+			$trigger.hover(
+				function(e){
+					e.preventDefault();
+					var $item = $(this).find(".sub-menu");
+					$item.stop().slideDown();
+				}, function(e){
+					var $item = $(this).find(".sub-menu");
+					$item.stop().slideUp();
+				} );
+		}
+
+		hoverAppear($cache.desktopnavItem);
 
 		//var csv is the CSV file with headers
 		function csvJSON(csv){

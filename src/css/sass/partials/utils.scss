@@ -22,6 +22,10 @@
   @include reset-box;
 }
 
+.before-content {
+	@include clearfix;
+}
+
 .full {
 	position: relative;
 	width: 100% !important;
