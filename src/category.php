@@ -2,7 +2,6 @@
 
 	<main role="main">
 		<!-- section -->
-		<section>
 
 			<div class="before-content">
 
@@ -29,6 +28,8 @@
 
 			</div>
 
+			<section>
+
 			<h1><?php _e( 'Category: ', 'html5blank' ); single_cat_title(); ?></h1>
 	
 			<?php
@@ -38,7 +39,7 @@
 
 			 ?>
 	
-			 <div class="recent-featured-left">
+			 <div class="recent-featured">
 			 	<div class="image-contain">
 			 		<?php the_post_thumbnail("front_thumb"); ?>
 			 		<div class="date-overlay">
@@ -57,6 +58,11 @@
 
 		</section>
 		<!-- /section -->
+		<div class="mobile-footer">
+			<img src="<?php echo get_template_directory_uri() . 
+			'/img/logo-blue.png'; ?>" alt="OBX Surf Info">
+			<?php html5blank_mobilenav(); ?>
+		</div>
 	</main>
 
 <?php get_footer(); ?>

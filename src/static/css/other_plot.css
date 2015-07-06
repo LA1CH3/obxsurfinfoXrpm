@@ -175,3 +175,19 @@ META DATA LABELS
   fill:white;
   font-weight: 700;
 }
+
+// firefox only fixes...
+@-moz-document url-prefix() { 
+  .day_row {
+  fill: url(/#dayGradient) !important;
+}
+
+.dayTitleRect{
+ fill:url('/#dayTitleGradient');
+}
+
+.blueTitleBackgound {
+  fill:url(#waveHeightTitleColor);
+}
+
+}

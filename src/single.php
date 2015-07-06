@@ -83,7 +83,7 @@
 			<p>ad goes here</p>
 		</div>
 	</div>
-	<?php endwhile; endif; wp_reset_postdata(); ?>
+	<?php break; endwhile; endif; wp_reset_postdata(); ?>
 	<div class="row">
 		<div class="obxad obx-sidebar-ad obx-mobile-ad">
 			Ad Space Here

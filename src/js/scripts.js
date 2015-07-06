@@ -94,6 +94,30 @@
 			infinite: true,
 			slidesToShow: 3, 
 			slidesToScroll: 3,
+			responsive: [
+			    {
+			      breakpoint: 1224,
+			      settings: {
+			        slidesToShow: 3,
+			        slidesToScroll: 3,
+			        infinite: true,
+			      }
+			    },
+			    {
+			      breakpoint: 1024,
+			      settings: {
+			        slidesToShow: 2,
+			        slidesToScroll: 2
+			      }
+			    },
+			    {
+			      breakpoint: 600,
+			      settings: {
+			        slidesToShow: 1,
+			        slidesToScroll: 1
+			      }
+			    }
+			]
 		});
 
 		//// API Calls
@@ -103,6 +127,9 @@
 			type: "GET",
 			cache: false,
 			url: "http://sdf.ndbc.noaa.gov/sos/server.php?request=GetObservation&service=SOS&version=1.0.0&offering=urn:ioos:station:wmo:44095&observedproperty=Waves&responseformat=text/csv&eventtime=latest",
+			beforeSend: function(req){
+				req.setRequestHeader("Token", "GmZEvCDPsBCPciTydwhpedhzbxxhMnPh");
+			},
 			success: function(resp){
 
 				var dataR = csvJSON(resp);

@@ -31,11 +31,11 @@
 	width: 100% !important;
 	height:204px !important;
 	display: inline-block !important;
-	margin-top: 260px;
+	margin-top: 215px;
 	@media screen and (min-width: 1024px){
 		margin-top: 0px;
 		min-height: 160px !important;
-		height: 24.5% !important;
+		height: 25% !important;
 		width: 63.9% !important;
 		top: -3%;
 	}
@@ -105,9 +105,13 @@
 	display: block !important;
 	width: 98% !important;
 	margin: 5px auto;
+	max-width: 420px;
 }
 
 .subscribe-box {
+	max-width: 400px;
+	margin-left: auto;
+	margin-right: auto;
 	input {
 		width: 65%;
 	}

@@ -5,32 +5,32 @@
 					<div>
 						<h3>About</h3>
 						<ul>
-							<li>Team</li>
-							<li>Technology</li>
-							<li>Our Story</li>
-							<li>Lee's Lil Shore Breakers</li>
+							<li><a href="<?php echo site_url('team/'); ?>">Team</a></li>
+							<li><a href="<?php echo site_url('technology/'); ?>">Technology</a></li>
+							<li><a href="<?php echo site_url('our-story/'); ?>">Our Story</a></li>
+							<li><a href="<?php echo site_url('lees-lil-shore-breakers/'); ?>">Lee's Lil Shore Breakers</a></li>
 						</ul>
 					</div>
 					<div>
 						<h3>Media</h3>
 						<ul>
-							<li>Surf Cams</li>
-							<li>Photo Galleries</li>
-							<li>Videos</li>
+							<li><a href="<?php echo site_url('surf-cams/'); ?>">Surf Cams</a></li>
+							<li><a href="<?php echo site_url('photo-galleries/'); ?>">Photo Galleries</a></li>
+							<li><a href="<?php echo site_url('video/'); ?>">Video</a></li>
 						</ul>
 					</div>
 					<div>
 						<h3>More</h3>
 						<ul>
-							<li>Where To Stay</li>
-							<li>Where To Eat</li>
+							<li><a href="<?php echo site_url('where-to-stay/'); ?>">Where To Stay</a></li>
+							<li><a href="<?php echo site_url('where-to-eat/'); ?>">Where To Eat</a></li>
 						</ul>
 					</div>
 					<div>
 						<h3>Contact</h3>
 						<ul>
 							<li>Email Us</li>
-							<li>Advertise</li>
+							<li><a href="<?php echo site_url('advertise/'); ?>">Advertise</a></li>
 							<li>PO 125</li>
 							<li>Kill Devil Hills, NC 27948</li>
 						</ul>

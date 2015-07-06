@@ -72,6 +72,10 @@ pre {
 	}
 }
 
+main {
+	padding: 0 2px;
+}
+
 .report {
 	margin-top: -20px;
 	@include media(769px){
@@ -397,7 +401,61 @@ pre {
 
 // category archive page
 .category {
-	
+	section {
+		padding: 0 15px 35px;
+	}
+	.recent-featured {
+		width: 100%;
+		max-width: 500px;
+		background-color: $grey;
+		border: 1px solid $lightgrey;
+		margin: 15px auto;
+		@include media(1028px){
+			@include span-columns(4);
+		}
+		img {
+			display: block;
+			margin: 0 auto;
+			width: 100%;
+		}
+		.date-overlay {
+			background-color: black;
+			p {
+				margin: 0;
+			}
+		}
+		h3, p {
+			padding: 0 15px;
+		}
+		h3 {
+			border-left: 3px solid $orange;
+			margin-left: 15px;
+		}
+		p {
+			color: $lightgrey;
+		}
+	}
+	.mobile-footer {
+			@include span-columns(12);
+			@include media(1028px){
+				display: none;
+			}
+			img {
+				display: block;
+				margin: 0 auto 15px;
+			}
+			ul {
+				text-align: center;
+				text-transform: uppercase;
+				list-style-type: none;
+				li {
+					margin: 5px 0;
+					a  {
+						color: $orange;
+					}
+				}
+			}
+		}
 }
 
 // single blog post
@@ -496,6 +554,7 @@ pre {
 				padding: 0;
 				border: 0;
 				text-indent: 0;
+				margin-bottom: 30px;
 			}
 		}
 		.related-blog {
@@ -559,4 +618,100 @@ pre {
 			}
 		}
 	}
+}
+
+// map page
+.map {
+	@include clearfix;
+	padding-bottom: 15px;
+	.header-break {
+		display: block !important;
+		@media screen and (max-width: 1028px){
+			span {
+				display: block;
+				margin-top: 15px;
+				color: $blue;
+			}
+		}
+	}
+	iframe {
+		@include media(1028px){
+			width: 66% !important;
+			float: left;
+		}
+	}
+	.subscribe-desktop {
+		display: none;
+		input {
+			width: 60%;
+		}
+		@include media(1028px){
+			display: inline-block;
+			@include span-columns(4);
+			@include omega;
+			padding: 0;
+			padding-left: 15px;
+			float: left;
+		}
+	}
+	.full {
+		margin-top: 15px;
+		width: 66% !important;
+		display: none !important;
+		@include media(1028px){
+			display: block !important;
+		}
+	}
+	.sidebar-ads-wrap {
+		@include clearfix;
+	}
+	.obx-mobile-ad {
+			@include media(1028px){
+				display: none !important;
+			}
+		}
+		.obx-desktop-ad {
+			display: none !important;
+			@include media(1028px){
+				display: block !important;
+				margin-right: 10px;
+				float: right;
+				width: 32% !important;
+			}
+		}
+		.subscribe-mobile {
+			padding: 0;
+			margin-top: 15px;
+			margin: 15px auto 0;
+			max-width: 400px;
+			input {
+				width: 60%;
+			}
+		}
+}
+
+// any random page
+.page {
+	.mobile-footer {
+			margin-top: 15px;
+			@include span-columns(12);
+			@include media(1028px){
+				display: none;
+			}
+			img {
+				display: block;
+				margin: 0 auto 15px;
+			}
+			ul {
+				text-align: center;
+				text-transform: uppercase;
+				list-style-type: none;
+				li {
+					margin: 5px 0;
+					a  {
+						color: $orange;
+					}
+				}
+			}
+		}
 }

@@ -39,7 +39,7 @@ get_header(); ?>
 	// i create an array of arrays, each individual array holds the values we need to display to the client
 
 	$userlist = array();
-	for($i = 2; $i < 5; $i++){
+	for($i = 2; $i < 20; $i++){
 
 		$user = array();
 		array_push($user, get_the_author_meta("display_name", $i));
@@ -76,8 +76,13 @@ get_header(); ?>
 	<?php }
 
 	 ?>
-
+<div class="mobile-footer">
+			<img src="<?php echo get_template_directory_uri() . 
+			'/img/logo-blue.png'; ?>" alt="OBX Surf Info">
+			<?php html5blank_mobilenav(); ?>
+		</div>
 </div>
+
 </main>
 
 <?php get_footer(); ?>

@@ -99,7 +99,7 @@
  	display: none;
  	width: 100%;
  	position: relative;
- 	top: 210px;
+ 	top: 220px;
  	@media screen and (min-width: 1024px){
  		width: 35.6%;
  		display: inline-block !important;
@@ -305,6 +305,30 @@
  	@include media(1024px){
  		display: block;
  	}
+ }
+
+ .home {
+ 	.mobile-footer {
+			@include span-columns(12);
+			@include media(1028px){
+				display: none;
+			}
+			img {
+				display: block;
+				margin: 0 auto 15px;
+			}
+			ul {
+				text-align: center;
+				text-transform: uppercase;
+				list-style-type: none;
+				li {
+					margin: 5px 0;
+					a  {
+						color: $orange;
+					}
+				}
+			}
+		}
  }
 
 
