@@ -112,3 +112,26 @@
 
 			</header>
 			<!-- /header -->
+
+			<?php
+
+			//$req = "http://sdf.ndbc.noaa.gov/sos/server.php?request=GetObservation&service=SOS&version=1.0.0&offering=urn:ioos:station:wmo:44095&observedproperty=Waves&responseformat=text/csv&eventtime=latest";
+			//$response = file_get_contents($req);
+
+
+
+			 ?>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

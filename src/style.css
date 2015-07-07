@@ -191,6 +191,10 @@ input[type="search"] {
   }
 }
 
+.page-template-page-report #mediaspace_wrapper {
+  height: 440px !important;
+}
+
 .home .jwplayer {
   display: block !important;
   margin-top: 50px;
@@ -1184,7 +1188,7 @@ main {
 .report .row .headshot img {
   display: block;
   margin: 0 auto;
-  width: 60%;
+  width: 55%;
 }
 .report .row .headshot h3 {
   text-transform: uppercase;

@@ -11,6 +11,8 @@ get_header(); ?>
 
 	// getting some vars for later 
 	$cat = get_field('category_name');
+	$title = get_the_title();
+	$title = str_replace(array(" Surf Report", " Kiteboarding Report"), "", $title);
 
 ?>
 
@@ -263,7 +265,7 @@ updateWidget(shortname);
 
 <div class="row about">
 	<!-- everything in here will be custom field fed -->
-	<h2>About Nags Head:</h2>
+	<h2>About <?php echo $title; ?>:</h2>
 	<h3>Photos, Videos, and More</h3>
 	<div class="report-slider">
 
@@ -312,6 +314,11 @@ updateWidget(shortname);
 		<a href="#" class="obxad obxad-report-short mobile-only">Ad goes here</a>
 	</div>
 <?php endwhile; endif; wp_reset_postdata(); ?>
+<div class="mobile-footer">
+		<img src="<?php echo get_template_directory_uri() . 
+		'/img/logo-blue.png'; ?>" alt="OBX Surf Info">
+		<?php html5blank_mobilenav(); ?>
+	</div>
 </main>
 
 <?php get_footer(); ?>
