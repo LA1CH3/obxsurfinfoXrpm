@@ -14,8 +14,60 @@ get_header(); ?>
 	$title = get_the_title();
 	$title = str_replace(array(" Surf Report", " Kiteboarding Report"), "", $title);
 
+	global $post;
+	$post_slug = $post->post_name;
 ?>
 
+<style>
+	@-moz-document url-prefix() { 
+  		.wsarea {
+		    fill:url(/reports/<?php echo $post_slug; ?>/#wsGradient); 
+		}
+		.tideChart {  
+		  fill:url(/reports/<?php echo $post_slug; ?>/#tideGradient);  
+		}
+		.tideArea {
+		  fill:url(/reports/<?php echo $post_slug; ?>/#waterTempGradient); 
+		}
+		.day_row {
+		  fill: url(/reports/<?php echo $post_slug; ?>/#dayGradient);
+		}
+		.dayTitleRect{
+		 fill:url(/reports/<?php echo $post_slug; ?>/#dayTitleGradient);
+		}
+		.tideBlueTitleBackgound{
+		  fill:url(/reports/<?php echo $post_slug; ?>/#waveHeightTitleColor);
+		}
+		.blueTitleBackgound{
+		  fill:url(/reports/<?php echo $post_slug; ?>/#waveHeightTitleColor);
+		}
+		.titleBlackTitleBackgound{
+		  fill:url(/reports/<?php echo $post_slug; ?>/#windspeedTitleColor);
+		}
+		.blackTitleBackgound{  
+		  fill:url(/reports/<?php echo $post_slug; ?>/#windspeedTitleColor);
+		}
+		.metadataTitleBackgound{  
+		  fill:url(/reports/<?php echo $post_slug; ?>/#metadataGradient);
+		}
+		.metadataTitleBackgoundRed{
+		  fill:url(/reports/<?php echo $post_slug; ?>/#metadataGradientRed);
+		}
+		.metadataTitleBackgoundYellow{
+		  fill:url(/reports/<?php echo $post_slug; ?>/#metadataGradientYellow);
+		}
+		.metadataTitleBackgoundGreen{
+		  fill:url(/reports/<?php echo $post_slug; ?>/#metadataGradientGreen);
+		}
+		#waterlevel{   
+		    fill:url(/reports/<?php echo $post_slug; ?>/#waveHeightColor); 
+		}
+		.waterTempLabelRect{
+		  fill:url(/reports/<?php echo $post_slug; ?>/#waterTempGradient); 
+		}
+
+	}
+</style>
 	
 
 
