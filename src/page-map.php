@@ -31,7 +31,7 @@ get_header(); ?>
 
 	</div>
 	<h2 class="header-break">Interactive Wave Map<span>click below for reports and data</span></h2>
-		<iframe src="http://mapsengine.google.com/map/embed?mid=zLwzMpoYZbnw.kEvGYE-B2rHw" height="700" width="100%" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe>
+		<iframe src="http://mapsengine.google.com/map/embed?mid=zLwzMpoYZbnw.kEvGYE-B2rHw" height="1085" width="100%" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe>
 	<div class="subscribe-box subscribe-desktop">
 			<img src="<?php echo get_template_directory_uri() . '/img/header-subscribe.png'; ?>" alt="#">
 			<p>Be informed on what's happening on the Outer Banks and never miss an event. Subscribe today and we'll deliver all the goods directly to your email account. It's easy.</p>
@@ -46,6 +46,41 @@ get_header(); ?>
 			</div>
 		</div>
 		<div class="sidebar-ads-wrap">
+			<a href="#" class="obxad obx-sidebar-ad obx-desktop-ad">
+				Ad Space Here
+			</a>
+			<a href="#" class="obxad obx-sidebar-ad obx-desktop-ad">
+				Ad Space Here
+			</a>
+			<div class="sub-list recent-list-left">
+				<h2>Latest Surf Reports</h2>
+			<?php 
+
+					$args = array(
+						'post_type' => 'post',
+						'posts_per_page' => 4,
+						'offset' => 2
+						);
+
+					$morequery = new WP_Query($args);
+
+					if( $morequery->have_posts() ) : while( $morequery->have_posts()) :
+
+				 ?>
+
+					<?php $morequery->the_post(); ?>
+						
+					<div class="blog-snippet">
+						<div class="blog-image">
+							<?php the_post_thumbnail("tiny_thumb"); ?>
+						</div>
+						<div class="blog-content">
+							<span><?php the_time(get_option('date_format')); ?></span>
+							<h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+						</div>
+					</div> 
+			<?php endwhile; endif; wp_reset_postdata(); ?>	
+			</div>
 			<a href="#" class="obxad obx-sidebar-ad obx-desktop-ad">
 				Ad Space Here
 			</a>

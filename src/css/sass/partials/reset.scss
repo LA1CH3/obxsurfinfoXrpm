@@ -115,7 +115,17 @@ input[type="search"] {
 }
 
 .slick-next, .slick-prev {
-  display: none !important;
+  width: 36px !important;
+  height: 67px !important;
+  top: 33% !important;
+}
+
+.slick-next:before {
+  content: url('img/nextarrow.png') !important;
+}
+
+.slick-prev:before {
+  content: url('img/prevarrow.png') !important;
 }
 
 .home #mediaspace_wrapper, .home .jwplayer {

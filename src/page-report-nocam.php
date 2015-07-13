@@ -1,6 +1,6 @@
 <?php 
 
-/* Template Name: Surf Report */
+/* Template Name: Surf Report w/o Cam */
 
 
 get_header(); ?>
@@ -141,13 +141,13 @@ updateWidget(shortname);
 
 			jwplayer('mediaspace').setup({
 				'author': 'OBXSURFINFO',
-				'description': 'OBXsurfinfo.com Camera',
+				'description': 'OBXsurfinfo.com Cam: Nags Head, NC',
 				'image': 'http://localhost:8888/obxsurf/wp-content/uploads/2015/06/logo_video.png',
 				'logo' : {
 					file: "http://obxsurfinfo.com/wp-content/uploads/2015/06/logo-video-black.png",
 					position: 'top-left'
 				},
-				'title': 'OBXsurfinfo.com Cam',
+				'title': 'OBXsurfinfo.com Cam: Nags Head, NC',
 				'backcolor': 'CCCCCC',
 				'frontcolor': '0000FF',
 				'screencolor': '000000',
@@ -193,7 +193,7 @@ updateWidget(shortname);
 			<a class="obxad obxad-report-short" href="#">Ad goes here</a>
 
 			<div class="subscribe-box subscribe-desktop">
-			<img src="<?php echo get_template_directory_uri() . '/img/header-subscribe.png'; ?>" alt="Subscribe">
+			<img src="<?php echo get_template_directory_uri() . '/img/header-subscribe.png'; ?>" alt="#">
 			<p>Be informed on what's happening on the Outer Banks and never miss an event. Subscribe today and we'll deliver all the goods directly to your email account. It's easy.</p>
 			<div class="subscribe-input">
 				<h3>Enter Your Email Here:</h3>
@@ -318,6 +318,7 @@ updateWidget(shortname);
 			</div>
 		</div>
 
+		<?php if(have_posts()) : while(have_posts()) : the_post(); ?>
 	<a href="#" class="obxad obxad-report-short mobile-only">Ad goes here</a>
 	<a href="#" class="obxad obxad-report-short">Ad goes here</a>
 	<a href="#" class="obxad obxad-report-short">Ad goes here</a>
@@ -332,33 +333,20 @@ updateWidget(shortname);
 	<h3>Photos, Videos, and More</h3>
 	<div class="report-slider">
 
-		<?php 
-
-		$args = array(
-			'post_type' => 'surf_reports',
-			'posts_per_page' => 6
-
-			);
-
-		$squery = new WP_Query($args);
-
-
-		?>
-
-		<?php if($squery->have_posts()) : while($squery->have_posts()) : $squery->the_post(); ?>
+		<?php if(have_rows('photos')) : while(have_rows('photos')) : the_row(); ?>
 		<div>
 			<?php
-			$image = get_field('featured_image_1'); ?>
-			<a href="<?php the_permalink(); ?>">
-				<?php echo wp_get_attachment_image($image, 'report_size'); ?>
-				<h3><?php the_title(); ?></h3>
+			$image = get_sub_field('image');
+			$img_link1 = wp_get_attachment_image_src($image, ''); 
+			$img_link1 = $img_link1[0]; ?>
+			<a href="<?php echo $img_link1; ?>">
+				<?php echo wp_get_attachment_image($image, 'report_slider_size'); ?>	
 			</a>
 
 		</div>
-	<?php endwhile; endif; wp_reset_postdata(); ?>
+	<?php endwhile; endif; ?>
 	</div>
 	<div class="row">
-	<?php if(have_posts()) : while(have_posts()) : the_post(); ?>
 		<div class="surf-break">
 			<h3>Surf Break</h3>
 			<div class="content">

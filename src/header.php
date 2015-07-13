@@ -28,7 +28,7 @@
         <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.5.5/slick.css"/>
         <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.5.5/slick-theme.css"/>
 
-        <?php if(is_page_template('page-report.php')){ ?>
+        <?php if(is_page_template('page-report.php') || is_page_template('page-report-nocam.php')){ ?>
 
           <script src="<?php echo get_template_directory_uri(); ?>/static/components/d3/d3.js"></script>
 		  <!-- <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/static/components/bootstrap/dist/css/bootstrap.min.css">
@@ -53,6 +53,10 @@
 
 	</head>
 	<body <?php body_class(); ?>>
+
+	<div class="preloader">
+		<div class="quiver"><span class="arrows st"></span><span class="arrows nd"></span><span class="arrows rd"></span><span class="arrows th"></span><span class="arrows fth"></span><span class="loading">Loading...</span></div>
+	</div>
 	
 
 		<!-- wrapper -->
@@ -72,7 +76,7 @@
 					<!-- /logo -->
 
 					<!-- ad -->
-					<div class="obxad header-container">
+					<div class="obxad obxad-top-center header-container">
 						<p>ad space here</p>
 					</div>
 					<!-- /ad -->
@@ -80,16 +84,16 @@
 					<div class="socials header-container">
 						<ul>
 							<li>
-								<a class="soc-icon fb" href="#"></a>
+								<a target="_blank" class="soc-icon fb" href="https://www.facebook.com/OBXSurfInfo"></a>
 							</li>
 							<li>
-								<a class="soc-icon twit" href="#"></a>
+								<a target="_blank" class="soc-icon twit" href="https://twitter.com/obxsurfinfo"></a>
 							</li>
 							<li>
-								<a class="soc-icon rss" href="#"></a>
+								<a target="_blank" class="soc-icon rss" href="<?php echo bloginfo('rss2_url'); ?>"></a>
 							</li>
 							<li>
-								<a class="soc-icon ig" href="#"></a>
+								<a target="_blank" class="soc-icon ig" href="#"></a>
 							</li>
 						</ul>
 						<a class="subscribe" href="#"><span>Subscribe</span></a>

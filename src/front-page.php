@@ -138,23 +138,23 @@
 
 			<div class="weather-wrapper">
 				<!-- <img src="<?php echo get_template_directory_uri() . '/img/placeholder-weather.png'; ?>" alt="surf"> -->
-				<a href="http://www.accuweather.com/en/us/kitty-hawk-nc/27949/weather-forecast/2114054" class="aw-widget-legal">
-			<!--
-			By accessing and/or using this code snippet, you agree to AccuWeather’s terms and conditions (in English) which can be found at http://www.accuweather.com/en/free-weather-widgets/terms and AccuWeather’s Privacy Statement (in English) which can be found at http://www.accuweather.com/en/privacy.
-			-->
-			</a><div id="awtd1432155532240" class="aw-widget-36hour"  data-locationkey="2114054" data-unit="f" data-language="en-us" data-useip="false" data-uid="awtd1432155532240" data-editlocation="false"></div><script type="text/javascript" src="http://oap.accuweather.com/launch.js"></script>
+				<a href="http://www.accuweather.com/en/us/nags-head-nc/27959/current-weather/349742" class="aw-widget-legal">
+				<!--
+				By accessing and/or using this code snippet, you agree to AccuWeather’s terms and conditions (in English) which can be found at http://www.accuweather.com/en/free-weather-widgets/terms and AccuWeather’s Privacy Statement (in English) which can be found at http://www.accuweather.com/en/privacy.
+				-->
+				</a><div id="awtd1436453448785" class="aw-widget-36hour"  data-locationkey="349742" data-unit="f" data-language="en-us" data-useip="false" data-uid="awtd1436453448785" data-editlocation="false"></div><script type="text/javascript" src="http://oap.accuweather.com/launch.js"></script>
 
 			</div>
 
-			<div class="obxad full">
+			<a href="" class="obxad full">
 				<p>ad goes here</p>
-			</div>
+			</a>
 	</div>
 
 	<div class="mosaic-bottom">
 			
 
-		<div class="latest-posts desktop-main">
+		<div class="latest-posts desktop-main top-posts">
 			<h2>Latest</h2>
 			<?php
 
@@ -183,7 +183,7 @@
 						<p><?php the_excerpt(); ?></p>
 					</div>
 
-					<?php $i++; ?>
+					<?php $i++; continue; ?>
 
 				<?php } else if( $i == 1 ){ ?>
 
@@ -278,7 +278,7 @@
 		-->
 		
 		<h2 class="header-break">Find Your Break<span>click below for reports and data</span></h2>
-		<iframe src="http://mapsengine.google.com/map/embed?mid=zLwzMpoYZbnw.kEvGYE-B2rHw" height="500" width="100%" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe>
+		<iframe class="surf-map" src="http://mapsengine.google.com/map/embed?mid=zLwzMpoYZbnw.kEvGYE-B2rHw" height="500" width="100%" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe>
 		<div class="subscribe-box subscribe-desktop">
 			<img src="<?php echo get_template_directory_uri() . '/img/header-subscribe.png'; ?>" alt="#">
 			<p>Be informed on what's happening on the Outer Banks and never miss an event. Subscribe today and we'll deliver all the goods directly to your email account. It's easy.</p>
@@ -292,15 +292,15 @@
 				</form>
 			</div>
 		</div>
-		<div class="obxad obx-sidebar-ad">
+		<a href="" class="obxad obx-sidebar-ad">
 			Ad Space Here
-		</div>
-		<div class="obxad obx-sidebar-ad">
+		</a>
+		<a href="" class="obxad obx-sidebar-ad">
 			Ad Space Here
-		</div>
-		<div class="obxad obx-sidebar-ad">
+		</a>
+		<a href="" class="obxad obx-sidebar-ad">
 			Ad Space Here
-		</div>
+		</a>
 		<div class="subscribe-box subscribe-mobile">
 			<img src="<?php echo get_template_directory_uri() . '/img/header-subscribe.png'; ?>" alt="#">
 			<p>Be informed on what's happening on the Outer Banks and never miss an event. Subscribe today and we'll deliver all the goods directly to your email account. It's easy.</p>

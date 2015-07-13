@@ -29,13 +29,13 @@
 .full {
 	position: relative;
 	width: 100% !important;
-	height:204px !important;
+	height:108px !important;
 	display: inline-block !important;
 	margin-top: 215px;
 	@media screen and (min-width: 1024px){
 		margin-top: 0px;
-		min-height: 160px !important;
-		height: 25% !important;
+		min-height: 108px !important;
+		height: 108px !important;
 		width: 63.9% !important;
 		top: -3%;
 	}

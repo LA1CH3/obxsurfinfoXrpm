@@ -35,6 +35,11 @@
 			<?php endwhile; endif; wp_reset_postdata(); ?>
 		</div>
 		<!-- /section -->
+		<div class="mobile-footer">
+			<img src="<?php echo get_template_directory_uri() . 
+			'/img/logo-blue.png'; ?>" alt="OBX Surf Info">
+			<?php html5blank_mobilenav(); ?>
+		</div>
 	</main>
 
 <?php get_footer(); ?>

@@ -10,9 +10,10 @@ footer {
 		@include clearfix;
 		background-color: $darkblue;
 		padding: 15px;
+		padding-left: 35px;
 		padding-bottom: 50px;
 		div {
-			@include span-columns(2.4);
+			@include span-columns(2);
 			h3 {
 				color: $gold;
 				text-shadow: 1px 1px black;
@@ -24,9 +25,18 @@ footer {
 			img {
 				padding-top: 40px;
 			}
+			&:last-child {
+				margin-left: 2.5%;
+				@include span-columns(3.2);
+			}
 		}
 		@include media(1024px){
 			display: block;
 		}
 	}
+}
+
+.mobile-footer {
+	background-color: black;
+	padding: 2.5%;
 }

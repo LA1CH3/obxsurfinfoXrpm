@@ -35,47 +35,44 @@ get_header(); ?>
 
 	<?php 
 
-	// looping through users sucks... here comes some shitty code
-	// i create an array of arrays, each individual array holds the values we need to display to the client
+	$args = array(
 
-	$userlist = array();
-	for($i = 2; $i < 20; $i++){
+		'post_type' => 'team',
+		'posts_per_page' => -1
 
-		$user = array();
-		array_push($user, get_the_author_meta("display_name", $i));
-		array_push($user, get_the_author_meta("Title", $i));
-		array_push($user, get_the_author_meta("description", $i));
-		array_push($user, get_avatar($i));
-		array_push($user, get_the_author_meta("user_email", $i));
+		);
 
-		array_push($userlist, $user);
+	$team = new WP_Query($args);
 
-	}
+	if($team->have_posts()) :
+		while($team->have_posts()) : $team->the_post();
 
-	//print_r($userlist);
+	// grab some info
+	$image = get_field('photo');
+	$role = get_field('role');
+	$email = get_field('email');
+	$bio = get_field('bio');
 
-
-	// then we loop and display the values
-	foreach($userlist as &$value){ ?>
+	?>
 
 	<div class="team-member">
 		<div class="bio-pic">
-			<?php echo $value[3]; // the bio image ?>
+			<?php echo wp_get_attachment_image( $image, 'medium' ); ?>
 		</div>
 		<article>
 			<div class="header-wrapper">
-				<a href="mailto:<?php echo $value[4]; ?>">
+				<a href="mailto:<?php echo $email; ?>">
 				<img src="<?php echo get_template_directory_uri() . 
 				'/img/mail-icon.png'; ?>" alt="Email">
-			</a><h2><?php echo $value[0]; ?></h2><br>
-			<h3><?php echo $value[1]; ?></h3>
+			</a><h2><?php the_title(); ?></h2><br>
+			<h3><?php echo $role; ?></h3>
 			</div>
-			<p><?php echo $value[2]; ?></p> 
+			<p><?php echo $bio; ?></p> 
 		</article>
 	</div>
-	<?php }
 
-	 ?>
+<?php endwhile; endif; wp_reset_postdata(); ?>
+	
 <div class="mobile-footer">
 			<img src="<?php echo get_template_directory_uri() . 
 			'/img/logo-blue.png'; ?>" alt="OBX Surf Info">

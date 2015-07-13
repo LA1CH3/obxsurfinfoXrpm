@@ -44,20 +44,23 @@
 		//// Plugins init
 		$(".slider").slick({
 			dots: true,
-			autoplay: true
+			autoplay: true,
+			arrows: false
 		});
 		
 		$(".slider-partners").slick({
 			infinite: true,
 			slidesToShow: 4, 
 			slidesToScroll: 4,
-			autoplay: true
+			autoplay: true,
+			arrows: false
 		});
 
 		$(".report-slider").slick({
 			infinite: true,
 			slidesToShow: 3, 
 			slidesToScroll: 3,
+			arrows: true,
 			responsive: [
 			    {
 			      breakpoint: 1224,
@@ -94,7 +97,8 @@
 			success: function(resp){
 				console.log(resp);
 				var swellTemp = resp["current_observation"];
-				swellTemp = swellTemp["feelslike_f"];
+				swellTemp = swellTemp["dewpoint_f"];
+				swellTemp += 6;
 				swellTemp = swellTemp + "°F";
 				$(".duck-temp").html(swellTemp);
 			},
@@ -124,5 +128,9 @@
 
 
 	});
+
+$(window).load(function(){
+	$('.preloader').fadeOut();
+})
 
 } ( this, jQuery ));

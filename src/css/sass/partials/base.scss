@@ -76,6 +76,16 @@ main {
 	padding: 0 2px;
 }
 
+.page-template-page-report-nocam .report {
+	#mediaspace_wrapper {
+		visibility: hidden;
+	}
+	.row article {
+		position: relative;
+		bottom: 434px;
+	}
+}
+
 .report {
 	margin-top: -20px;
 	@include media(769px){
@@ -83,17 +93,34 @@ main {
 	}
 	h2 {
 		display: inline-block;
-		width: 60%;
+		width: 100%;
 		clear: both;
+		@include media(1028px){
+			width: 60%;
+		}
 	}
 	.report-title {
 		display: block;
 		padding: 0px 0 0 10px;
 		position: relative;
+		margin: 10px 0;
+		&:after {
+			@include media(769px){
+				content: "Current Buoy Data \2003 \2003 \2003 Wave System History";
+				position: absolute;
+				right: 50px;
+				font-size: 50%;
+				text-transform: uppercase;
+				color: $blue;
+			}
+		}
+		@include media(1028px){
+			width: 100%;
+		}
 	}
 	.row {
 		@include clearfix;
-		padding: 3px;
+		padding: 2px;
 		iframe {
 			display: none;
 			@include media(769px){
@@ -118,7 +145,7 @@ main {
 				height: 340px;
 			}
 			@include media(769px){
-				height: 375px;
+				height: 370px;
 				@include span-columns(9);
 				margin: -30px -30px -30px -40px;
 				#mainwidget {
@@ -126,6 +153,9 @@ main {
 					height: 375px;
 					margin-bottom: -30px;
 				}
+			}
+			@include media(1028px){
+				overflow: hidden !important;
 			}
 		}
 		.obxad-report-long {
@@ -151,6 +181,7 @@ main {
 		.obxad-report-post {
 			width: 100%;
 			float: left;
+			margin-bottom: -15px;
 		}
 		.mobile-only {
 			display: block;
@@ -186,12 +217,22 @@ main {
 			width: 100%;
 			padding: 5px;
 			margin-right: 0.5% !important;
+			min-height: 459px;
+			margin-bottom: 15px;
 			h2 {
 				color: black;
 				display: block;
+				margin: 10px 0;
 				@include media(769px){
 					display: inline-block;
 				}
+			}
+			.no-report {
+				text-align: center;
+				margin-top: 100px;
+				color: black;
+				font-size: 150%;
+				line-height: 40px;
 			}
 			@include media(769px){
 				@include span-columns(8);
@@ -202,7 +243,7 @@ main {
 			clear: both;
 			ul {
 				right: 5%;
-				margin-top: 15px !important;
+				margin-top: 5px;
 			}
 		}
 		.reporter {
@@ -212,11 +253,18 @@ main {
 			}
 		}
 		.headshot {
-			@include span-columns(3);
-			height: auto;
+			@include span-columns(12);
+			float: none;
+			height: 240px;
 			background-color: grey;
 			padding-top: 10px;
+			padding-bottom: 10px;
 			text-align: center;
+			max-width: 165px;
+			margin: 0 auto 10px;
+			@include media(769px){
+				@include span-columns(3);
+			}
 			img {
 				display: block;
 				margin: 0 auto;
@@ -238,17 +286,34 @@ main {
 				margin-bottom: 8px;
 				text-transform: uppercase;
 			}
-			h3, a {
+			h3 {
 				@include media(769px){
 					font-size: initial;
 					line-height: initial;
 				}
 			}
+			a {
+				@include media(769px){
+					font-size: 12px;
+				}
+			}
 		}
 		.report-pic {
-			@include span-columns(4.4);
+			@include span-columns(12);
+			&.report-pic-second {
+				display: none !important;
+			}
+			@include media(769px){
+				@include span-columns(4.53);
+				&.report-pic-second {
+					display: inline-block !important;
+					@include omega;
+				}
+			}
 			background-color: grey;
 			padding: 5px;
+			padding-top: 2.5%;
+			height: 240px;
 			margin-right: 2%;
 			img {
 				display: block;
@@ -272,6 +337,8 @@ main {
 			padding-right: 15px;
 		}
 		.post {
+			position: relative;
+			bottom: 15px;
 			h5 {
 				display: inline-block;
 				@include span-columns(3);
@@ -297,7 +364,7 @@ main {
 				width: 90%;
 				margin: 0 auto;
 				img {
-					margin: 0;
+					margin: 0 auto;
 				}
 			}
 			.surf-break, .nearby {
@@ -411,11 +478,18 @@ main {
 		border: 1px solid $lightgrey;
 		margin: 15px auto;
 		@include media(1028px){
-			@include span-columns(4);
+			@include span-columns(3.85);
+			min-height: 180px;
+			height: 464px;
+		}
+		.image-contain {
+			height: 295px;
+			overflow: hidden;
 		}
 		img {
 			display: block;
 			margin: 0 auto;
+			height: 92%;
 			width: 100%;
 		}
 		.date-overlay {
@@ -650,20 +724,40 @@ main {
 			@include span-columns(4);
 			@include omega;
 			padding: 0;
-			padding-left: 15px;
+			padding-left: 30px;
 			float: left;
+			position: relative;
+			bottom: 55px;
+		}
+	}
+	.recent-list-left {
+		.blog-snippet {
+			border-bottom: 1px solid $grey;
+			margin-bottom: 10px;
+			&:last-child {
+				border-bottom: 0;
+			}
 		}
 	}
 	.full {
-		margin-top: 15px;
 		width: 66% !important;
 		display: none !important;
+		height: 108px !important;
 		@include media(1028px){
-			display: block !important;
+			display: inline-block !important;
+			margin-top: 10px;
 		}
 	}
 	.sidebar-ads-wrap {
 		@include clearfix;
+		display: block;
+		width: 100%;
+		float: right;
+		@include media(1028px){
+			position: relative;
+			bottom: 55px;
+			width: 33%;
+		}
 	}
 	.obx-mobile-ad {
 			@include media(1028px){
@@ -672,11 +766,15 @@ main {
 		}
 		.obx-desktop-ad {
 			display: none !important;
+			&:nth-child(2){
+				margin-bottom: 15px;
+			}
 			@include media(1028px){
 				display: block !important;
-				margin-right: 10px;
+				margin-right: 5px;
 				float: right;
-				width: 32% !important;
+				clear: right;
+				width: 100% !important;
 			}
 		}
 		.subscribe-mobile {
@@ -715,3 +813,126 @@ main {
 			}
 		}
 }
+
+// just a default page
+.page-template-default {
+	.row {
+		padding: 2.5% 5%;
+	}
+}
+
+//preloader animation
+.preloader {
+	background-color: black;
+	width: 100vw;
+	height: 100vh;
+}
+.quiver {
+  position: fixed;
+  bottom: 50%;
+  left: 50%;
+  z-index: 899;
+  margin-bottom: -50px;
+  margin-left: -50px;
+  width: 100px;
+  span:nth-child(1) {
+	  -moz-animation-delay: 0s;
+	  -webkit-animation-delay: 0s;
+	  animation-delay: 0s;
+	}
+
+	span:nth-child(2) {
+	  -moz-animation-delay: 0.1s;
+	  -webkit-animation-delay: 0.1s;
+	  animation-delay: 0.1s;
+	}
+
+	span:nth-child(3) {
+	  -moz-animation-delay: 0.2s;
+	  -webkit-animation-delay: 0.2s;
+	  animation-delay: 0.2s;
+	}
+
+	span:nth-child(4) {
+	  -moz-animation-delay: 0.3s;
+	  -webkit-animation-delay: 0.3s;
+	  animation-delay: 0.3s;
+	}
+
+	span:nth-child(5) {
+	  -moz-animation-delay: 0.4s;
+	  -webkit-animation-delay: 0.4s;
+	  animation-delay: 0.4s;
+	}
+	.arrows {
+	  -moz-animation: equalizor cubic-bezier(0.77, 0, 0.175, 1) 0.5s alternate-reverse infinite;
+	  -webkit-animation: equalizor cubic-bezier(0.77, 0, 0.175, 1) 0.5s alternate-reverse infinite;
+	  animation: equalizor cubic-bezier(0.77, 0, 0.175, 1) 0.5s alternate-reverse infinite;
+	  vertical-align: baseline;
+	  display: inline-block;
+	  width: 0;
+	  height: 0;
+	  border-style: solid;
+	  border-width: 0 10px 1px 10px;
+	  border-color: rgba(255, 255, 255, 0) rgba(255, 255, 255, 0) #0B486B rgba(255, 255, 255, 0);
+	}
+	* {
+  -moz-backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+}
+
+.st {
+  border-bottom-color: #0B486B;
+}
+
+.nd {
+  border-bottom-color: #3B8686;
+}
+
+.rd {
+  border-bottom-color: #79BD9A;
+}
+
+.th {
+  border-bottom-color: #A8DBA8;
+}
+
+.fth {
+  border-bottom-color: #CFF09E;
+}
+
+@-moz-keyframes equalizor {
+  from {
+    border-bottom-width: 60px;
+  }
+  to {
+    border-bottom-width: 1px;
+  }
+}
+@-webkit-keyframes equalizor {
+  from {
+    border-bottom-width: 60px;
+  }
+  to {
+    border-bottom-width: 1px;
+  }
+}
+@keyframes equalizor {
+  from {
+    border-bottom-width: 60px;
+  }
+  to {
+    border-bottom-width: 1px;
+  }
+}
+
+.loading {
+  display: block;
+  text-transform: uppercase;
+  color: $orange;
+}
+
+
+

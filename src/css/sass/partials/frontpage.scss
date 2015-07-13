@@ -134,12 +134,21 @@
 	@media screen and (min-width: 1024px){
 		margin-top: 0px;
 	}
+	.surf-map {
+		height: 250px !important;
+		@include media(1028px){
+			height: 500px !important;
+		}
+	}
 }
 
 .latest-posts {
 	background-color: $grey;
 	padding-left: 15px;
 	padding-bottom: 15px;
+	&.top-posts {
+		margin-top: -64px;
+	}
 	h3 {
 		text-indent: 1em;
 		padding: 5px 0;
