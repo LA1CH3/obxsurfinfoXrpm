@@ -55,7 +55,7 @@
 	<body <?php body_class(); ?>>
 
 	<div class="preloader">
-		<div class="quiver"><span class="arrows st"></span><span class="arrows nd"></span><span class="arrows rd"></span><span class="arrows th"></span><span class="arrows fth"></span><span class="loading">Loading...</span></div>
+		<div class="quiver"><span class="arrows st"></span><span class="arrows nd"></span><span class="arrows rd"></span><span class="arrows th"></span><span class="arrows fth"></span><span class="loading">Loading......</span></div>
 	</div>
 	
 
@@ -96,7 +96,7 @@
 								<a target="_blank" class="soc-icon ig" href="#"></a>
 							</li>
 						</ul>
-						<a class="subscribe" href="#"><span>Subscribe</span></a>
+						<a class="subscribe" href="<?php echo site_url('/subscribe/') ?>"><span>Subscribe</span></a>
 					</div>
 
 					<!-- nav -->

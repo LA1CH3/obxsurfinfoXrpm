@@ -14,6 +14,9 @@ get_header(); ?>
 	$title = get_the_title();
 	$title = str_replace(array(" Surf Report", " Kiteboarding Report"), "", $title);
 
+	// wave system history url
+	$wsh = get_field('wsh');
+
 	global $post;
 	$post_slug = $post->post_name;
 ?>
@@ -97,6 +100,9 @@ get_header(); ?>
 </div>
 
 <h2 class="report-title"><?php the_title(); ?></h2>
+<div class="report-subtitles">
+	<span class="report-subtitle report-subtitle-buoy">Current Buoy Data</span><span class="report-subtitle report-subtitle-wave"><a href="<?php echo $wsh; ?>">Wave System History</a></span>
+</div>
 <div class="row">
 	<iframe src="http://mapsengine.google.com/map/embed?mid=zLwzMpoYZbnw.kEvGYE-B2rHw" height="300" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe>
 	<!-- this will be a custom field -->
@@ -130,7 +136,7 @@ updateWidget(shortname);
 			 ?>
 
 			<div id="mediaspace">
-				<a href="<?php echo $m3u8; ?>">WATCH LIVE ON Ipad,Iphone</a>
+				<p class="android_fallback"><a href="<?php echo $m3u8; ?>">Sorry, your device does not support native live streaming. Click here to view the OBXSurfInfo live stream through your device's native video player.</a></p>
 				<del datetime="2013-09-25T17:40:33+00:00"></del>
 			</div>
 
@@ -142,11 +148,12 @@ updateWidget(shortname);
 			jwplayer('mediaspace').setup({
 				'author': 'OBXSURFINFO',
 				'description': 'OBXsurfinfo.com Camera',
-				'image': 'http://localhost:8888/obxsurf/wp-content/uploads/2015/06/logo_video.png',
+				'image': 'http://dev.obxsurfinfo.com/wp-content/uploads/2015/06/logo_video.png',
 				'logo' : {
 					file: "http://obxsurfinfo.com/wp-content/uploads/2015/06/logo-video-black.png",
 					position: 'top-left'
 				},
+				fallback: false,
 				'title': 'OBXsurfinfo.com Cam',
 				'backcolor': 'CCCCCC',
 				'frontcolor': '0000FF',
@@ -224,8 +231,10 @@ updateWidget(shortname);
 				'posts_per_page' => '1',
 				'category_name' => $cat,
 				'date_query' => array(
-						'before' => strtotime('-24 hours')
-					)
+					array(
+						'after' => '24 hours ago'
+						),
+					),
 
 				);
 
@@ -257,13 +266,7 @@ updateWidget(shortname);
 			<h3>Local Reporter:</h3>
 			<!-- this will be custom field or whatever -->
 			<h3 class="author"><?php the_author(); ?></h3>
-			<?php
-
-				$authlink = get_the_author_meta('user_url');
-
-
-			 ?>
-			<a href="<?php echo $authlink; ?>">Click Here For Bio</a>
+			<a href="<?php echo site_url('/team/'); ?>">Click Here For Bio</a>
 		</div>
 		<?php
 
@@ -336,7 +339,7 @@ updateWidget(shortname);
 
 		$args = array(
 			'post_type' => 'surf_reports',
-			'posts_per_page' => 6
+			'posts_per_page' => 8
 
 			);
 

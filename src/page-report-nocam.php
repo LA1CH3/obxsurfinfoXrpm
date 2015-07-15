@@ -14,6 +14,9 @@ get_header(); ?>
 	$title = get_the_title();
 	$title = str_replace(array(" Surf Report", " Kiteboarding Report"), "", $title);
 
+	// wave system history url
+	$wsh = get_field('wsh');
+
 	global $post;
 	$post_slug = $post->post_name;
 ?>
@@ -97,6 +100,9 @@ get_header(); ?>
 </div>
 
 <h2 class="report-title"><?php the_title(); ?></h2>
+<div class="report-subtitles">
+	<span class="report-subtitle report-subtitle-buoy">Current Buoy Data</span><span class="report-subtitle report-subtitle-wave"><a href="<?php echo $wsh; ?>">Wave System History</a></span>
+</div>
 <div class="row">
 	<iframe src="http://mapsengine.google.com/map/embed?mid=zLwzMpoYZbnw.kEvGYE-B2rHw" height="300" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe>
 	<!-- this will be a custom field -->
@@ -142,7 +148,7 @@ updateWidget(shortname);
 			jwplayer('mediaspace').setup({
 				'author': 'OBXSURFINFO',
 				'description': 'OBXsurfinfo.com Cam: Nags Head, NC',
-				'image': 'http://localhost:8888/obxsurf/wp-content/uploads/2015/06/logo_video.png',
+				'image': 'http://dev.obxsurfinfo.com/wp-content/uploads/2015/06/logo_video.png',
 				'logo' : {
 					file: "http://obxsurfinfo.com/wp-content/uploads/2015/06/logo-video-black.png",
 					position: 'top-left'
@@ -224,8 +230,10 @@ updateWidget(shortname);
 				'posts_per_page' => '1',
 				'category_name' => $cat,
 				'date_query' => array(
-						'before' => strtotime('-24 hours')
-					)
+					array(
+						'after' => '24 hours ago'
+						),
+					),
 
 				);
 
@@ -333,18 +341,30 @@ updateWidget(shortname);
 	<h3>Photos, Videos, and More</h3>
 	<div class="report-slider">
 
-		<?php if(have_rows('photos')) : while(have_rows('photos')) : the_row(); ?>
+		<?php 
+
+		$args = array(
+			'post_type' => 'surf_reports',
+			'posts_per_page' => 8
+
+			);
+
+		$squery = new WP_Query($args);
+
+
+		?>
+
+		<?php if($squery->have_posts()) : while($squery->have_posts()) : $squery->the_post(); ?>
 		<div>
 			<?php
-			$image = get_sub_field('image');
-			$img_link1 = wp_get_attachment_image_src($image, ''); 
-			$img_link1 = $img_link1[0]; ?>
-			<a href="<?php echo $img_link1; ?>">
-				<?php echo wp_get_attachment_image($image, 'report_slider_size'); ?>	
+			$image = get_field('featured_image_1'); ?>
+			<a href="<?php the_permalink(); ?>">
+				<?php echo wp_get_attachment_image($image, 'report_size'); ?>
+				<h3><?php the_title(); ?></h3>
 			</a>
 
 		</div>
-	<?php endwhile; endif; ?>
+	<?php endwhile; endif; wp_reset_postdata(); ?>
 	</div>
 	<div class="row">
 		<div class="surf-break">

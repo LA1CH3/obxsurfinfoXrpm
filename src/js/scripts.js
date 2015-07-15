@@ -58,8 +58,8 @@
 
 		$(".report-slider").slick({
 			infinite: true,
-			slidesToShow: 3, 
-			slidesToScroll: 3,
+			slidesToShow: 4, 
+			slidesToScroll: 4,
 			arrows: true,
 			responsive: [
 			    {
@@ -125,6 +125,16 @@
 
 
 		});
+
+		// subscribe page edits
+		var $sub_submit = $(".stc-subscribe-wrapper .form-group").detach();
+		var $sub_btn = $("#stc-subscribe-btn").detach();
+		$('.stc-subscribe-wrapper form').append($sub_submit);
+		$('.stc-subscribe-wrapper form').append($sub_btn);
+		$('#stc-email').attr('placeholder', 'Enter Email Here');
+		$('#stc-subscribe-btn').html('Subscribe');
+
+
 
 
 	});

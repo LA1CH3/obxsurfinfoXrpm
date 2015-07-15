@@ -14,9 +14,9 @@
 					<div>
 						<h3>Media</h3>
 						<ul>
-							<li><a href="<?php echo site_url('surf-cams/'); ?>">Surf Cams</a></li>
-							<li><a href="<?php echo site_url('photo-galleries/'); ?>">Photo Galleries</a></li>
-							<li><a href="<?php echo site_url('video/'); ?>">Video</a></li>
+							<li><a href="<?php echo site_url('media/surf-cams/'); ?>">Surf Cams</a></li>
+							<li><a href="<?php echo site_url('category/surf-pictures/'); ?>">Photo Galleries</a></li>
+							<li><a href="<?php echo site_url('category/videos/'); ?>">Video</a></li>
 						</ul>
 					</div>
 					<div>
@@ -29,7 +29,7 @@
 					<div>
 						<h3>Contact</h3>
 						<ul>
-							<li>Email Us</li>
+							<li><a href="mailto:info@obxsurfinfo.com">Email Us</a></li>
 							<li><a href="<?php echo site_url('advertise/'); ?>">Advertise</a></li>
 							<li>PO 125</li>
 							<li>Kill Devil Hills, NC 27948</li>

@@ -1,0 +1,110 @@
+<html>
+<head>
+<META HTTP-EQUIV="Pragma" CONTENT="no-cache">
+<META HTTP-EQUIV="Expires" CONTENT="-1">
+<style type="text/css">
+#surfingdata {
+    background-color: #27355C;
+    color: #666666 !important;
+    margin: 2px 0;
+    padding: 0 !important;
+    width: 760px !important;
+}
+#surfingdata img {
+    width: 760px !important;
+	height:auto;
+	margin: 0 auto !important;
+}
+/*#bluepatch {
+    background-color: #46659B;
+    height: 50px;
+    left: 360px;
+    position: absolute;
+    top: 603px;
+    width: 50px;
+    z-index: 20000;
+}*/
+</style>
+</head>
+
+<body class="wavechart" style="margin: 0; padding: 0;">
+<SCRIPT LANGUAGE="javascript">
+BG = new Image()
+BG.src = "44056_.jpg"
+VB = new Image()
+VB.src = "44014_.jpg"
+DP = new Image()
+DP.src = "44056_.jpg" 
+OI = new Image()
+OI.src = "44095_.jpg" 
+HI = new Image()
+HI.src = "41025_.jpg"
+JP = new Image()
+JP.src = "99999_.jpg"
+
+
+DPvector = new Image()
+DPvector.src = "NDBC%202D%2044056.jpg" 
+VBvector = new Image()
+VBvector.src = "NDBC%202D%2044014.jpg"
+OIvector = new Image()
+OIvector.src = "NDBC%202D%2044095.jpg" 
+HIvector = new Image()
+HIvector.src = "NDBC%202D%2041025.jpg"
+JPvector = new Image()
+JPvector.src = "NDBC%202D%2099999.jpg"
+
+function makeDP()
+{
+ document.map.src=DP.src;
+ document.vector.src=DPvector.src;
+}
+
+function makeVB()
+{
+ document.map.src=VB.src;
+ document.vector.src=VBvector.src;
+}
+function makeOI()
+{
+ document.map.src=OI.src;
+ document.vector.src=OIvector.src;
+}
+function makeHI()
+{
+  document.map.src=HI.src;
+  document.vector.src=HIvector.src;
+}
+function makeJP()
+{
+  document.map.src=JP.src;
+  document.vector.src=JPvector.src;
+}
+
+</SCRIPT>
+
+<IMG NAME="map" SRC="http://www.obxsurfinfo.com/waveforce/44095_.jpg" USEMAP="#ep" width="760">
+<MAP NAME="ep"><AREA SHAPE="rect" ALT="Buxton Surf Report " href="/surf-reports/buxton-surf-report/" target="_parent" COORDS="374,529,498,588" onClick="makeHI()"><AREA SHAPE="rect" ALT="Enlarged right side" href="#" COORDS="374,592,434,653" onClick="makeHI()"><AREA SHAPE="rect" ALT="Visit WaveFore Technologies to learn more" href="http://www.WaveForceTechnologies.com" target="_blank" COORDS="620,678,754,754" >
+  <AREA SHAPE="rect" ALT="Click to view Nags Head Surf Report " href="/surf-reports/nags-head-surf-report/" COORDS="269,315,397,355" target="_parent" onClick="makeHI()">
+  <AREA SHAPE="rect" ALT="Click to view Nags Head Surf Report " href="/surf-reports/nags-head-surf-report/" COORDS="403,249,459,289" target="_parent" onClick="makeHI()">
+  <AREA SHAPE="rect" ALT="Outer Banks Kiteboarding Reports at the Rodanthe Slick" href="/surf-reports/waves-kiteboarding-report/" target="_parent" COORDS="202,456,370,537" onClick="makeHI()">
+  <AREA SHAPE="rect" ALT="Click to view Ocracoke Surf Report " href="/surf-reports/ocracoke-surf-report/" target="_parent" COORDS="129,544,367,717" onClick="makeHI()">
+<AREA SHAPE="rect" ALT="Click to view Kill Devil Hills Surf Report " href="/surf-reports/kill-devil-hills-surf-report/" target="_parent" COORDS="273,207,498,246" onClick="makeHI()">
+<AREA SHAPE="rect" ALT="Click to view Kitty Hawk NC Surf Report " href="/surf-reports/kitty-hawk-kill-devil-hills-surf-report/" target="_parent" COORDS="273,150,481,204" onClick="makeHI()">
+<AREA SHAPE="rect" ALT="Click to view Nags Head Surf Report " href="/surf-reports/nags-head-surf-report/" COORDS="269,249,351,312" target="_parent" onClick="makeHI()">
+<AREA SHAPE="rect" ALT="Outer Banks Kiteboarding Reports at the Rodanthe Slick" href="/surf-reports/waves-kiteboarding-report/" target="_parent" COORDS="236,358,380,454" onClick="makeHI()">
+<AREA SHAPE="rect" ALT="Click to view Rodanthe Surf Report " href="/surf-reports/rodanthe-surf-report/" COORDS="386,357,500,454" target="_parent" onClick="makeHI()">
+<AREA SHAPE="rect" ALT="Avon Surf Report " href="/surf-reports/avon-surf-report/" target="_parent" COORDS="374,458,498,525" onClick="makeHI()">
+<AREA SHAPE="rect" ALT="Click to view Corolla Surf Report " href="/surf-reports/corolla-surf-report/" target="_parent" COORDS="212,6,413,101" onClick="makeDP()" >
+<AREA SHAPE="rect" ALT="Enlarged right side" href="#" COORDS="261,102,374,149" onClick="makeDP()">
+<AREA SHAPE="rect" ALT="Enlarged right side" href="#" COORDS="415,26,488,100" onClick="makeVB()">
+<AREA SHAPE="rect" ALT="Enlarged right side" href="#" COORDS="353,248,399,312" onClick="makeJP()">
+<AREA SHAPE="rect" ALT="Enlarged right side" href="#" COORDS="401,293,461,354" onClick="makeOI()">
+<AREA SHAPE="default" nohref>
+</MAP>
+<div id="surfingdata">
+<img id="vector" name="vector" src="NDBC%202D%2044056.jpg"  width="760">
+</div>
+<div id="bluepatch">&nbsp;</div>
+</body>
+</html>

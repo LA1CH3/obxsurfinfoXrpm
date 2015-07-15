@@ -432,11 +432,11 @@ function addWindInformation(met_data_width,water_width,windDir,windSpdVal,windTy
     
     wind_image = ""
     if (windType == 0){
-      wind_image = "http://localhost:8888/obxsurf/wp-content/themes/html5blank/src/static/clean.png"
+      wind_image = "http://dev.obxsurfinfo.com/wp-content/themes/html5blank/src/static/clean.png"
     }else if(windType == 1){ 
-      wind_image = "http://localhost:8888/obxsurf/wp-content/themes/html5blank/src/static/semi-choppy.png"
+      wind_image = "http://dev.obxsurfinfo.com/wp-content/themes/html5blank/src/static/semi-choppy.png"
     }else if(windType == 2){ 
-      wind_image = "http://localhost:8888/obxsurf/wp-content/themes/html5blank/src/static/choppy.png"
+      wind_image = "http://dev.obxsurfinfo.com/wp-content/themes/html5blank/src/static/choppy.png"
     }
    
 
@@ -508,7 +508,7 @@ function addWindInformation(met_data_width,water_width,windDir,windSpdVal,windTy
         .attr("height", 20)
         .attr("x", (windMkr.x))
         .attr("y", (windMkr.y))  
-        .attr("xlink:href", 'http://localhost:8888/obxsurf/wp-content/themes/html5blank/src/static/red_marker.png');
+        .attr("xlink:href", 'http://dev.obxsurfinfo.com/wp-content/themes/html5blank/src/static/red_marker.png');
        
    
   }
@@ -532,7 +532,7 @@ function getStationData(){
   //loads the template data
   $.ajax({
     dataType: "json",
-    url: 'http://localhost:8888/obxsurf/wp-content/themes/html5blank/src/locations.json',
+    url: 'http://dev.obxsurfinfo.com/wp-content/themes/html5blank/src/locations.json',
     async: false,
      success: function(result){
               var text = '';

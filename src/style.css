@@ -178,12 +178,40 @@ input[type="search"] {
   top: 33% !important;
 }
 
+.slick-next {
+  right: -25px !important;
+}
+@media screen and (min-width: 769px) {
+  .slick-next {
+    right: -45px !important;
+  }
+}
+
+.slick-prev {
+  left: -25px !important;
+}
+@media screen and (min-width: 769px) {
+  .slick-prev {
+    left: -45px !important;
+  }
+}
+
 .slick-next:before {
   content: url("img/nextarrow.png") !important;
 }
 
 .slick-prev:before {
   content: url("img/prevarrow.png") !important;
+}
+
+.home #mediaspace {
+  position: relative;
+  min-height: 60px;
+}
+
+.report #mediaspace {
+  position: relative;
+  min-height: 230px;
 }
 
 .home #mediaspace_wrapper, .home .jwplayer {
@@ -734,7 +762,6 @@ nav.desktop ul li {
   height: 40px;
   text-align: center;
   border-top: 3px solid black;
-  border-left: 3px solid black;
   background: #45484d;
   /* Old browsers */
   /* FF3.6+ */
@@ -1021,25 +1048,37 @@ main {
   }
 }
 .report .report-title {
-  display: block;
+  display: inline-block;
+  width: 100%;
   padding: 0px 0 0 10px;
   position: relative;
-  margin: 10px 0;
+  margin: 20px 0 0;
 }
 @media screen and (min-width: 769px) {
-  .report .report-title:after {
-    content: "Current Buoy Data \2003 \2003 \2003 Wave System History";
-    position: absolute;
-    right: 50px;
-    font-size: 50%;
-    text-transform: uppercase;
-    color: #3768b9;
+  .report .report-title {
+    width: 50%;
+    margin: 10px 0;
   }
 }
-@media screen and (min-width: 1028px) {
-  .report .report-title {
-    width: 100%;
+.report .report-subtitles {
+  display: none;
+  width: 49%;
+  text-align: right;
+}
+@media screen and (min-width: 769px) {
+  .report .report-subtitles {
+    display: inline-block;
   }
+}
+.report .report-subtitle {
+  text-transform: uppercase;
+  color: #3768b9;
+}
+.report .report-subtitle a {
+  color: #3768b9;
+}
+.report .report-subtitle.report-subtitle-buoy {
+  margin-right: 15px;
 }
 .report .row {
   padding: 2px;
@@ -1949,6 +1988,11 @@ main {
   border-bottom: 1px solid #18191b;
   margin-bottom: 10px;
 }
+.map .recent-list-left .blog-snippet span {
+  color: #3768b9;
+  font-size: 80%;
+  font-style: italic;
+}
 .map .recent-list-left .blog-snippet:last-child {
   border-bottom: 0;
 }
@@ -2041,14 +2085,61 @@ main {
   color: #fb5701;
 }
 
+.subscribe .stc-subscribe-wrapper {
+  width: 66%;
+  float: left;
+}
+.subscribe .stc-subscribe-wrapper form > .checkbox {
+  visibility: hidden;
+}
+.subscribe .stc-subscribe-wrapper .stc-categories {
+  margin-bottom: 50px;
+}
+.subscribe .stc-subscribe-wrapper .stc-categories .checkbox {
+  display: inline-block;
+  width: 49%;
+}
+.subscribe .stc-subscribe-wrapper .stc-categories .checkbox label {
+  font-size: 150%;
+  font-style: italic;
+}
+.subscribe .stc-subscribe-wrapper #stc-unsubscribe-checkbox {
+  visibility: hidden;
+}
+.subscribe .stc-subscribe-wrapper .form-group label {
+  position: relative;
+  left: -9999px;
+}
+.subscribe .stc-subscribe-wrapper .form-group input {
+  position: relative;
+  left: -105px;
+  margin-bottom: 15px;
+}
+.subscribe #stc-subscribe-btn {
+  width: 117px;
+  height: 32px;
+  background-image: url("img/bg-subscribe.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-transform: uppercase;
+  padding-right: 23px;
+}
+
 .page-template-default .row {
   padding: 2.5% 5%;
+}
+.page-template-default .row::after {
+  clear: both;
+  content: "";
+  display: table;
 }
 
 .preloader {
   background-color: black;
   width: 100vw;
   height: 100vh;
+  position: fixed;
+  z-index: 10000;
 }
 
 .quiver {
@@ -2135,6 +2226,12 @@ main {
   display: block;
   text-transform: uppercase;
   color: #fb5701;
+}
+
+.android_fallback {
+  padding: 25px 15px 0;
+  position: absolute;
+  top: 35px;
 }
 
 /**

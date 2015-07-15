@@ -100,22 +100,32 @@ main {
 		}
 	}
 	.report-title {
-		display: block;
+		display: inline-block;
+		width: 100%;
 		padding: 0px 0 0 10px;
 		position: relative;
-		margin: 10px 0;
-		&:after {
-			@include media(769px){
-				content: "Current Buoy Data \2003 \2003 \2003 Wave System History";
-				position: absolute;
-				right: 50px;
-				font-size: 50%;
-				text-transform: uppercase;
-				color: $blue;
-			}
+		margin: 20px 0 0;
+		@include media(769px){
+			width: 50%;
+			margin: 10px 0;
 		}
-		@include media(1028px){
-			width: 100%;
+	}
+	.report-subtitles {
+		display: none;
+		width: 49%;
+		text-align: right;
+		@include media(769px){
+			display: inline-block;
+		}
+	}
+	.report-subtitle {
+		text-transform: uppercase;
+		color: $blue;
+		a {
+			color: $blue;
+		}
+		&.report-subtitle-buoy {
+			margin-right: 15px;
 		}
 	}
 	.row {
@@ -734,6 +744,11 @@ main {
 		.blog-snippet {
 			border-bottom: 1px solid $grey;
 			margin-bottom: 10px;
+			span {
+				color: $blue;
+				font-size: 80%;
+				font-style: italic;
+			}
 			&:last-child {
 				border-bottom: 0;
 			}
@@ -814,10 +829,58 @@ main {
 		}
 }
 
+// subscribe page
+.subscribe {
+	.stc-subscribe-wrapper {
+		width: 66%;
+		float: left;
+		form {
+			& > .checkbox {
+				visibility: hidden;
+			}
+		}
+		.stc-categories {
+			margin-bottom: 50px;
+			.checkbox {
+				display: inline-block;
+				width: 49%;
+				label {
+					font-size: 150%;
+					font-style: italic;
+				}
+			}
+		}
+		#stc-unsubscribe-checkbox {
+			visibility: hidden;
+		}
+		.form-group {
+			label {
+				position: relative;
+				left: -9999px;
+			}
+			input {
+				position: relative;
+				left: -105px;
+				margin-bottom: 15px;
+			}
+		}
+	}
+	#stc-subscribe-btn {
+		width: 117px;
+		height: 32px;
+		background-image: url('img/bg-subscribe.png');
+		background-repeat: no-repeat;
+		background-size: cover;
+		text-transform: uppercase;
+		padding-right: 23px;
+	}
+}
+
 // just a default page
 .page-template-default {
 	.row {
 		padding: 2.5% 5%;
+		@include clearfix;
 	}
 }
 
@@ -826,6 +889,8 @@ main {
 	background-color: black;
 	width: 100vw;
 	height: 100vh;
+	position: fixed;
+	z-index: 10000;
 }
 .quiver {
   position: fixed;
@@ -932,6 +997,12 @@ main {
   display: block;
   text-transform: uppercase;
   color: $orange;
+}
+
+.android_fallback {
+	padding: 25px 15px 0;
+	position: absolute;
+	top: 35px; 
 }
 
 

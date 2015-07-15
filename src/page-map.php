@@ -75,7 +75,7 @@ get_header(); ?>
 							<?php the_post_thumbnail("tiny_thumb"); ?>
 						</div>
 						<div class="blog-content">
-							<span><?php the_time(get_option('date_format')); ?></span>
+							<span><?php the_time(get_option('date_format')); ?> @ <?php the_time(); ?></span>
 							<h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
 						</div>
 					</div> 

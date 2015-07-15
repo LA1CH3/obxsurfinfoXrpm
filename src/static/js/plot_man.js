@@ -45,7 +45,7 @@ function waveHeightMan(svg,x,y,width,height,water_height,max_height){
        .attr('y',100)
        .attr('width', width)
        .attr('height', 78)
-       .attr("xlink:href","http://localhost:8888/obxsurf/wp-content/themes/html5blank/src/person14.svg")
+       .attr("xlink:href","http://dev.obxsurfinfo.com/wp-content/themes/html5blank/src/person14.svg")
        .on("mouseover", function() { 
         var tooltip = d3.select("#tooltip");
         tooltip.style("visibility", "visible"); 
@@ -105,7 +105,7 @@ function waveHeightMan(svg,x,y,width,height,water_height,max_height){
        .attr('y',126)
        .attr('width', width)
        .attr('height', 80/scale_f)
-       .attr("xlink:href","http://localhost:8888/obxsurf/wp-content/themes/html5blank/src/person14.svg")
+       .attr("xlink:href","http://dev.obxsurfinfo.com/wp-content/themes/html5blank/src/person14.svg")
        .on("mouseover", function() { 
         var tooltip = d3.select("#tooltip");
         tooltip.style("visibility", "visible"); 

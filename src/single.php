@@ -44,16 +44,16 @@
 		<div class="socials">
 			<ul>
 				<li>
-					<a class="soc-icon fb" href="#"></a>
+					<a target="_blank" class="soc-icon fb" href="https://www.facebook.com/OBXSurfInfo"></a>
 				</li>
 				<li>
-					<a class="soc-icon twit" href="#"></a>
+					<a target="_blank" class="soc-icon twit" href="https://twitter.com/obxsurfinfo"></a>
 				</li>
 				<li>
-					<a class="soc-icon rss" href="#"></a>
+					<a target="_blank" class="soc-icon rss" href="<?php echo bloginfo('rss2_url'); ?>"></a>
 				</li>
 				<li>
-					<a class="soc-icon ig" href="#"></a>
+					<a target="_blank" class="soc-icon ig" href="#"></a>
 				</li>
 			</ul>
 		</div>

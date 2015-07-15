@@ -81,7 +81,7 @@
 			<script type="text/javascript">jwplayer.key="HkK82SF6pb3Nsl4jUamA+6I28yoBeFIUZm54ow+2JbI=";</script> 
 
 			<div id="mediaspace">
-				<a href="http://64.34.175.240:1935/cameras/camera3.stream/playlist.m3u8">WATCH LIVE ON Ipad,Iphone</a>
+				<p class="android_fallback"><a href="http://64.34.175.240:1935/cameras/camera3.stream/playlist.m3u8">Sorry, your device does not support native live streaming. Click here to view the OBXSurfInfo live stream through your device's native video player.</a></p>
 				<del datetime="2013-09-25T17:40:33+00:00"></del>
 			</div>
 
@@ -89,7 +89,7 @@
 			jwplayer('mediaspace').setup({
 				'author': 'OBXSURFINFO',
 				'description': 'OBXsurfinfo.com Cam: Nags Head, NC',
-				'image': 'http://localhost:8888/obxsurf/wp-content/uploads/2015/06/logo_video.png',
+				'image': 'http://dev.obxsurfinfo.com/obxsurf/wp-content/uploads/2015/06/logo_video.png',
 				'logo' : {
 					file: "http://obxsurfinfo.com/wp-content/uploads/2015/06/logo-video-black.png",
 					position: 'top-left'
@@ -98,17 +98,22 @@
 				'backcolor': 'CCCCCC',
 				'frontcolor': '0000FF',
 				'screencolor': '000000',
-				'streamer':  'rtmp://64.34.175.240:1935/cameras/camera3.stream',
+				'streamer':  'http://64.34.175.240:1935/cameras/camera3.stream/playlist.m3u8',
+				'fallback': false,
 				'autostart': 'true',
 				'controlbar': 'bottom',
 				'width': '320',
 				'height': '210',
+				'androidhls' : 'true',
 				'stretching': 'fill',
 				sources: [{
+					file: 'rtsp://64.34.175.240:1935/cameras/camera3.stream'
+				},{
 					file: 'rtmp://64.34.175.240:1935/cameras/camera3.stream'
 				},{
-					file: 'http://64.34.175.240:1935/cameras/camera3.stream/playlist.m3u8'
-				}],
+					file: 'http://64.34.175.240:1935/cameras/camera3.stream/playlist.m3u8',
+					default: true
+				},],
 				'modes': [
 				{type: 'flash', src: 'http://obxsurfinfo.com/jwplayer/jwplayer.flash.swf'},
 				{
@@ -118,6 +123,7 @@
 						'provider': 'video'
 					}
 				},
+
 				{
 					type: 'download',
 					config: {
@@ -328,7 +334,7 @@
 
 						'post_type' => 'post',
 						'posts_per_page' => 1,
-						'cat' => 4
+						'cat' => 61
 
 						);
 
@@ -337,7 +343,7 @@
 				 	if($localquery->have_posts()) : while( $localquery->have_posts()) : $localquery->the_post(); ?>
 
 				<div class="image-contain">
-						<img src="<?php echo get_template_directory_uri() . '/img/placeholder-latest.jpg'; ?>" alt="hey">
+						<?php the_post_thumbnail("front_thumb"); ?>
 						<div class="date-overlay">
 							<p><?php the_time(get_option('date_format')); ?></p>
 						</div>
@@ -364,7 +370,7 @@
 				 	if($travelquery->have_posts()) : while( $travelquery->have_posts()) : $travelquery->the_post(); ?>
 
 				<div class="image-contain">
-						<img src="<?php echo get_template_directory_uri() . '/img/placeholder-latest.jpg'; ?>" alt="hey">
+						<?php the_post_thumbnail("front_thumb"); ?>
 						<div class="date-overlay">
 							<p><?php the_time(get_option('date_format')); ?></p>
 						</div>

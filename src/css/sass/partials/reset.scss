@@ -120,12 +120,36 @@ input[type="search"] {
   top: 33% !important;
 }
 
+.slick-next {
+  right: -25px !important;
+  @include media(769px){
+    right: -45px !important;
+  }
+}
+
+.slick-prev {
+  left: -25px !important;
+  @include media(769px){
+    left: -45px !important;
+  }
+}
+
 .slick-next:before {
   content: url('img/nextarrow.png') !important;
 }
 
 .slick-prev:before {
   content: url('img/prevarrow.png') !important;
+}
+
+.home #mediaspace {
+  position: relative;
+  min-height: 60px;
+}
+
+.report #mediaspace {
+  position: relative;
+  min-height: 230px;
 }
 
 .home #mediaspace_wrapper, .home .jwplayer {

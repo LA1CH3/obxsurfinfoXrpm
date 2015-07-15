@@ -1,0 +1,68 @@
+<html>
+<head>
+<META HTTP-EQUIV="Pragma" CONTENT="no-cache">
+<META HTTP-EQUIV="Expires" CONTENT="-1">
+</head>
+<body style="margin: 0; padding: 0;">
+<SCRIPT LANGUAGE="javascript">
+BG = new Image()
+BG.src = "44056_.png"
+VB = new Image()
+VB.src = "44014_.png"
+DP = new Image()
+DP.src = "44056_.png" 
+OI = new Image()
+OI.src = "44095_.png" 
+HI = new Image()
+HI.src = "41001_.png"
+
+VBvector = new Image()
+VBvector.src = "NDBC%202D%2044014.jpg"
+DPvector = new Image()
+DPvector.src = "NDBC%202D%2044100.jpg" 
+OIvector = new Image()
+OIvector.src = "NDBC%202D%2044095.jpg" 
+HIvector = new Image()
+HIvector.src = "NDBC%202D%2041001.jpg"
+
+function makeVB()
+{
+ document.map.src=VB.src;
+ document.vector.src=VBvector.src;
+}
+function makeDP()
+{
+ document.map.src=DP.src;
+ document.vector.src=DPvector.src;
+}
+function makeOI()
+{
+ document.map.src=OI.src;
+ document.vector.src=OIvector.src;
+}
+function makeHI()
+{
+  document.map.src=HI.src;
+  document.vector.src=HIvector.src;
+}
+</SCRIPT>
+
+<IMG NAME="map" SRC="44056_.png" USEMAP="#ep" width="760">
+<img name="vector" src="NDBC%202D%2044014.jpg" width="760" height="auto">
+<MAP NAME="ep"><AREA SHAPE="rect" ALT="Click to view Ocracoke Surf Report " href="/surf-reports/ocracoke-surf-report/" target="_parent" COORDS="129,583,357,717" onClick="makeHI()">
+<AREA SHAPE="rect" ALT="Click to view Kill Devil Hills Surf Report " href="/surf-reports/kill-devil-hills-surf-report/" target="_parent" COORDS="273,199,498,246" onClick="makeHI()">
+<AREA SHAPE="rect" ALT="Click to view Kitty Hawk NC Surf Report " href="/surf-reports/kitty-hawk-kill-devil-hills-surf-report/" target="_parent" COORDS="273,150,497,199" onClick="makeHI()">
+<AREA SHAPE="rect" ALT="Click to view Nags Head Surf Report " href="/surf-reports/nags-head-surf-report/" COORDS="273,246,498,293" target="_parent" onClick="makeHI()">
+<AREA SHAPE="rect" ALT="Outer Banks Kiteboarding Reports at the Rodanthe Slick" href="/surf-reports/waves-kiteboarding-report/" target="_parent" COORDS="236,346,386,582" onClick="makeHI()">
+<AREA SHAPE="rect" ALT="Click to view Rodanthe Surf Report " href="/surf-reports/rodanthe-surf-report/" COORDS="389,345,501,440" target="_parent" onClick="makeHI()">
+<AREA SHAPE="rect" ALT="Avon Surf Report " href="/surf-reports/avon-surf-report/" target="_parent" COORDS="388,445,501,583" onClick="makeHI()">
+<AREA SHAPE="rect" ALT="Click to view Corolla Surf Report " href="/surf-reports/corolla-surf-report/" target="_parent" COORDS="212,6,413,101" onClick="makeDP()" >
+<AREA SHAPE="rect" ALT="Enlarged right side" href="#" COORDS="283,101,333,151" onClick="makeDP()" >
+<AREA SHAPE="rect" ALT="Enlarged right side" href="#" COORDS="419,43,469,93" onClick="makeVB()">
+<AREA SHAPE="rect" ALT="Enlarged right side" href="#" COORDS="360,585,425,641" onClick="makeHI()">
+<AREA SHAPE="rect" ALT="Enlarged right side" href="#" COORDS="401,293,451,343" onClick="makeOI()">
+<AREA SHAPE="default" nohref>
+</MAP>
+
+</body>
+</html>
