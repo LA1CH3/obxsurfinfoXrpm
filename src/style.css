@@ -271,6 +271,10 @@ input[type="search"] {
   .slick-dots {
     bottom: 60px !important;
   }
+
+  .team-member article h3 {
+    top: 23px !important;
+  }
 }
 /**
  * partials/wordpress
@@ -450,7 +454,7 @@ input[type="search"] {
   margin-right: auto;
 }
 .subscribe-box input {
-  width: 65%;
+  width: 50%;
 }
 .subscribe-box h3 {
   text-transform: uppercase;
@@ -497,6 +501,8 @@ main {
   float: left;
 }
 .header .obxad-top-center {
+  min-width: 420px;
+  max-width: 420px;
   margin-bottom: 15px;
 }
 @media screen and (min-width: 1028px) {
@@ -506,6 +512,11 @@ main {
     margin-bottom: 0;
   }
 }
+@media screen and (min-width: 1270px) {
+  .header .obxad-top-center {
+    left: 70px;
+  }
+}
 .header .socials {
   display: none;
   position: relative;
@@ -513,6 +524,11 @@ main {
 @media screen and (min-width: 1024px) {
   .header .socials {
     display: block;
+    width: 28%;
+  }
+}
+@media screen and (min-width: 1270px) {
+  .header .socials {
     width: 33%;
   }
 }
@@ -520,8 +536,13 @@ main {
   list-style-type: none;
   position: absolute;
   top: 0;
-  right: 45%;
+  right: 40%;
   margin: 0;
+}
+@media screen and (min-width: 1200px) {
+  .header .socials ul {
+    right: 33%;
+  }
 }
 .header .socials ul li {
   float: left;
@@ -559,7 +580,7 @@ main {
   display: none;
   position: absolute;
   top: 0;
-  right: 35px;
+  right: -15px;
   width: 117px;
   height: 32px;
   background-image: url("img/bg-subscribe.png");
@@ -579,6 +600,11 @@ main {
     display: block;
   }
 }
+@media screen and (min-width: 1270px) {
+  .header .subscribe {
+    right: 0px;
+  }
+}
 
 .logo {
   width: 100%;
@@ -595,6 +621,11 @@ main {
   }
 }
 @media screen and (min-width: 1024px) {
+  .logo {
+    width: 30%;
+  }
+}
+@media screen and (min-width: 1200px) {
   .logo {
     width: 33%;
   }
@@ -712,6 +743,9 @@ main {
   text-transform: uppercase;
   -webkit-margin-before: 0em;
   -webkit-margin-after: 0em;
+}
+.nav-trigger .words a {
+  font-size: 100%;
 }
 .nav-trigger .hamburger {
   position: absolute;
@@ -1184,7 +1218,7 @@ main {
     margin-right: 2.3576515979%;
     width: 33.4675264613%;
     margin-right: 0;
-    margin-bottom: 7px;
+    margin-bottom: 4px;
   }
   .report .row .obxad-report-short:last-child {
     margin-right: 0;
@@ -1556,7 +1590,7 @@ main {
     float: left;
     display: block;
     margin-right: 2.3576515979%;
-    width: 14.7019570017%;
+    width: 23.2317613015%;
   }
   .team .team-member .bio-pic:last-child {
     margin-right: 0;
@@ -1590,6 +1624,7 @@ main {
   left: 45px;
   font-style: italic;
   color: grey;
+  margin: 1em 0;
 }
 .team .team-member article p {
   font-size: 12px;
@@ -1603,7 +1638,7 @@ main {
     float: left;
     display: block;
     margin-right: 2.3576515979%;
-    width: 82.9403914003%;
+    width: 74.4105871005%;
   }
   .team .team-member article:last-child {
     margin-right: 0;
@@ -1984,6 +2019,9 @@ main {
     margin-right: 0;
   }
 }
+.map .recent-list-left h2 {
+  text-align: center;
+}
 .map .recent-list-left .blog-snippet {
   border-bottom: 1px solid #18191b;
   margin-bottom: 10px;
@@ -2085,9 +2123,29 @@ main {
   color: #fb5701;
 }
 
-.subscribe .stc-subscribe-wrapper {
-  width: 66%;
+.subscribe .sub_splash {
   float: left;
+  width: 100%;
+  margin-top: 15px;
+}
+.subscribe .sub_splash img {
+  display: block;
+  margin: 0 auto;
+}
+@media screen and (min-width: 769px) {
+  .subscribe .sub_splash {
+    width: 33%;
+    margin-top: 0;
+  }
+}
+.subscribe .stc-subscribe-wrapper {
+  width: 100%;
+  float: left;
+}
+@media screen and (min-width: 769px) {
+  .subscribe .stc-subscribe-wrapper {
+    width: 66%;
+  }
 }
 .subscribe .stc-subscribe-wrapper form > .checkbox {
   visibility: hidden;
@@ -2112,8 +2170,13 @@ main {
 }
 .subscribe .stc-subscribe-wrapper .form-group input {
   position: relative;
-  left: -105px;
+  left: -100px;
   margin-bottom: 15px;
+}
+@media screen and (min-width: 769px) {
+  .subscribe .stc-subscribe-wrapper .form-group input {
+    left: -105px;
+  }
 }
 .subscribe #stc-subscribe-btn {
   width: 117px;
@@ -2123,6 +2186,9 @@ main {
   background-size: cover;
   text-transform: uppercase;
   padding-right: 23px;
+  font-family: Verdana, sans-serif;
+  font-weight: bold;
+  font-size: 0.75em;
 }
 
 .page-template-default .row {
@@ -2409,8 +2475,8 @@ main {
   margin-top: -64px;
 }
 .latest-posts h3 {
-  text-indent: 1em;
   padding: 5px 0;
+  padding-left: 1em;
   border-left: 4px solid #fb5701;
 }
 .latest-posts .sub-list {

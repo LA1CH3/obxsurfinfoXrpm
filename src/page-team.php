@@ -38,7 +38,8 @@ get_header(); ?>
 	$args = array(
 
 		'post_type' => 'team',
-		'posts_per_page' => -1
+		'posts_per_page' => -1,
+		'order' => 'ASC'
 
 		);
 
@@ -57,7 +58,7 @@ get_header(); ?>
 
 	<div class="team-member">
 		<div class="bio-pic">
-			<?php echo wp_get_attachment_image( $image, 'medium' ); ?>
+			<?php echo wp_get_attachment_image( $image, 'full' ); ?>
 		</div>
 		<article>
 			<div class="header-wrapper">

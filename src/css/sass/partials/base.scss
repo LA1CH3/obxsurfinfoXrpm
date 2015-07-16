@@ -182,7 +182,7 @@ main {
 				display: block;
 				@include span-columns(4.2);
 				margin-right: 0;
-				margin-bottom: 7px;
+				margin-bottom: 4px;
 				&:last-child {
 					margin-bottom: 0;
 				}
@@ -436,7 +436,7 @@ main {
 				margin: 0 auto;
 			}
 			@include media(769px){
-				@include span-columns(2);
+				@include span-columns(3);
 			}
 		}
 		article {
@@ -462,6 +462,7 @@ main {
 				left: 45px;
 				font-style: italic;
 				color: grey;
+				margin:  1em 0;
 			}
 			p {
 				font-size: 12px;
@@ -469,7 +470,7 @@ main {
 			}
 			@include span-columns(12);
 			@include media(769px){
-				@include span-columns(10);
+				@include span-columns(9);
 			}
 		}
 	}
@@ -741,6 +742,9 @@ main {
 		}
 	}
 	.recent-list-left {
+		h2 {
+			text-align: center;
+		}
 		.blog-snippet {
 			border-bottom: 1px solid $grey;
 			margin-bottom: 10px;
@@ -831,9 +835,25 @@ main {
 
 // subscribe page
 .subscribe {
-	.stc-subscribe-wrapper {
-		width: 66%;
+	.sub_splash {
 		float: left;
+		width: 100%;
+		margin-top: 15px;
+		img {
+			display: block;
+			margin: 0 auto;
+		}
+		@include media(769px){
+			width: 33%;
+			margin-top: 0;
+		}
+	}
+	.stc-subscribe-wrapper {
+		width: 100%;
+		float: left;
+		@include media(769px){
+			width: 66%;
+		}
 		form {
 			& > .checkbox {
 				visibility: hidden;
@@ -860,8 +880,11 @@ main {
 			}
 			input {
 				position: relative;
-				left: -105px;
+				left: -100px;
 				margin-bottom: 15px;
+				@include media(769px){
+					left: -105px;
+				}
 			}
 		}
 	}
@@ -873,6 +896,9 @@ main {
 		background-size: cover;
 		text-transform: uppercase;
 		padding-right: 23px;
+		font-family: Verdana, sans-serif;
+		font-weight: bold;
+		font-size: 0.75em;
 	}
 }
 

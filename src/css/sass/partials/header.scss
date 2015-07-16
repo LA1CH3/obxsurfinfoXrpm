@@ -13,11 +13,16 @@
 		float: left;
 	}
 	.obxad-top-center {
+		min-width: 420px;
+		max-width: 420px;
 		margin-bottom: 15px;
 		@include media(1028px){
 			position: relative;
 			left: 30px;
 			margin-bottom: 0;
+		}
+		@include media(1270px){
+			left: 70px;
 		}
 	}
 	.socials {
@@ -25,14 +30,20 @@
 		position: relative;
 		@media screen and (min-width: 1024px){
 			display: block;
+			width: 28%;
+		}
+		@include media(1270px){
 			width: 33%;
 		}
 		ul {
 			list-style-type: none;
 			position: absolute;
 			top: 0;
-			right: 45%;
+			right: 40%;
 			margin: 0;
+			@include media(1200px){
+				right: 33%;
+			}
 			li {
 				float: left;
 				a {
@@ -71,7 +82,7 @@
 		display: none;
 		position: absolute;
 		top: 0;
-		right: 35px;
+		right: -15px;
 		width: 117px;
 		height: 32px;
 		background-image: url('img/bg-subscribe.png');
@@ -87,6 +98,9 @@
 		}
 		@media screen and (min-width: 1024px){
 			display:block;
+		}
+		@include media(1270px){
+			right: 0px;
 		}
 	}
 }
@@ -104,6 +118,9 @@
 		width: 50%;
 	}
 	@media screen and (min-width: 1024px){
+		width: 30%;
+	}
+	@media screen and (min-width: 1200px){
 		width: 33%;
 	}
 	img {

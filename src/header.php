@@ -102,7 +102,7 @@
 					<!-- nav -->
 					<nav class="nav mobile" role="navigation">
 						<div class="nav-trigger">
-							<h2 class="words">Home</h2>
+							<h2 class="words"><a href="<?php echo site_url(); ?>">Home</a></h2>
 							<span class="hamburger">
 								<img src="<?php echo get_template_directory_uri() . '/img/hamburger.png'; ?>" alt="Mobile Navigation">
 							</span>
