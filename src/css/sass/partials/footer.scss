@@ -12,6 +12,9 @@ footer {
 		padding: 15px;
 		padding-left: 35px;
 		padding-bottom: 50px;
+		a {
+			font-size: 12px;
+		}
 		div {
 			@include span-columns(2);
 			h3 {

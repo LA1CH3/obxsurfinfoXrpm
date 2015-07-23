@@ -51,6 +51,8 @@
  		}
  		&.wind {
  			width: 50%;
+ 			position: relative;
+ 			left: 30px;
  		}
  		&.location {
  			width: 25%;
@@ -61,8 +63,13 @@
  				width: 50%;
  				max-width: 40px;
  			}
+ 			position: relative;
+ 			left: 0px;
  			text-align: right;
  			width: 24%;
+ 			@include media(769px){
+ 				left: 30px;
+ 			}
  		}
  	}
  }
@@ -224,9 +231,17 @@
  	@media screen and (min-width: 768px){
  		width: 50%;
  	}
+ 	.image-contain {
+ 		height: 188px;
+ 		overflow: hidden;
+ 	}
  	.image-contain, p {
  		position: relative;
  		width: 80%;
+ 		img {
+ 			width: 100%;
+ 			height: auto;
+ 		}
  		.date-overlay {
  			position: absolute;
  			bottom: -1px;
@@ -338,6 +353,19 @@
 				}
 			}
 		}
+ }
+
+ // little reset
+ #surfingdata {
+	width: 580px !important;
+	height: 285px;
+	background-color: #27355C;
+	padding: 10px;
+	color: #666666 !important;
+ }
+
+ .wrapper #surfingdata {
+ 	display: none;
  }
 
 

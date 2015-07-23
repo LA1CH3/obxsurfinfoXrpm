@@ -51,6 +51,14 @@
 
         	<?php } ?>
 
+        	<!--[if IE]>
+			<style>
+			    .slick-dots {
+					bottom: 66px !important;
+			    }
+			</style>
+			<![endif]-->
+
 	</head>
 	<body <?php body_class(); ?>>
 
@@ -102,7 +110,11 @@
 					<!-- nav -->
 					<nav class="nav mobile" role="navigation">
 						<div class="nav-trigger">
-							<h2 class="words"><a href="<?php echo site_url(); ?>">Home</a></h2>
+							<h2 class="words">
+							<a href="<?php echo site_url(); ?>">Home</a>
+							<a href="<?php echo site_url('/reports/') ?>">Reports</a>
+							<a href="<?php echo site_url('/blogs/') ?>">Blogs</a>
+							</h2>
 							<span class="hamburger">
 								<img src="<?php echo get_template_directory_uri() . '/img/hamburger.png'; ?>" alt="Mobile Navigation">
 							</span>

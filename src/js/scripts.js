@@ -31,6 +31,11 @@
 
 		hoverAppear($cache.desktopnavItem);
 
+		$(".sub-menu li a").hover(function(e){
+			console.log("test");
+			$(this).parent().toggleClass("sub-hover");
+		});
+
 		// Click appear functions
 
 		function clickAppear($trigger, $item){
@@ -135,9 +140,16 @@
 		$('#stc-subscribe-btn').html('Subscribe');
 
 
+		// ie hack...stupid IE
+		var doc = document.documentElement;
+		doc.setAttribute('data-useragent', navigator.userAgent);
+
+
 
 
 	});
+
+	// $('#buoyclick').fancybox();
 
 $(window).load(function(){
 	$('.preloader').fadeOut();

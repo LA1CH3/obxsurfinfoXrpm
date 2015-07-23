@@ -83,6 +83,7 @@
   stroke-width:2px; 
   color: white;
   font-weight:bold;
+  margin-left: -125px;
 }
 
 #tooltip.hidden {

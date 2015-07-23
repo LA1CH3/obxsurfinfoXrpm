@@ -41,12 +41,14 @@
 	
 			 <div class="recent-featured">
 			 	<div class="image-contain">
-			 		<?php the_post_thumbnail("front_thumb"); ?>
+			 		<a href="<?php the_permalink(); ?>">
+			 			<?php the_post_thumbnail("full"); ?>
+			 		</a>
 			 		<div class="date-overlay">
 			 			<p><?php the_time(get_option('date_format')); ?></p>
 			 		</div>
 			 	</div>
-			 	<h3><?php the_title(); ?></h3>
+			 	<h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
 			 	<p><?php the_excerpt(); ?></p>
 			 </div>
 

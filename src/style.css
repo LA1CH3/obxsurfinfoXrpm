@@ -114,7 +114,8 @@ body {
   background-color: #fff;
   background-image: url("img/bg.png");
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 100%;
+  background-color: black;
 }
 
 section::after {
@@ -134,6 +135,7 @@ h2 {
 img {
   max-width: 100%;
   vertical-align: middle;
+  image-rendering: optimizeSpeed;
 }
 
 a {
@@ -168,8 +170,20 @@ input[type="search"] {
   text-shadow: none;
 }
 
+#fancybox_content {
+  width: 600px;
+}
+
+.aw-emergency-header {
+  display: none;
+}
+
 .slick-slider {
   margin-bottom: 5px !important;
+}
+
+.slider-partners .slick-slide {
+  margin-left: 33px;
 }
 
 .slick-next, .slick-prev {
@@ -247,6 +261,7 @@ input[type="search"] {
 
 .slick-dots {
   bottom: 80px !important;
+  padding: 0;
 }
 .slick-dots li {
   margin: 0 17px !important;
@@ -745,7 +760,8 @@ main {
   -webkit-margin-after: 0em;
 }
 .nav-trigger .words a {
-  font-size: 100%;
+  font-size: 65%;
+  padding-right: 5px;
 }
 .nav-trigger .hamburger {
   position: absolute;
@@ -758,8 +774,8 @@ main {
   position: absolute;
   z-index: 100;
   top: 0;
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   background-color: rgba(55, 104, 185, 0.9);
   text-align: center;
   padding-top: 30%;
@@ -822,19 +838,31 @@ nav.desktop .sub-menu {
   margin-top: 10px;
 }
 nav.desktop .sub-menu li {
+  width: 100%;
+  position: relative;
+  z-index: 11;
+  margin: 0;
+}
+nav.desktop .sub-menu li a {
+  font-size: 12px;
+  color: white;
   float: none;
   display: block;
   position: relative;
   right: 4px;
-  width: 105%;
+  width: 100%;
   z-index: 10;
   height: 50px;
-  padding-top: 13px;
   margin: 0;
-  border: 2px solid black;
 }
-nav.desktop .sub-menu li a {
-  font-size: 12px;
+nav.desktop .sub-menu li a:hover {
+  color: black !important;
+}
+
+nav.desktop ul li.sub-hover {
+  background-color: #fb5701;
+  background-image: -webkit-linear-gradient(top, #fb5701, #642300);
+  background-image: linear-gradient(to bottom,#fb5701, #642300);
 }
 
 /**
@@ -857,6 +885,9 @@ footer .footer-desktop::after {
   clear: both;
   content: "";
   display: table;
+}
+footer .footer-desktop a {
+  font-size: 12px;
 }
 footer .footer-desktop div {
   float: left;
@@ -1060,7 +1091,7 @@ main {
 }
 .page-template-page-report-nocam .report .row article {
   position: relative;
-  bottom: 434px;
+  bottom: 425px;
 }
 
 .report {
@@ -1112,7 +1143,10 @@ main {
   color: #3768b9;
 }
 .report .report-subtitle.report-subtitle-buoy {
-  margin-right: 15px;
+  margin-right: 25px;
+}
+.report .report-subtitle.report-subtitle-wave {
+  margin-right: 25px;
 }
 .report .row {
   padding: 2px;
@@ -1156,9 +1190,6 @@ main {
   overflow-x: scroll;
   margin: -10px -20px -10px -40px;
 }
-.report .row #widget #tooltip {
-  display: none;
-}
 .report .row #widget #mainwidget {
   height: 340px;
 }
@@ -1169,7 +1200,7 @@ main {
     display: block;
     margin-right: 2.3576515979%;
     width: 74.4105871005%;
-    margin: -30px -30px -30px -40px;
+    margin: -30px -30px -33px -45px;
   }
   .report .row #widget:last-child {
     margin-right: 0;
@@ -1200,8 +1231,8 @@ main {
     float: left;
     display: block;
     margin-right: 2.3576515979%;
-    width: 65.8807828007%;
-    margin-right: 0.5%;
+    width: 66.2219749727%;
+    margin-right: 0.2%;
   }
   .report .row .obxad-report-long:last-child {
     margin-right: 0;
@@ -1219,6 +1250,8 @@ main {
     width: 33.4675264613%;
     margin-right: 0;
     margin-bottom: 4px;
+    float: right;
+    clear: right;
   }
   .report .row .obxad-report-short:last-child {
     margin-right: 0;
@@ -1247,8 +1280,7 @@ main {
 @media screen and (min-width: 769px) {
   .report .row #mediaspace_wrapper, .report .row .jwplayer {
     float: left;
-    width: 65.9% !important;
-    margin-right: 0.5%;
+    width: 66.2% !important;
   }
 }
 .report .row .subscribe-box {
@@ -1303,11 +1335,15 @@ main {
     float: left;
     display: block;
     margin-right: 2.3576515979%;
-    width: 65.8807828007%;
+    width: 66.1366769297%;
+    margin-right: 0 !important;
   }
   .report .row article:last-child {
     margin-right: 0;
   }
+}
+.report .row .non-report-art {
+  min-height: 108px !important;
 }
 .report .row .socials {
   float: right;
@@ -1661,6 +1697,7 @@ main {
     display: block;
     margin-right: 2.3576515979%;
     width: 30.4820949564%;
+    margin: 1.4%;
     min-height: 180px;
     height: 464px;
   }
@@ -1670,16 +1707,25 @@ main {
 }
 .category .recent-featured .image-contain {
   height: 295px;
+  position: relative;
   overflow: hidden;
 }
 .category .recent-featured img {
   display: block;
-  margin: 0 auto;
-  height: 92%;
-  width: 100%;
+  height: 100%;
+  max-width: initial;
+  position: absolute;
+  top: -9999px;
+  bottom: -9999px;
+  left: -9999px;
+  right: -9999px;
+  margin: auto;
 }
 .category .recent-featured .date-overlay {
   background-color: black;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
 }
 .category .recent-featured .date-overlay p {
   margin: 0;
@@ -2158,7 +2204,7 @@ main {
   width: 49%;
 }
 .subscribe .stc-subscribe-wrapper .stc-categories .checkbox label {
-  font-size: 150%;
+  font-size: 130%;
   font-style: italic;
 }
 .subscribe .stc-subscribe-wrapper #stc-unsubscribe-checkbox {
@@ -2189,6 +2235,31 @@ main {
   font-family: Verdana, sans-serif;
   font-weight: bold;
   font-size: 0.75em;
+}
+
+.reports main ul.reports-list, .blogs main ul.reports-list {
+  list-style-type: none;
+}
+.reports main ul.reports-list li a, .blogs main ul.reports-list li a {
+  display: block;
+  width: 111%;
+  margin-left: -5.5%;
+  text-align: center;
+  height: 50px;
+  padding-top: 15px;
+  background: #3768b9;
+  /* Old browsers */
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #3768b9), color-stop(44%, #3160ae), color-stop(100%, #143f83));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #3768b9 0%, #3160ae 44%, #143f83 100%);
+  /* Chrome10+,Safari5.1+ */
+  /* Opera 11.10+ */
+  /* IE10+ */
+  background: linear-gradient(to bottom, #3768b9 0%, #3160ae 44%, #143f83 100%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3768b9', endColorstr='#143f83',GradientType=0 );
+  /* IE6-9 */
 }
 
 .page-template-default .row {
@@ -2300,6 +2371,18 @@ main {
   top: 35px;
 }
 
+html[data-useragent*='Mozilla/5.0 (Windows NT 6.3; WOW64; Trident/7.0; .NET4.0C; .NET4.0E; .NET CLR 2.0.50727; .NET CLR 3.0.30729; .NET CLR 3.5.30729; rv:11.0) like Gecko'] .slick-dots {
+  bottom: 66px !important;
+}
+
+html[data-useragent*='Mozilla/5.0 (Windows NT 10.0; WOW64; Trident/7.0; Touch; .NET4.0C; .NET4.0E; .NET CLR 2.0.50727; .NET CLR 3.0.30729; .NET CLR 3.5.30729; Tablet PC 2.0; InfoPath.3; ASU2JS; rv:11.0) like Gecko'] .slick-dots {
+  bottom: 66px !important;
+}
+
+html[data-useragent*='Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.71 Safari/537.36 Edge/12.0'] .slick-dots {
+  bottom: 66px !important;
+}
+
 /**
  * partials/frontpage
  * ---
@@ -2362,11 +2445,15 @@ main {
 }
 .vid-info div.wind {
   width: 50%;
+  position: relative;
+  left: 30px;
 }
 .vid-info div.location {
   width: 25%;
 }
 .vid-info div.last {
+  position: relative;
+  left: 0px;
   text-align: right;
   width: 24%;
 }
@@ -2374,6 +2461,11 @@ main {
   float: left;
   width: 50%;
   max-width: 40px;
+}
+@media screen and (min-width: 769px) {
+  .vid-info div.last {
+    left: 30px;
+  }
 }
 
 .slider {
@@ -2562,9 +2654,17 @@ main {
     width: 50%;
   }
 }
+.recent-featured-left .image-contain, .recent-featured-right .image-contain {
+  height: 188px;
+  overflow: hidden;
+}
 .recent-featured-left .image-contain, .recent-featured-left p, .recent-featured-right .image-contain, .recent-featured-right p {
   position: relative;
   width: 80%;
+}
+.recent-featured-left .image-contain img, .recent-featured-left p img, .recent-featured-right .image-contain img, .recent-featured-right p img {
+  width: 100%;
+  height: auto;
 }
 .recent-featured-left .image-contain .date-overlay, .recent-featured-left p .date-overlay, .recent-featured-right .image-contain .date-overlay, .recent-featured-right p .date-overlay {
   position: absolute;
@@ -2689,4 +2789,16 @@ main {
 }
 .home .mobile-footer ul li a {
   color: #fb5701;
+}
+
+#surfingdata {
+  width: 580px !important;
+  height: 285px;
+  background-color: #27355C;
+  padding: 10px;
+  color: #666666 !important;
+}
+
+.wrapper #surfingdata {
+  display: none;
 }

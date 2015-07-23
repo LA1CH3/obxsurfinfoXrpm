@@ -14,8 +14,9 @@ get_header(); ?>
 	$title = get_the_title();
 	$title = str_replace(array(" Surf Report", " Kiteboarding Report"), "", $title);
 
-	// wave system history url
+	// wave system history/buoy data url
 	$wsh = get_field('wsh');
+	$cbd = get_field('cbd');
 
 	global $post;
 	$post_slug = $post->post_name;
@@ -101,7 +102,8 @@ get_header(); ?>
 
 <h2 class="report-title"><?php the_title(); ?></h2>
 <div class="report-subtitles">
-	<span class="report-subtitle report-subtitle-buoy">Current Buoy Data</span><span class="report-subtitle report-subtitle-wave"><a href="<?php echo $wsh; ?>">Wave System History</a></span>
+	<span class="report-subtitle report-subtitle-buoy"><a href="#surfingdata" id="buoyclick" class="fancybox-inline">Current Buoy Data</a></span><span class="report-subtitle report-subtitle-wave"><a href="<?php echo $wsh; ?>">Wave System History</a></span><a href="#"><img src="<?php echo get_template_directory_uri() . 
+	'/img/info.png'; ?>" alt="Learn About Our Technology"></a>
 </div>
 <div class="row">
 	<iframe src="http://mapsengine.google.com/map/embed?mid=zLwzMpoYZbnw.kEvGYE-B2rHw" height="300" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe>
@@ -218,8 +220,6 @@ updateWidget(shortname);
 <?php endwhile; endif; wp_reset_postdata(); ?>
 
 <div class="row reporter">
-	<article>
-		<h2><?php the_title(); ?></h2>
 
 		<?php
 
@@ -244,6 +244,8 @@ updateWidget(shortname);
 				while($surfquery->have_posts()) : $surfquery->the_post();
 
 		 ?>
+		 		<article>
+					<h2><?php the_title(); ?></h2>
 		 			<div class="socials header-container">
 						<ul>
 							<li>
@@ -301,7 +303,8 @@ updateWidget(shortname);
 	<?php endwhile;
 
 		else: ?>
-			<h3 class="no-report">Our reporters are currently out grabbing the latest conditions for you. Check back soon for today's report!</h3>
+		<article class="non-report-art">
+			<h3 class="no-report"></h3>
 		</article>
 
 		<?php endif; 
@@ -398,6 +401,10 @@ updateWidget(shortname);
 		'/img/logo-blue.png'; ?>" alt="OBX Surf Info">
 		<?php html5blank_mobilenav(); ?>
 	</div>
+	<div id="surfingdata" style="">
+<!--/* SHARED BUOY WIDGET */-->
+<p class="nomargin"><iframe id="surfingdatas" src="http://dev.obxsurfinfo.com/surfdata.php" frameborder="0" scrolling="no" align="top" width="560" height="125"></iframe></p>
+<img src="<?php echo $cbd; ?>" width="560px" /></div> 
 </main>
 
 <?php get_footer(); ?>

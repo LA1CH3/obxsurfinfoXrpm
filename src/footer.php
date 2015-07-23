@@ -6,7 +6,7 @@
 						<h3>About</h3>
 						<ul>
 							<li><a href="<?php echo site_url('team/'); ?>">Team</a></li>
-							<li><a href="<?php echo site_url('technology/'); ?>">Technology</a></li>
+							<li><a href="<?php echo site_url('category/technology/'); ?>">Technology</a></li>
 							<li><a href="<?php echo site_url('our-story/'); ?>">Our Story</a></li>
 							<li><a href="<?php echo site_url('lees-lil-shore-breakers/'); ?>">Lee's Lil Shore Breakers</a></li>
 						</ul>
@@ -30,7 +30,8 @@
 						<h3>Contact</h3>
 						<ul>
 							<li><a href="mailto:info@obxsurfinfo.com">Email Us</a></li>
-							<li><a href="<?php echo site_url('advertise/'); ?>">Advertise</a></li>
+							<li><a href="<?php echo site_url('advertise-with-us/'); ?>">Advertise</a></li>
+							<li><a href="<?php echo site_url('disclaimer/'); ?>">Legal/Copyright</a></li>
 							<li>PO 125</li>
 							<li>Kill Devil Hills, NC 27948</li>
 						</ul>

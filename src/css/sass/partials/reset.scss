@@ -54,7 +54,8 @@ body {
   background-color: $body-bg;
   background-image: url("img/bg.png");
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 100%;
+  background-color: black;
 }
 
 section {
@@ -74,6 +75,7 @@ img {
   max-width: 100%;
   // Omit space caused by default style, between images lines
   vertical-align: middle;
+  @include image-rendering(optimizeSpeed);
 }
 
 a {
@@ -109,9 +111,23 @@ input[type="search"] {
 
 //// Custom resets
 
+//fancybox
+#fancybox_content {
+  width: 600px;
+}
+
+// weather widget reset
+.aw-emergency-header {
+  display: none;
+}
+
 // slick slider resets
 .slick-slider {
   margin-bottom: 5px !important;
+}
+
+.slider-partners .slick-slide {
+  margin-left: 33px;
 }
 
 .slick-next, .slick-prev {
@@ -182,6 +198,7 @@ input[type="search"] {
 
 .slick-dots {
   bottom: 80px !important;
+  padding: 0;
   li {
     margin: 0 17px !important;
     &.slick-active {
@@ -198,6 +215,8 @@ input[type="search"] {
     height: 10px !important;
   }
 }
+
+
 
 // firefox only fixes...
 @-moz-document url-prefix() { 
