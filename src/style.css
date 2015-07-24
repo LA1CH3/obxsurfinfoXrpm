@@ -703,6 +703,114 @@ main {
   background-position: -106px 44px;
 }
 
+.subscribe {
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 15px;
+  width: 117px;
+  height: 32px;
+  background-image: url("img/bg-subscribe.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.subscribe span {
+  position: absolute;
+  color: white;
+  text-transform: uppercase;
+  top: 7px;
+  left: 14px;
+  font-size: 0.75em;
+}
+@media screen and (min-width: 1024px) {
+  .subscribe {
+    display: block;
+  }
+}
+@media screen and (min-width: 1270px) {
+  .subscribe {
+    right: 17px;
+  }
+}
+
+.subscribe-input {
+  position: relative;
+}
+
+@media screen and (min-width: 1270px) {
+  .single .subscribe {
+    right: 5px;
+  }
+}
+
+#loading2 {
+  display: block;
+  position: absolute;
+  margin: 30px 0 0 100px;
+  width: 80px;
+  height: 80px;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  top: 35%;
+}
+
+#loading2 #outerCircle {
+  display: block;
+  position: absolute;
+  margin: 0;
+  width: 250px;
+  height: 250px;
+  border-top: 7px solid #06F;
+  border-bottom: 7px solid #06F;
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+  border-radius: 160px;
+  -moz-border-radius: 160px;
+  -webkit-border-radius: 160px;
+  -ms-border-radius: 160px;
+  -o-border-radius: 160px;
+  z-index: 1000;
+}
+
+#loading2 #outerCircle {
+  box-shadow: 0 0 20px #06F;
+  -moz-box-shadow: 0 0 20px #06F;
+  -ms-box-shadow: 0 0 20px #06F;
+  -o-box-shadow: 0 0 20px #06F;
+  -webkit-box-shadow: 0 0 20px #06F;
+  -webkit-animation: cwSpin 1s linear .8s infinite;
+  -ms-animation: cwSpin .666s linear .8s infinite;
+  animation: cwSpin .666s linear .8s infinite;
+}
+
+@-webkit-keyframes cwSpin {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+@-ms-keyframes cwSpin {
+  0% {
+    -ms-transform: rotate(0deg);
+  }
+  100% {
+    -ms-transform: rotate(360deg);
+  }
+}
+@keyframes cwSpin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
 /**
  * partials/nav
  * ---
@@ -2260,6 +2368,128 @@ main {
   /* W3C */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3768b9', endColorstr='#143f83',GradientType=0 );
   /* IE6-9 */
+}
+
+.surf-cams .cams::after {
+  clear: both;
+  content: "";
+  display: table;
+}
+.surf-cams .row::after {
+  clear: both;
+  content: "";
+  display: table;
+}
+.surf-cams .row .surf-title {
+  width: 100%;
+}
+@media screen and (min-width: 769px) {
+  .surf-cams .row .surf-title {
+    width: 63%;
+    display: inline-block;
+  }
+}
+.surf-cams .row .header-break {
+  width: 100%;
+}
+@media screen and (min-width: 769px) {
+  .surf-cams .row .header-break {
+    display: inline-block;
+    width: 100%;
+  }
+}
+.surf-cams .cam-map {
+  display: none;
+  width: 35%;
+  float: right;
+  margin-top: -75px;
+}
+@media screen and (min-width: 769px) {
+  .surf-cams .cam-map {
+    display: block;
+  }
+}
+.surf-cams #mediaspace_wrapper {
+  width: 100%;
+}
+.surf-cams #mediaspace_wrapper, .surf-cams #mediaspace1_wrapper, .surf-cams #mediaspace2_wrapper, .surf-cams .second-cam {
+  width: 100% !important;
+}
+.surf-cams .mob {
+  display: block !important;
+  width: 100% !important;
+  max-width: 420px;
+  margin: 3px auto 0;
+}
+@media screen and (min-width: 769px) {
+  .surf-cams .mob {
+    display: none !important;
+  }
+}
+@media screen and (min-width: 769px) {
+  .surf-cams #mediaspace_wrapper {
+    float: left;
+    display: block;
+    margin-right: 2.3576515979%;
+    width: 63.7483317257%;
+    width: 64.4% !important;
+    margin-right: 0.5% !important;
+  }
+  .surf-cams #mediaspace_wrapper:last-child {
+    margin-right: 0;
+  }
+  .surf-cams #mediaspace1_wrapper, .surf-cams #mediaspace2_wrapper {
+    float: left;
+    display: block;
+    margin-right: 2.3576515979%;
+    width: 63.7483317257%;
+    width: 100% !important;
+    margin-right: 0.5%;
+  }
+  .surf-cams #mediaspace1_wrapper:last-child, .surf-cams #mediaspace2_wrapper:last-child {
+    margin-right: 0;
+  }
+  .surf-cams .second-cam {
+    float: left;
+    width: 64.4% !important;
+  }
+  .surf-cams .obxad-report-long {
+    float: left;
+    display: block;
+    margin-right: 2.3576515979%;
+    width: 63.7483317257%;
+    margin-right: 0;
+    margin-right: 0.5%;
+  }
+  .surf-cams .obxad-report-long:last-child {
+    margin-right: 0;
+  }
+  .surf-cams .obxad-report-short {
+    float: left;
+    display: block;
+    margin-right: 2.3576515979%;
+    width: 35.1734873213%;
+  }
+  .surf-cams .obxad-report-short:last-child {
+    margin-right: 0;
+  }
+  .surf-cams .obxad-report-short.sidebar {
+    float: left;
+    display: block;
+    margin-right: 2.3576515979%;
+    width: 35.1734873213%;
+    float: right;
+    margin: 0;
+    margin-bottom: 5px;
+  }
+  .surf-cams .obxad-report-short.sidebar:last-child {
+    margin-right: 0;
+  }
+  .surf-cams .subscribe-desktop {
+    float: right;
+    padding: 0;
+    padding-top: 15px;
+  }
 }
 
 .page-template-default .row {

@@ -943,6 +943,89 @@ main {
 	}
 }
 
+.surf-cams {
+	.cams {
+		@include clearfix;
+	}
+	.row {
+		@include clearfix;
+		.surf-title {
+			width: 100%;
+			@include media(769px){
+				width: 63%;
+				display: inline-block;
+			}
+		}
+		.header-break {
+			width: 100%;
+			@include media(769px){
+				display: inline-block;
+				width: 100%;
+			}
+		}
+	}
+	.cam-map {
+		display: none;
+		width: 35%;
+		float: right;
+		margin-top: -75px;
+		@include media(769px){
+			display: block;
+		}
+	}
+	#mediaspace_wrapper {
+		width: 100%;
+	}
+	#mediaspace_wrapper, #mediaspace1_wrapper, #mediaspace2_wrapper, .second-cam {
+		width: 100% !important;
+	}
+	.mob {
+		display: block !important;
+		width: 100% !important;
+		max-width: 420px;
+		margin: 3px auto 0;
+		@include media(769px){
+			display: none !important;
+		}
+	}
+	@include media(769px){
+		#mediaspace_wrapper {
+			@include span-columns(7.75);
+			width: 64.4% !important;
+			margin-right: 0.5% !important;
+		}
+		#mediaspace1_wrapper, #mediaspace2_wrapper {
+			@include span-columns(7.75);
+			width: 100% !important;
+			margin-right: 0.5%;
+		}
+		.second-cam {
+			float: left;
+			width: 64.4% !important;
+		}
+		.obxad-report-long {
+			@include span-columns(7.75);
+			@include omega;
+			margin-right: 0.5%;
+		}
+		.obxad-report-short {
+			@include span-columns(4.4);
+		}
+		.obxad-report-short.sidebar {
+			@include span-columns(4.4);
+			float: right;
+			margin: 0;
+			margin-bottom: 5px;
+		}
+		.subscribe-desktop {
+			float: right;
+			padding: 0;
+			padding-top: 15px;
+		}
+
+	}
+}
+
 // just a default page
 .page-template-default {
 	.row {

@@ -70,13 +70,10 @@
 			<img src="<?php echo get_template_directory_uri() . '/img/header-subscribe.png'; ?>" alt="#">
 			<p>Be informed on what's happening on the Outer Banks and never miss an event. Subscribe today and we'll deliver all the goods directly to your email account. It's easy.</p>
 			<div class="subscribe-input">
-				<h3>Enter Your Email Here:</h3>
-				<form class="search-bar" role="search">
-				  <input type="search" placeholder="Enter Search" />
-				  <button type="submit">
-				    Subscribe
-				  </button>
-				</form>
+				<h3>Click here to subscribe:</h3>
+					<form class="search-bar" role="search">
+						<a class="subscribe" href="<?php echo site_url('/subscribe/') ?>"><span>Subscribe</span></a>
+					</form>
 			</div>
 		</div>
 		<div class="obxad full">
@@ -248,13 +245,10 @@
 			<img src="<?php echo get_template_directory_uri() . '/img/header-subscribe.png'; ?>" alt="#">
 			<p>Be informed on what's happening on the Outer Banks and never miss an event. Subscribe today and we'll deliver all the goods directly to your email account. It's easy.</p>
 			<div class="subscribe-input">
-				<h3>Enter Your Email Here:</h3>
-				<form class="search-bar" role="search">
-				  <input type="search" placeholder="Enter Search" />
-				  <button type="submit">
-				    Subscribe
-				  </button>
-				</form>
+				<h3>Click here to subscribe:</h3>
+					<form class="search-bar" role="search">
+						<a class="subscribe" href="<?php echo site_url('/subscribe/') ?>"><span>Subscribe</span></a>
+					</form>
 			</div>
 		</div>
 		<div class="mobile-footer">

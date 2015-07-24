@@ -63,7 +63,9 @@
 	<body <?php body_class(); ?>>
 
 	<div class="preloader">
-		<div class="quiver"><span class="arrows st"></span><span class="arrows nd"></span><span class="arrows rd"></span><span class="arrows th"></span><span class="arrows fth"></span><span class="loading">Loading......</span></div>
+		<span id="loading2">
+                        <span id="outerCircle"></span>
+        </span>
 	</div>
 	
 

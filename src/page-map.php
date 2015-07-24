@@ -31,18 +31,16 @@ get_header(); ?>
 
 	</div>
 	<h2 class="header-break">Interactive Wave Map<span>click below for reports and data</span></h2>
-		<iframe src="http://mapsengine.google.com/map/embed?mid=zLwzMpoYZbnw.kEvGYE-B2rHw" height="1085" width="100%" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe>
+		<!-- <iframe src="http://mapsengine.google.com/map/embed?mid=zLwzMpoYZbnw.kEvGYE-B2rHw" height="1085" width="100%" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe> -->
+		<iframe class="surf-map" src="https://www.google.com/maps/d/embed?mid=z3-rd3vo__6g.kbhErvatmfuM" frameborder="0" width="100%" height="1085"></iframe>
 	<div class="subscribe-box subscribe-desktop">
 			<img src="<?php echo get_template_directory_uri() . '/img/header-subscribe.png'; ?>" alt="#">
 			<p>Be informed on what's happening on the Outer Banks and never miss an event. Subscribe today and we'll deliver all the goods directly to your email account. It's easy.</p>
 			<div class="subscribe-input">
-				<h3>Enter Your Email Here:</h3>
-				<form class="search-bar" role="search">
-				  <input type="search" placeholder="Enter Search" />
-				  <button type="submit">
-				    Subscribe
-				  </button>
-				</form>
+				<h3>Click here to subscribe:</h3>
+					<form class="search-bar" role="search">
+						<a class="subscribe" href="<?php echo site_url('/subscribe/') ?>"><span>Subscribe</span></a>
+					</form>
 			</div>
 		</div>
 		<div class="sidebar-ads-wrap">
@@ -109,13 +107,10 @@ get_header(); ?>
 			<img src="<?php echo get_template_directory_uri() . '/img/header-subscribe.png'; ?>" alt="#">
 			<p>Be informed on what's happening on the Outer Banks and never miss an event. Subscribe today and we'll deliver all the goods directly to your email account. It's easy.</p>
 			<div class="subscribe-input">
-				<h3>Enter Your Email Here:</h3>
-				<form class="search-bar" role="search">
-				  <input type="search" placeholder="Enter Search" />
-				  <button type="submit">
-				    Subscribe
-				  </button>
-				</form>
+				<h3>Click here to subscribe:</h3>
+					<form class="search-bar" role="search">
+						<a class="subscribe" href="<?php echo site_url('/subscribe/') ?>"><span>Subscribe</span></a>
+					</form>
 			</div>
 		</div>
 
