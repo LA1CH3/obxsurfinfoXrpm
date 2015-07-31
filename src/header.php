@@ -63,8 +63,11 @@
 	<body <?php body_class(); ?>>
 
 	<div class="preloader">
+	<img src="<?php echo get_template_directory_uri() . '/img/logo-blue.png'; ?>" alt="OBX Surf Info">
 		<span id="loading2">
-                        <span id="outerCircle"></span>
+                        <span id="outerCircle">
+                        	
+                        </span>
         </span>
 	</div>
 	
@@ -86,9 +89,9 @@
 					<!-- /logo -->
 
 					<!-- ad -->
-					<div class="obxad obxad-top-center header-container">
-						<p>ad space here</p>
-					</div>
+					<a href="#" class="obxad obxad-top-center header-container">
+						<script type="text/javascript" src="http://dev.obxsurfinfo.com/wp-content/plugins/oiopub-direct/js.php#type=banner&align=center&zone=1"></script>
+					</a>
 					<!-- /ad -->
 
 					<div class="socials header-container">

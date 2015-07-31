@@ -122,8 +122,15 @@ updateWidget(shortname);
 </div>
 
 <div class="row">
-	<a class="obxad obxad-report-long" href="#">Ad goes here</a>
-	<a href="#" class="obxad obxad-report-short">Ad goes here</a>
+	<a class="obxad obxad-report-long mob-zone1" href="#">
+		<script type="text/javascript" src="http://dev.obxsurfinfo.com/wp-content/plugins/oiopub-direct/js.php#type=banner&align=center&zone=1&refresh=5"></script>
+	</a>
+	<a class="obxad obxad-report-long mob-zone2" href="#">
+		<script type="text/javascript" src="http://dev.obxsurfinfo.com/wp-content/plugins/oiopub-direct/js.php#type=banner&align=center&zone=2&refresh=5"></script>
+	</a>
+	<a href="#" class="obxad obxad-report-short">
+	<script type="text/javascript" src="http://dev.obxsurfinfo.com/wp-content/plugins/oiopub-direct/js.php#type=banner&align=center&zone=3&refresh=5"></script>
+	</a>
 </div>
 
 <div class="row">
@@ -197,9 +204,13 @@ updateWidget(shortname);
 
 			</script>
 
-			<a class="obxad obxad-report-short" href="#">Ad goes here</a>
+			<a class="obxad obxad-report-short" href="#">
+				<script type="text/javascript" src="http://dev.obxsurfinfo.com/wp-content/plugins/oiopub-direct/js.php#type=banner&align=center&zone=3&refresh=5"></script>
+			</a>
 
-			<a class="obxad obxad-report-short" href="#">Ad goes here</a>
+			<a class="obxad obxad-report-short" href="#">
+				<script type="text/javascript" src="http://dev.obxsurfinfo.com/wp-content/plugins/oiopub-direct/js.php#type=banner&align=center&zone=3&refresh=5"></script>
+			</a>
 
 			<div class="subscribe-box subscribe-desktop">
 			<img src="<?php echo get_template_directory_uri() . '/img/header-subscribe.png'; ?>" alt="#">
@@ -324,11 +335,19 @@ updateWidget(shortname);
 		</div>
 
 		<?php if(have_posts()) : while(have_posts()) : the_post(); ?>
-	<a href="#" class="obxad obxad-report-short mobile-only">Ad goes here</a>
-	<a href="#" class="obxad obxad-report-short">Ad goes here</a>
-	<a href="#" class="obxad obxad-report-short">Ad goes here</a>
-	<a href="#" class="obxad obxad-report-short">Ad goes here</a>
-	<a href="#" class="obxad obxad-report-short">Ad goes here</a>
+	<a href="#" class="obxad obxad-report-short mobile-only"><script type="text/javascript" src="http://dev.obxsurfinfo.com/wp-content/plugins/oiopub-direct/js.php#type=banner&align=center&zone=2&refresh=5"></script></a>
+	<a href="#" class="obxad obxad-report-short">
+		<script type="text/javascript" src="http://dev.obxsurfinfo.com/wp-content/plugins/oiopub-direct/js.php#type=banner&align=center&zone=4&refresh=5"></script>
+	</a>
+	<a href="#" class="obxad obxad-report-short">
+		<script type="text/javascript" src="http://dev.obxsurfinfo.com/wp-content/plugins/oiopub-direct/js.php#type=banner&align=center&zone=4&refresh=5"></script>
+	</a>
+	<a href="#" class="obxad obxad-report-short">
+		<script type="text/javascript" src="http://dev.obxsurfinfo.com/wp-content/plugins/oiopub-direct/js.php#type=banner&align=center&zone=4&refresh=5"></script>
+	</a>
+	<a href="#" class="obxad obxad-report-short">
+		<script type="text/javascript" src="http://dev.obxsurfinfo.com/wp-content/plugins/oiopub-direct/js.php#type=banner&align=center&zone=4&refresh=5"></script>
+	</a>
 
 </div>
 
@@ -391,8 +410,8 @@ updateWidget(shortname);
 	</div>
 </div>
 <div class="row final-ads">
-		<a href="#" class="obxad obxad-report-short mobile-only">Ad goes here</a>
-		<a href="#" class="obxad obxad-report-short mobile-only">Ad goes here</a>
+		<a href="#" class="obxad obxad-report-short mobile-only"><script type="text/javascript" src="http://dev.obxsurfinfo.com/wp-content/plugins/oiopub-direct/js.php#type=banner&align=center&zone=3&refresh=5"></script></a>
+		<a href="#" class="obxad obxad-report-short mobile-only"><script type="text/javascript" src="http://dev.obxsurfinfo.com/wp-content/plugins/oiopub-direct/js.php#type=banner&align=center&zone=3&refresh=5"></script></a>
 	</div>
 <?php endwhile; endif; wp_reset_postdata(); ?>
 <div class="mobile-footer">

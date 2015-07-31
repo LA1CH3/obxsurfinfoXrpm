@@ -56,7 +56,10 @@ pre {
 
 
 .obxad {
-	background-color: grey;
+	position: relative;
+	background-position: center center;
+	background-size: cover;
+	background-repeat: no-repeat;
 	width: 50%;
 	height: 108px;
 	text-align: center;
@@ -64,6 +67,12 @@ pre {
 	text-transform: uppercase;
 	line-height: 70px;
 	display: none;
+	.oio-banner-zone {
+		position: absolute;
+		left: 0;
+		right: 0;
+		top: 0;
+	}
 	@media screen and (min-width: 768px){
 		display: block;
 	}
@@ -82,9 +91,25 @@ main {
 	}
 	.row article {
 		position: relative;
-		bottom: 425px;
+		bottom: 404px;
 	}
 }
+
+.mob-zone1 {
+		display: inline-block;
+		@include media(1028px){
+			display: none !important;
+		}
+	}
+	.mob-zone2 {
+		display: none !important;
+		@include media(1028px){
+			display: inline-block !important;
+			&.obx-sidebar-ad {
+				display: block !important;
+			}
+		}
+	}
 
 .report {
 	margin-top: -20px;
@@ -1041,6 +1066,16 @@ main {
 	height: 100vh;
 	position: fixed;
 	z-index: 10000;
+	img {
+		width: 10%;
+		display: block;
+		position: absolute;
+		left: 0;
+		right: 0;
+		margin-right: auto;
+		margin-left: auto;
+		top: 46%;
+	}
 }
 .quiver {
   position: fixed;

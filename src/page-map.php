@@ -45,10 +45,10 @@ get_header(); ?>
 		</div>
 		<div class="sidebar-ads-wrap">
 			<a href="#" class="obxad obx-sidebar-ad obx-desktop-ad">
-				Ad Space Here
+				<script type="text/javascript" src="http://dev.obxsurfinfo.com/wp-content/plugins/oiopub-direct/js.php#type=banner&align=center&zone=3&refresh=5"></script>
 			</a>
 			<a href="#" class="obxad obx-sidebar-ad obx-desktop-ad">
-				Ad Space Here
+				<script type="text/javascript" src="http://dev.obxsurfinfo.com/wp-content/plugins/oiopub-direct/js.php#type=banner&align=center&zone=3&refresh=5"></script>
 			</a>
 			<div class="sub-list recent-list-left">
 				<h2>Latest Surf Reports</h2>
@@ -69,9 +69,6 @@ get_header(); ?>
 					<?php $morequery->the_post(); ?>
 						
 					<div class="blog-snippet">
-						<div class="blog-image">
-							<?php the_post_thumbnail("tiny_thumb"); ?>
-						</div>
 						<div class="blog-content">
 							<span><?php the_time(get_option('date_format')); ?> @ <?php the_time(); ?></span>
 							<h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
@@ -80,26 +77,26 @@ get_header(); ?>
 			<?php endwhile; endif; wp_reset_postdata(); ?>	
 			</div>
 			<a href="#" class="obxad obx-sidebar-ad obx-desktop-ad">
-				Ad Space Here
+				<script type="text/javascript" src="http://dev.obxsurfinfo.com/wp-content/plugins/oiopub-direct/js.php#type=banner&align=center&zone=3&refresh=5"></script>
 			</a>
 			<a href="#" class="obxad obx-sidebar-ad obx-desktop-ad">
-				Ad Space Here
+				<script type="text/javascript" src="http://dev.obxsurfinfo.com/wp-content/plugins/oiopub-direct/js.php#type=banner&align=center&zone=3&refresh=5"></script>
 			</a>
 			<a href="#" class="obxad obx-sidebar-ad obx-desktop-ad">
-				Ad Space Here
+				<script type="text/javascript" src="http://dev.obxsurfinfo.com/wp-content/plugins/oiopub-direct/js.php#type=banner&align=center&zone=4&refresh=5"></script>
 			</a>
 			<a href="#" class="obxad obx-sidebar-ad obx-desktop-ad">
-				Ad Space Here
+				<script type="text/javascript" src="http://dev.obxsurfinfo.com/wp-content/plugins/oiopub-direct/js.php#type=banner&align=center&zone=4&refresh=5"></script>
 			</a>
-			<a href="#" class="obxad obx-sidebar-ad obx-mobile-ad">
-				Ad Space Here
+			<a href="#" class="obxad obx-sidebar-ad obx-mobile-ad" style="background-image:url(<?php echo get_template_directory_uri() . '/img/Advertisers/Zone1/badbean.jpg'; ?>);">
+				
 			</a>
-			<a href="#" class="obxad obx-sidebar-ad obx-mobile-ad">
-				Ad Space Here
+			<a href="#" class="obxad obx-sidebar-ad obx-mobile-ad" style="background-image:url(<?php echo get_template_directory_uri() . '/img/Advertisers/Zone2/carolinabrew.jpg'; ?>);">
+				
 			</a>
 		</div>
 		<a href="#" class="obxad full">
-			<p>ad goes here</p>
+			<script type="text/javascript" src="http://dev.obxsurfinfo.com/wp-content/plugins/oiopub-direct/js.php#type=banner&align=center&zone=2&refresh=5"></script>
 		</a>
 		
 

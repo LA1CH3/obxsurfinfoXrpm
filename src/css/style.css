@@ -728,7 +728,7 @@ main {
   margin: 30px 0 0 100px;
   width: 80px;
   height: 80px;
-  left: 0;
+  left: -170px;
   right: 0;
   margin-left: auto;
   margin-right: auto;
@@ -1171,7 +1171,10 @@ pre {
 }
 
 .obxad {
-  background-color: grey;
+  position: relative;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
   width: 50%;
   height: 108px;
   text-align: center;
@@ -1179,6 +1182,12 @@ pre {
   text-transform: uppercase;
   line-height: 70px;
   display: none;
+}
+.obxad .oio-banner-zone {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
 }
 @media screen and (min-width: 768px) {
   .obxad {
@@ -1200,7 +1209,28 @@ main {
 }
 .page-template-page-report-nocam .report .row article {
   position: relative;
-  bottom: 425px;
+  bottom: 404px;
+}
+
+.mob-zone1 {
+  display: inline-block;
+}
+@media screen and (min-width: 1028px) {
+  .mob-zone1 {
+    display: none !important;
+  }
+}
+
+.mob-zone2 {
+  display: none !important;
+}
+@media screen and (min-width: 1028px) {
+  .mob-zone2 {
+    display: inline-block !important;
+  }
+  .mob-zone2.obx-sidebar-ad {
+    display: block !important;
+  }
 }
 
 .report {
@@ -2511,6 +2541,16 @@ main {
   height: 100vh;
   position: fixed;
   z-index: 10000;
+}
+.preloader img {
+  width: 10%;
+  display: block;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin-right: auto;
+  margin-left: auto;
+  top: 46%;
 }
 
 .quiver {

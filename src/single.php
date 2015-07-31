@@ -77,17 +77,17 @@
 			</div>
 		</div>
 		<div class="obxad full">
-			<p>ad goes here</p>
+			<script type="text/javascript" src="http://dev.obxsurfinfo.com/wp-content/plugins/oiopub-direct/js.php#type=banner&align=center&zone=2&refresh=5"></script>
 		</div>
 	</div>
 	<?php break; endwhile; endif; wp_reset_postdata(); ?>
 	<div class="row">
-		<div class="obxad obx-sidebar-ad obx-mobile-ad">
-			Ad Space Here
-		</div>
-		<div class="obxad obx-sidebar-ad obx-mobile-ad">
-			Ad Space Here
-		</div>
+		<a class="obxad obx-sidebar-ad obx-mobile-ad">
+			<script type="text/javascript" src="http://dev.obxsurfinfo.com/wp-content/plugins/oiopub-direct/js.php#type=banner&align=center&zone=1&refresh=5"></script>
+		</a>
+		<a class="obxad obx-sidebar-ad obx-mobile-ad">
+			<script type="text/javascript" src="http://dev.obxsurfinfo.com/wp-content/plugins/oiopub-direct/js.php#type=banner&align=center&zone=2&refresh=5"></script>
+		</a>
 		<div class="latest-posts desktop-main single-more">
 			<h3>If you like this, you may also like:</h3>
 			<?php
@@ -194,18 +194,18 @@
 
 		<?php endwhile; endif; wp_reset_postdata(); ?>
 		</div>
-		<div class="obxad obx-sidebar-ad obx-desktop-ad">
-			Ad Space Here
-		</div>
-		<div class="obxad obx-sidebar-ad obx-desktop-ad">
-			Ad Space Here
-		</div>
-		<div class="obxad obx-sidebar-ad obx-desktop-ad">
-			Ad Space Here
-		</div>
-		<div class="obxad obx-sidebar-ad obx-desktop-ad">
-			Ad Space Here
-		</div>
+		<a href="#" class="obxad obx-sidebar-ad obx-desktop-ad">
+			<script type="text/javascript" src="http://dev.obxsurfinfo.com/wp-content/plugins/oiopub-direct/js.php#type=banner&align=center&zone=3&refresh=5"></script>
+		</a>
+		<a href="#" class="obxad obx-sidebar-ad obx-desktop-ad">
+			<script type="text/javascript" src="http://dev.obxsurfinfo.com/wp-content/plugins/oiopub-direct/js.php#type=banner&align=center&zone=3&refresh=5"></script>
+		</a>
+		<a href="#" class="obxad obx-sidebar-ad obx-desktop-ad">
+			<script type="text/javascript" src="http://dev.obxsurfinfo.com/wp-content/plugins/oiopub-direct/js.php#type=banner&align=center&zone=3&refresh=5"></script>
+		</a>
+		<a href="#" class="obxad obx-sidebar-ad obx-desktop-ad">
+			<script type="text/javascript" src="http://dev.obxsurfinfo.com/wp-content/plugins/oiopub-direct/js.php#type=banner&align=center&zone=3&refresh=5"></script>
+		</a>
 		<div class="ifyoulike">
 			<h3>If you like this, you might like:</h3>
 			<?php

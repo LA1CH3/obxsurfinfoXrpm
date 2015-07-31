@@ -32,8 +32,12 @@ get_header(); ?>
 	</div>
 
 	<div class="row">
-		<a class="obxad obxad-report-long" href="#">Ad goes here</a>
-	    <a href="#" class="obxad obxad-report-short">Ad goes here</a>
+		<a class="obxad obxad-report-long" href="#">
+			<script type="text/javascript" src="http://dev.obxsurfinfo.com/wp-content/plugins/oiopub-direct/js.php#type=banner&align=center&zone=2&refresh=5"></script>
+		</a>
+	    <a href="#" class="obxad obxad-report-short">
+	    	<script type="text/javascript" src="http://dev.obxsurfinfo.com/wp-content/plugins/oiopub-direct/js.php#type=banner&align=center&zone=3&refresh=5"></script>
+	    </a>
 	</div>
 	<div class="row">
 		<script type='text/javascript' src='<?php echo get_template_directory_uri() . '/js/lib/jwplayer.js'; ?>'></script>
@@ -96,7 +100,7 @@ get_header(); ?>
 
 			</script>
 
-			<a class="obxad obxad-report-short mob" href="#">Ad goes here</a>
+			<a class="obxad obxad-report-short mob" href="#"><script type="text/javascript" src="http://dev.obxsurfinfo.com/wp-content/plugins/oiopub-direct/js.php#type=banner&align=center&zone=3&refresh=5"></script></a>
 			
 			<div class="cam-map">
 				<h2 class="header-break">Find Your Break<span>click below for reports and data</span></h2>
@@ -167,9 +171,9 @@ get_header(); ?>
 		   </div>
 		    
 		    <!-- ads -->
-		    <a class="obxad obxad-report-short mob" href="#">Ad goes here</a>
-		    <a href="#" class="obxad obxad-report-short mobile-only sidebar">Ad goes here</a>
-			<a href="#" class="sidebar obxad obxad-report-short">Ad goes here</a>
+		    <a class="obxad obxad-report-short mob" href="#"><script type="text/javascript" src="http://dev.obxsurfinfo.com/wp-content/plugins/oiopub-direct/js.php#type=banner&align=center&zone=3&refresh=5"></script></a>
+		    <a href="#" class="obxad obxad-report-short mobile-only sidebar"><script type="text/javascript" src="http://dev.obxsurfinfo.com/wp-content/plugins/oiopub-direct/js.php#type=banner&align=center&zone=3&refresh=5"></script></a>
+			<a href="#" class="sidebar obxad obxad-report-short"><script type="text/javascript" src="http://dev.obxsurfinfo.com/wp-content/plugins/oiopub-direct/js.php#type=banner&align=center&zone=3&refresh=5"></script></a>
 			<div class="subscribe-box subscribe-desktop">
 				<img src="<?php echo get_template_directory_uri() . '/img/header-subscribe.png'; ?>" alt="Subscribe">
 				<p>Be informed on what's happening on the Outer Banks and never miss an event. Subscribe today and we'll deliver all the goods directly to your email account. It's easy.</p>
@@ -241,10 +245,10 @@ get_header(); ?>
 
 			</script>
 			</div>
-			<a class="obxad obxad-report-short mob" href="#">Ad goes here</a>
-			<a href="#" class="obxad obxad-report-short mobile-only sidebar">Ad goes here</a>
-			<a href="#" class="sidebar obxad obxad-report-short">Ad goes here</a>
-			<a href="#" class="obxad obxad-report-short mobile-only sidebar">Ad goes here</a>
+			<a class="obxad obxad-report-short mob" href="#"><script type="text/javascript" src="http://dev.obxsurfinfo.com/wp-content/plugins/oiopub-direct/js.php#type=banner&align=center&zone=3&refresh=5"></script></a>
+			<a href="#" class="obxad obxad-report-short mobile-only sidebar"><script type="text/javascript" src="http://dev.obxsurfinfo.com/wp-content/plugins/oiopub-direct/js.php#type=banner&align=center&zone=3&refresh=5"></script></a>
+			<a href="#" class="sidebar obxad obxad-report-short"><script type="text/javascript" src="http://dev.obxsurfinfo.com/wp-content/plugins/oiopub-direct/js.php#type=banner&align=center&zone=4&refresh=5"></script></a>
+			<a href="#" class="obxad obxad-report-short mobile-only sidebar"><script type="text/javascript" src="http://dev.obxsurfinfo.com/wp-content/plugins/oiopub-direct/js.php#type=banner&align=center&zone=4&refresh=5"></script></a>
 
 	</div>
 		
@@ -260,8 +264,8 @@ get_header(); ?>
 			</div>
 		</div>
 
-		<a class="obxad obxad-report-short mob" href="#">Ad goes here</a>
-		<a class="obxad obxad-report-short mob" href="#">Ad goes here</a>
+		<a class="obxad obxad-report-short mob" href="#"><script type="text/javascript" src="http://dev.obxsurfinfo.com/wp-content/plugins/oiopub-direct/js.php#type=banner&align=center&zone=3&refresh=5"></script></a>
+		<a class="obxad obxad-report-short mob" href="#"><script type="text/javascript" src="http://dev.obxsurfinfo.com/wp-content/plugins/oiopub-direct/js.php#type=banner&align=center&zone=3&refresh=5"></script></a>
 
 	<div class="mobile-footer">
 		<img src="<?php echo get_template_directory_uri() . 
