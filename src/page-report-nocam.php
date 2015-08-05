@@ -7,7 +7,7 @@ get_header(); ?>
 
 <main role="main" class="report">
 
-<?php if(have_posts()) : while(have_posts()) : the_post();
+	<?php if(have_posts()) : while(have_posts()) : the_post();
 
 	// getting some vars for later 
 	$cat = get_field('category_name');
@@ -17,65 +17,66 @@ get_header(); ?>
 	// wave system history url
 	$wsh = get_field('wsh');
 	$cbd = get_field('cbd');
+	$map = get_field('map');
 
 	global $post;
 	$post_slug = $post->post_name;
-?>
+	?>
 
-<style>
-	@-moz-document url-prefix() { 
-  		.wsarea {
-		    fill:url(/reports/<?php echo $post_slug; ?>/#wsGradient); 
-		}
-		.tideChart {  
-		  fill:url(/reports/<?php echo $post_slug; ?>/#tideGradient);  
-		}
-		.tideArea {
-		  fill:url(/reports/<?php echo $post_slug; ?>/#waterTempGradient); 
-		}
-		.day_row {
-		  fill: url(/reports/<?php echo $post_slug; ?>/#dayGradient);
-		}
-		.dayTitleRect{
-		 fill:url(/reports/<?php echo $post_slug; ?>/#dayTitleGradient);
-		}
-		.tideBlueTitleBackgound{
-		  fill:url(/reports/<?php echo $post_slug; ?>/#waveHeightTitleColor);
-		}
-		.blueTitleBackgound{
-		  fill:url(/reports/<?php echo $post_slug; ?>/#waveHeightTitleColor);
-		}
-		.titleBlackTitleBackgound{
-		  fill:url(/reports/<?php echo $post_slug; ?>/#windspeedTitleColor);
-		}
-		.blackTitleBackgound{  
-		  fill:url(/reports/<?php echo $post_slug; ?>/#windspeedTitleColor);
-		}
-		.metadataTitleBackgound{  
-		  fill:url(/reports/<?php echo $post_slug; ?>/#metadataGradient);
-		}
-		.metadataTitleBackgoundRed{
-		  fill:url(/reports/<?php echo $post_slug; ?>/#metadataGradientRed);
-		}
-		.metadataTitleBackgoundYellow{
-		  fill:url(/reports/<?php echo $post_slug; ?>/#metadataGradientYellow);
-		}
-		.metadataTitleBackgoundGreen{
-		  fill:url(/reports/<?php echo $post_slug; ?>/#metadataGradientGreen);
-		}
-		#waterlevel{   
-		    fill:url(/reports/<?php echo $post_slug; ?>/#waveHeightColor); 
-		}
-		.waterTempLabelRect{
-		  fill:url(/reports/<?php echo $post_slug; ?>/#waterTempGradient); 
-		}
+	<style>
+		@-moz-document url-prefix() { 
+			.wsarea {
+				fill:url(/reports/<?php echo $post_slug; ?>/#wsGradient); 
+			}
+			.tideChart {  
+				fill:url(/reports/<?php echo $post_slug; ?>/#tideGradient);  
+			}
+			.tideArea {
+				fill:url(/reports/<?php echo $post_slug; ?>/#waterTempGradient); 
+			}
+			.day_row {
+				fill: url(/reports/<?php echo $post_slug; ?>/#dayGradient);
+			}
+			.dayTitleRect{
+				fill:url(/reports/<?php echo $post_slug; ?>/#dayTitleGradient);
+			}
+			.tideBlueTitleBackgound{
+				fill:url(/reports/<?php echo $post_slug; ?>/#waveHeightTitleColor);
+			}
+			.blueTitleBackgound{
+				fill:url(/reports/<?php echo $post_slug; ?>/#waveHeightTitleColor);
+			}
+			.titleBlackTitleBackgound{
+				fill:url(/reports/<?php echo $post_slug; ?>/#windspeedTitleColor);
+			}
+			.blackTitleBackgound{  
+				fill:url(/reports/<?php echo $post_slug; ?>/#windspeedTitleColor);
+			}
+			.metadataTitleBackgound{  
+				fill:url(/reports/<?php echo $post_slug; ?>/#metadataGradient);
+			}
+			.metadataTitleBackgoundRed{
+				fill:url(/reports/<?php echo $post_slug; ?>/#metadataGradientRed);
+			}
+			.metadataTitleBackgoundYellow{
+				fill:url(/reports/<?php echo $post_slug; ?>/#metadataGradientYellow);
+			}
+			.metadataTitleBackgoundGreen{
+				fill:url(/reports/<?php echo $post_slug; ?>/#metadataGradientGreen);
+			}
+			#waterlevel{   
+				fill:url(/reports/<?php echo $post_slug; ?>/#waveHeightColor); 
+			}
+			.waterTempLabelRect{
+				fill:url(/reports/<?php echo $post_slug; ?>/#waterTempGradient); 
+			}
 
-	}
-</style>
+		}
+	</style>
 	
 
 
-<div class="before-content">
+	<div class="before-content">
 
 		<nav class="nav desktop" role="navigation">
 			<?php html5blank_nav(); ?>
@@ -98,44 +99,44 @@ get_header(); ?>
 			</div>
 		</div>
 
-</div>
+	</div>
 
-<h2 class="report-title"><?php the_title(); ?></h2>
-<div class="report-subtitles">
-	<span class="report-subtitle report-subtitle-buoy"><a href="#surfingdata" id="buoyclick" class="fancybox-inline">Current Buoy Data</a></span><span class="report-subtitle report-subtitle-wave"><a href="<?php echo $wsh; ?>">Wave System History</a></span><a href="#"><img src="<?php echo get_template_directory_uri() . 
-	'/img/info.png'; ?>" alt="Learn About Our Technology"></a>
-</div>
-<div class="row">
-	<!-- <iframe src="http://mapsengine.google.com/map/embed?mid=zLwzMpoYZbnw.kEvGYE-B2rHw" height="300" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe> -->
-	<iframe class="surf-map" src="https://www.google.com/maps/d/embed?mid=z3-rd3vo__6g.kbhErvatmfuM" frameborder="0" height="300"></iframe>
-	<!-- this will be a custom field -->
-	<?php $shortname = get_field('widget_shortname'); ?>
+	<h2 class="report-title"><?php the_title(); ?></h2>
+	<div class="report-subtitles">
+		<span class="report-subtitle report-subtitle-buoy"><a href="#surfingdata" id="buoyclick" class="fancybox-inline">Current Buoy Data</a></span><span class="report-subtitle report-subtitle-wave"><a href="<?php echo $wsh; ?>">Wave System History</a></span><a href="#"><img src="<?php echo get_template_directory_uri() . 
+		'/img/info.png'; ?>" alt="Learn About Our Technology"></a>
+	</div>
+	<div class="row">
+		<!-- <iframe src="http://mapsengine.google.com/map/embed?mid=zLwzMpoYZbnw.kEvGYE-B2rHw" height="300" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe> -->
+		<iframe class="surf-map" src="<?php echo $map; ?>" frameborder="0" height="300"></iframe>
+		<!-- this will be a custom field -->
+		<?php $shortname = get_field('widget_shortname'); ?>
 		<div id="widget">      
-            <div id="tooltip" class="tooltipMenu" style="">
-        </div>
-	<script>
-		var shortname = <?php echo json_encode($shortname); ?>;
-		var d;
-getStationData();
-updateWidget(shortname);
-	</script>
-</div>
+			<div id="tooltip" class="tooltipMenu" style="">
+			</div>
+			<script>
+				var shortname = <?php echo json_encode($shortname); ?>;
+				var d;
+				getStationData();
+				updateWidget(shortname);
+			</script>
+		</div>
 
-<div class="row">
-	<a class="obxad obxad-report-long mob-zone1" href="#">
-		<script type="text/javascript" src="http://dev.obxsurfinfo.com/wp-content/plugins/oiopub-direct/js.php#type=banner&align=center&zone=1&refresh=5"></script>
-	</a>
-	<a class="obxad obxad-report-long mob-zone2" href="#">
-		<script type="text/javascript" src="http://dev.obxsurfinfo.com/wp-content/plugins/oiopub-direct/js.php#type=banner&align=center&zone=2&refresh=5"></script>
-	</a>
-	<a href="#" class="obxad obxad-report-short">
-	<script type="text/javascript" src="http://dev.obxsurfinfo.com/wp-content/plugins/oiopub-direct/js.php#type=banner&align=center&zone=3&refresh=5"></script>
-	</a>
-</div>
+		<div class="row">
+			<a class="obxad obxad-report-long mob-zone1" href="#">
+				<script type="text/javascript" src="http://dev.obxsurfinfo.com/wp-content/plugins/oiopub-direct/js.php#type=banner&align=center&zone=1&refresh=5"></script>
+			</a>
+			<a class="obxad obxad-report-long mob-zone2" href="#">
+				<script type="text/javascript" src="http://dev.obxsurfinfo.com/wp-content/plugins/oiopub-direct/js.php#type=banner&align=center&zone=2&refresh=5"></script>
+			</a>
+			<a href="#" class="obxad obxad-report-short">
+				<script type="text/javascript" src="http://dev.obxsurfinfo.com/wp-content/plugins/oiopub-direct/js.php#type=banner&align=center&zone=3&refresh=5"></script>
+			</a>
+		</div>
 
-<div class="row">
-	<!-- custom field for the correct video here -->
-	<script type='text/javascript' src='<?php echo get_template_directory_uri() . '/js/lib/jwplayer.js'; ?>'></script>
+		<div class="row">
+			<!-- custom field for the correct video here -->
+			<script type='text/javascript' src='<?php echo get_template_directory_uri() . '/js/lib/jwplayer.js'; ?>'></script>
 
 			<script type="text/javascript">jwplayer.key="HkK82SF6pb3Nsl4jUamA+6I28yoBeFIUZm54ow+2JbI=";</script> 
 
@@ -143,7 +144,7 @@ updateWidget(shortname);
 			$rtmp = get_field('rtmp_video_link');
 			$m3u8 = get_field('m3u8_video_link');
 
-			 ?>
+			?>
 
 			<div id="mediaspace">
 				<a href="<?php echo $m3u8; ?>">WATCH LIVE ON Ipad,Iphone</a>
@@ -202,74 +203,75 @@ updateWidget(shortname);
 				jwplayer().pause(true);
 			}, 30000);
 
-			</script>
+		</script>
 
-			<a class="obxad obxad-report-short" href="#">
-				<script type="text/javascript" src="http://dev.obxsurfinfo.com/wp-content/plugins/oiopub-direct/js.php#type=banner&align=center&zone=3&refresh=5"></script>
-			</a>
+		<a class="obxad obxad-report-short" href="#">
+			<script type="text/javascript" src="http://dev.obxsurfinfo.com/wp-content/plugins/oiopub-direct/js.php#type=banner&align=center&zone=3&refresh=5"></script>
+		</a>
 
-			<a class="obxad obxad-report-short" href="#">
-				<script type="text/javascript" src="http://dev.obxsurfinfo.com/wp-content/plugins/oiopub-direct/js.php#type=banner&align=center&zone=3&refresh=5"></script>
-			</a>
+		<a class="obxad obxad-report-short" href="#">
+			<script type="text/javascript" src="http://dev.obxsurfinfo.com/wp-content/plugins/oiopub-direct/js.php#type=banner&align=center&zone=3&refresh=5"></script>
+		</a>
 
-			<div class="subscribe-box subscribe-desktop">
+		<div class="subscribe-box subscribe-desktop">
 			<img src="<?php echo get_template_directory_uri() . '/img/header-subscribe.png'; ?>" alt="#">
 			<p>Be informed on what's happening on the Outer Banks and never miss an event. Subscribe today and we'll deliver all the goods directly to your email account. It's easy.</p>
 			<div class="subscribe-input">
 				<h3>Click here to subscribe:</h3>
-					<form class="search-bar" role="search">
-						<a class="subscribe" href="<?php echo site_url('/subscribe/') ?>"><span>Subscribe</span></a>
-					</form>
+				<form class="search-bar" role="search">
+					<a class="subscribe" href="<?php echo site_url('/subscribe/') ?>"><span>Subscribe</span></a>
+				</form>
 			</div>
 		</div>
 
-</div>
+	</div>
 
 <?php endwhile; endif; wp_reset_postdata(); ?>
 
 <div class="row reporter">
-	<article>
-		<h2><?php the_title(); ?></h2>
 
-		<?php
+	<?php
 
 
 			// only accept posts made in the last 24 hours
 
-			$args = array(
-				'post_type' => 'surf_reports',
-				'posts_per_page' => '1',
-				'category_name' => $cat,
-				'date_query' => array(
-					array(
-						'after' => '24 hours ago'
-						),
-					),
+	$args = array(
+		'post_type' => 'surf_reports',
+		'posts_per_page' => '1',
+		'category_name' => $cat,
+		'date_query' => array(
+			array(
+				'after' => '24 hours ago'
+				),
+			),
 
-				);
+		);
 
-			$surfquery = new WP_Query($args);
+	$surfquery = new WP_Query($args);
 
-			if($surfquery->have_posts()): 
-				while($surfquery->have_posts()) : $surfquery->the_post();
+	if($surfquery->have_posts()): 
+		while($surfquery->have_posts()) : $surfquery->the_post();
 
-		 ?>
-		 			<div class="socials header-container">
-						<ul>
-							<li>
-								<a class="soc-icon fb" href="https://www.facebook.com/OBXSurfInfo"></a>
-							</li>
-							<li>
-								<a class="soc-icon twit" href="https://twitter.com/obxsurfinfo"></a>
-							</li>
-							<li>
-								<a class="soc-icon rss" href="<?php echo bloginfo('rss2_url'); ?>"></a>
-							</li>
-							<li>
-								<a class="soc-icon ig" href="#"></a>
-							</li>
-						</ul>
-						<a class="subscribe" href="#"><span>Subscribe</span></a>
+	?>
+	<article>
+		<h2><?php the_title(); ?></h2>
+
+		<div class="socials header-container">
+			<ul>
+				<li>
+					<a class="soc-icon fb" href="https://www.facebook.com/OBXSurfInfo"></a>
+				</li>
+				<li>
+					<a class="soc-icon twit" href="https://twitter.com/obxsurfinfo"></a>
+				</li>
+				<li>
+					<a class="soc-icon rss" href="<?php echo bloginfo('rss2_url'); ?>"></a>
+				</li>
+				<li>
+					<a class="soc-icon ig" href="#"></a>
+				</li>
+			</ul>
+			<a class="subscribe" href="#"><span>Subscribe</span></a>
 		</div>
 		<div class="headshot">
 			<?php echo get_avatar(get_the_author_meta('ID')); ?>
@@ -278,10 +280,10 @@ updateWidget(shortname);
 			<h3 class="author"><?php the_author(); ?></h3>
 			<?php
 
-				$authlink = get_the_author_meta('user_url');
+			$authlink = get_the_author_meta('user_url');
 
 
-			 ?>
+			?>
 			<a href="<?php echo $authlink; ?>">Click Here For Bio</a>
 		</div>
 		<?php
@@ -294,7 +296,7 @@ updateWidget(shortname);
 		$link1 = $link1[0];
 		$link2 = $link2[0];
 
-		 ?>
+		?>
 		<div class="report-pic">
 			<a href="<?php echo $link1; ?>">
 				<?php echo wp_get_attachment_image($feat1, 'report_size'); ?>
@@ -314,27 +316,28 @@ updateWidget(shortname);
 		</div>
 	</article>
 
-	<?php endwhile;
+<?php endwhile;
 
-		else: ?>
-			<h3 class="no-report">Our reporters are currently out grabbing the latest conditions for you. Check back soon for today's report!</h3>
-		</article>
+else: ?>
+<article class="non-report-art">
+	<h3 class="no-report"></h3>
+</article>
 
-		<?php endif; 
+<?php endif; 
 
-	 wp_reset_postdata(); ?>
-	<div class="subscribe-box subscribe-mobile">
-			<img src="<?php echo get_template_directory_uri() . '/img/header-subscribe.png'; ?>" alt="#">
-			<p>Be informed on what's happening on the Outer Banks and never miss an event. Subscribe today and we'll deliver all the goods directly to your email account. It's easy.</p>
-			<div class="subscribe-input">
-				<h3>Click here to subscribe:</h3>
-					<form class="search-bar" role="search">
-						<a class="subscribe" href="<?php echo site_url('/subscribe/') ?>"><span>Subscribe</span></a>
-					</form>
-			</div>
-		</div>
+wp_reset_postdata(); ?>
+<div class="subscribe-box subscribe-mobile">
+	<img src="<?php echo get_template_directory_uri() . '/img/header-subscribe.png'; ?>" alt="#">
+	<p>Be informed on what's happening on the Outer Banks and never miss an event. Subscribe today and we'll deliver all the goods directly to your email account. It's easy.</p>
+	<div class="subscribe-input">
+		<h3>Click here to subscribe:</h3>
+		<form class="search-bar" role="search">
+			<a class="subscribe" href="<?php echo site_url('/subscribe/') ?>"><span>Subscribe</span></a>
+		</form>
+	</div>
+</div>
 
-		<?php if(have_posts()) : while(have_posts()) : the_post(); ?>
+<?php if(have_posts()) : while(have_posts()) : the_post(); ?>
 	<a href="#" class="obxad obxad-report-short mobile-only"><script type="text/javascript" src="http://dev.obxsurfinfo.com/wp-content/plugins/oiopub-direct/js.php#type=banner&align=center&zone=2&refresh=5"></script></a>
 	<a href="#" class="obxad obxad-report-short">
 		<script type="text/javascript" src="http://dev.obxsurfinfo.com/wp-content/plugins/oiopub-direct/js.php#type=banner&align=center&zone=4&refresh=5"></script>
@@ -371,28 +374,28 @@ updateWidget(shortname);
 		?>
 
 		<?php if($squery->have_posts()) : while($squery->have_posts()) : $squery->the_post(); ?>
-		<div>
-			<?php
-			$image = get_field('featured_image_1'); ?>
-			<a href="<?php the_permalink(); ?>">
-				<?php echo wp_get_attachment_image($image, 'report_size'); ?>
-				<h3><?php the_title(); ?></h3>
-			</a>
+			<div>
+				<?php
+				$image = get_field('featured_image_1'); ?>
+				<a href="<?php the_permalink(); ?>">
+					<?php echo wp_get_attachment_image($image, 'report_size'); ?>
+					<h3><?php the_title(); ?></h3>
+				</a>
 
-		</div>
-	<?php endwhile; endif; wp_reset_postdata(); ?>
+			</div>
+		<?php endwhile; endif; wp_reset_postdata(); ?>
 	</div>
 	<div class="row">
 		<div class="surf-break">
 			<h3>Surf Break</h3>
 			<div class="content">
 
-			<?php
+				<?php
 
-			$break = get_field('surf_break');
-			echo $break;
+				$break = get_field('surf_break');
+				echo $break;
 
-			 ?>
+				?>
 				
 			</div>
 		</div>
@@ -403,26 +406,26 @@ updateWidget(shortname);
 				$nearby = get_field('whats_nearby');
 				echo $nearby;
 
-				 ?>
+				?>
 			</div>
 		</div>
 
 	</div>
 </div>
 <div class="row final-ads">
-		<a href="#" class="obxad obxad-report-short mobile-only"><script type="text/javascript" src="http://dev.obxsurfinfo.com/wp-content/plugins/oiopub-direct/js.php#type=banner&align=center&zone=3&refresh=5"></script></a>
-		<a href="#" class="obxad obxad-report-short mobile-only"><script type="text/javascript" src="http://dev.obxsurfinfo.com/wp-content/plugins/oiopub-direct/js.php#type=banner&align=center&zone=3&refresh=5"></script></a>
-	</div>
+	<a href="#" class="obxad obxad-report-short mobile-only"><script type="text/javascript" src="http://dev.obxsurfinfo.com/wp-content/plugins/oiopub-direct/js.php#type=banner&align=center&zone=3&refresh=5"></script></a>
+	<a href="#" class="obxad obxad-report-short mobile-only"><script type="text/javascript" src="http://dev.obxsurfinfo.com/wp-content/plugins/oiopub-direct/js.php#type=banner&align=center&zone=3&refresh=5"></script></a>
+</div>
 <?php endwhile; endif; wp_reset_postdata(); ?>
 <div class="mobile-footer">
-		<img src="<?php echo get_template_directory_uri() . 
-		'/img/logo-blue.png'; ?>" alt="OBX Surf Info">
-		<?php html5blank_mobilenav(); ?>
-	</div>
-	<div id="surfingdata" style="">
-<!--/* SHARED BUOY WIDGET */-->
-<p class="nomargin"><iframe id="surfingdatas" src="http://dev.obxsurfinfo.com/surfdata.php" frameborder="0" scrolling="no" align="top" width="560" height="125"></iframe></p>
-<img src="<?php echo $cbd; ?>" width="560px" /></div> 
+	<img src="<?php echo get_template_directory_uri() . 
+	'/img/logo-blue.png'; ?>" alt="OBX Surf Info">
+	<?php html5blank_mobilenav(); ?>
+</div>
+<div id="surfingdata" style="">
+	<!--/* SHARED BUOY WIDGET */-->
+	<p class="nomargin"><iframe id="surfingdatas" src="http://dev.obxsurfinfo.com/surfdata.php" frameborder="0" scrolling="no" align="top" width="560" height="125"></iframe></p>
+	<img src="<?php echo $cbd; ?>" width="560px" /></div> 
 </main>
 
 <?php get_footer(); ?>

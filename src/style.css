@@ -703,18 +703,18 @@ main {
   background-position: -106px 44px;
 }
 
-.subscribe {
+.subscribe-input .subscribe {
   display: block;
   position: absolute;
-  top: 0;
-  right: 15px;
+  top: -10px;
+  right: 0;
   width: 117px;
   height: 32px;
   background-image: url("img/bg-subscribe.png");
   background-repeat: no-repeat;
   background-size: cover;
 }
-.subscribe span {
+.subscribe-input .subscribe span {
   position: absolute;
   color: white;
   text-transform: uppercase;
@@ -723,12 +723,12 @@ main {
   font-size: 0.75em;
 }
 @media screen and (min-width: 1024px) {
-  .subscribe {
+  .subscribe-input .subscribe {
     display: block;
   }
 }
 @media screen and (min-width: 1270px) {
-  .subscribe {
+  .subscribe-input .subscribe {
     right: 17px;
   }
 }
@@ -944,6 +944,8 @@ nav.desktop ul li a:hover {
 nav.desktop .sub-menu {
   display: none;
   margin-top: 10px;
+  position: relative;
+  z-index: 100000000;
 }
 nav.desktop .sub-menu li {
   width: 100%;
@@ -1187,6 +1189,12 @@ pre {
   left: 0;
   right: 0;
   top: 0;
+  margin: 0 !important;
+  padding: 0 !important;
+  max-width: 100% !important;
+}
+.obxad .oio-banner-zone img {
+  width: 100%;
 }
 @media screen and (min-width: 768px) {
   .obxad {
@@ -1208,7 +1216,7 @@ main {
 }
 .page-template-page-report-nocam .report .row article {
   position: relative;
-  bottom: 404px;
+  bottom: 436px;
 }
 
 .mob-zone1 {
@@ -1296,6 +1304,8 @@ main {
 }
 .report .row iframe {
   display: none;
+  position: relative;
+  z-index: 10000;
 }
 @media screen and (min-width: 769px) {
   .report .row iframe {
@@ -1433,7 +1443,7 @@ main {
     display: block;
     margin-right: 2.3576515979%;
     width: 31.7615656014%;
-    padding: 10px 0 0 10px;
+    padding: 29px 0 0 20px;
   }
   .report .row .subscribe-box:last-child {
     margin-right: 0;
@@ -2194,10 +2204,10 @@ main {
     width: 31.7615656014%;
     margin-right: 0;
     padding: 0;
-    padding-left: 30px;
-    float: left;
+    float: right;
     position: relative;
-    bottom: 55px;
+    padding-top: 15px;
+    padding-bottom: 25px;
   }
   .map .subscribe-desktop:last-child {
     margin-right: 0;
@@ -2536,17 +2546,27 @@ main {
   width: 100vw;
   height: 100vh;
   position: fixed;
-  z-index: 10000;
+  z-index: 1000000;
 }
 .preloader img {
-  width: 10%;
+  width: 200px;
   display: block;
   position: absolute;
   left: 0;
   right: 0;
   margin-right: auto;
   margin-left: auto;
-  top: 46%;
+  top: 55%;
+}
+@media screen and (min-height: 800px) {
+  .preloader img {
+    top: 49%;
+  }
+}
+@media screen and (min-height: 1100px) {
+  .preloader img {
+    top: 47%;
+  }
 }
 
 .quiver {
@@ -2959,9 +2979,9 @@ html[data-useragent*='Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (K
 }
 
 .subscribe-box {
-  padding-top: 45px;
+  padding-top: 25px;
   padding-left: 5%;
-  margin-bottom: 15px;
+  margin-bottom: 35px;
 }
 .subscribe-box img {
   float: left;

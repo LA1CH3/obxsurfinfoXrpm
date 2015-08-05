@@ -133,8 +133,8 @@ function html5blank_header_scripts()
                 'html5blankscripts',
                 get_template_directory_uri() . '/js/scripts.js',
                 array(
-                    'conditionizr',
-                    'modernizr',
+                    //'conditionizr',
+                    //'modernizr',
                     'jquery',
                     'simpleWeather'),
                 '1.0.0');

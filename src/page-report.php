@@ -17,6 +17,7 @@ get_header(); ?>
 	// wave system history/buoy data url
 	$wsh = get_field('wsh');
 	$cbd = get_field('cbd');
+	$map = get_field('map');
 
 	global $post;
 	$post_slug = $post->post_name;
@@ -107,7 +108,7 @@ get_header(); ?>
 </div>
 <div class="row">
 	<!-- <iframe src="http://mapsengine.google.com/map/embed?mid=zLwzMpoYZbnw.kEvGYE-B2rHw" height="300" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe> -->
-	<iframe class="surf-map" src="https://www.google.com/maps/d/embed?mid=z3-rd3vo__6g.kbhErvatmfuM" frameborder="0" height="300"></iframe>
+	<iframe class="surf-map" src="<?php echo $map; ?>" frameborder="0" height="300"></iframe>
 	<!-- this will be a custom field -->
 	<?php $shortname = get_field('widget_shortname'); ?>
 		<div id="widget">      

@@ -89,7 +89,7 @@
 			jwplayer('mediaspace').setup({
 				'author': 'OBXSURFINFO',
 				'description': 'OBXsurfinfo.com Cam: Nags Head, NC',
-				'image': 'http://dev.obxsurfinfo.com/obxsurf/wp-content/uploads/2015/06/logo_video.png',
+				'image': 'http://dev.obxsurfinfo.com/wp-content/uploads/2015/06/logo_video.png',
 				'logo' : {
 					file: "http://obxsurfinfo.com/wp-content/uploads/2015/06/logo-video-black.png",
 					position: 'top-left'
@@ -300,23 +300,23 @@
 			</div>
 		</div>
 		<a href="" class="obxad obx-sidebar-ad mob-zone1">
-		<script type="text/javascript" src="http://dev.obxsurfinfo.com/wp-content/plugins/oiopub-direct/js.php#type=banner&align=center&zone=2&refresh=5"></script>
+		<script type="text/javascript" src="http://dev.obxsurfinfo.com/wp-content/plugins/oiopub-direct/js.php#type=banner&align=center&zone=2"></script>
 			
 		</a>
 		<a href="" class="obxad obx-sidebar-ad mob-zone2">
-		<script type="text/javascript" src="http://dev.obxsurfinfo.com/wp-content/plugins/oiopub-direct/js.php#type=banner&align=center&zone=3&refresh=5"></script>
+		<script type="text/javascript" src="http://dev.obxsurfinfo.com/wp-content/plugins/oiopub-direct/js.php#type=banner&align=center&zone=3"></script>
 			
 		</a>
 		<a href="" class="obxad obx-sidebar-ad">
-		<script type="text/javascript" src="http://dev.obxsurfinfo.com/wp-content/plugins/oiopub-direct/js.php#type=banner&align=center&zone=3&refresh=5"></script>
+		<script type="text/javascript" src="http://dev.obxsurfinfo.com/wp-content/plugins/oiopub-direct/js.php#type=banner&align=center&zone=3"></script>
 			
 		</a>
 		<a href="" class="obxad obx-sidebar-ad">
-		<script type="text/javascript" src="http://dev.obxsurfinfo.com/wp-content/plugins/oiopub-direct/js.php#type=banner&align=center&zone=3&refresh=5"></script>
+		<script type="text/javascript" src="http://dev.obxsurfinfo.com/wp-content/plugins/oiopub-direct/js.php#type=banner&align=center&zone=3"></script>
 			
 		</a>
 		<a href="" class="obxad obx-sidebar-ad">
-		<script type="text/javascript" src="http://dev.obxsurfinfo.com/wp-content/plugins/oiopub-direct/js.php#type=banner&align=center&zone=3&refresh=5"></script>
+		<script type="text/javascript" src="http://dev.obxsurfinfo.com/wp-content/plugins/oiopub-direct/js.php#type=banner&align=center&zone=3"></script>
 			
 		</a>
 		<div class="subscribe-box subscribe-mobile">

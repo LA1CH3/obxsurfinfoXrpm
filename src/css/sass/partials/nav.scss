@@ -122,6 +122,8 @@ nav.desktop {
 	.sub-menu {
 		display: none;
 		margin-top: 10px;
+		position: relative;
+		z-index: 100000000;
 		li {
 			width: 100%;
 			position: relative;
