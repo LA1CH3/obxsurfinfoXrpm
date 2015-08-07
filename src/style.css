@@ -753,7 +753,7 @@ main {
   right: 0;
   margin-left: auto;
   margin-right: auto;
-  top: 35%;
+  top: 35vh;
 }
 
 #loading2 #outerCircle {
@@ -1192,6 +1192,10 @@ pre {
   margin: 0 !important;
   padding: 0 !important;
   max-width: 100% !important;
+  height: 100% !important;
+}
+.obxad .oio-banner-zone .oio-slot {
+  height: 100% !important;
 }
 .obxad .oio-banner-zone img {
   width: 100%;
@@ -1443,7 +1447,7 @@ main {
     display: block;
     margin-right: 2.3576515979%;
     width: 31.7615656014%;
-    padding: 29px 0 0 20px;
+    padding: 37px 0 0 20px;
   }
   .report .row .subscribe-box:last-child {
     margin-right: 0;
@@ -2042,7 +2046,7 @@ main {
   display: block;
   margin-right: 2.3576515979%;
   width: 74.4105871005%;
-  margin-top: -100px;
+  margin-top: -30px;
   min-height: 100px !important;
   display: none !important;
 }
@@ -2274,6 +2278,8 @@ main {
     float: right;
     clear: right;
     width: 100% !important;
+    margin-top: 0;
+    margin-bottom: 0;
   }
 }
 .map .subscribe-mobile {
@@ -2549,23 +2555,23 @@ main {
   z-index: 1000000;
 }
 .preloader img {
-  width: 200px;
+  width: 170px;
   display: block;
   position: absolute;
   left: 0;
   right: 0;
   margin-right: auto;
   margin-left: auto;
-  top: 55%;
+  top: 51vh;
 }
 @media screen and (min-height: 800px) {
   .preloader img {
-    top: 49%;
+    top: 45vh;
   }
 }
 @media screen and (min-height: 1100px) {
   .preloader img {
-    top: 47%;
+    top: 43vh;
   }
 }
 

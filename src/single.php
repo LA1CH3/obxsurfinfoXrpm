@@ -77,16 +77,16 @@
 			</div>
 		</div>
 		<div class="obxad full">
-			<script type="text/javascript" src="http://dev.obxsurfinfo.com/wp-content/plugins/oiopub-direct/js.php#type=banner&align=center&zone=2&refresh=5"></script>
+			<script type="text/javascript" src="http://dev.obxsurfinfo.com/wp-content/plugins/oiopub-direct/js.php#type=banner&align=center&zone=2"></script>
 		</div>
 	</div>
 	<?php break; endwhile; endif; wp_reset_postdata(); ?>
 	<div class="row">
 		<a class="obxad obx-sidebar-ad obx-mobile-ad">
-			<script type="text/javascript" src="http://dev.obxsurfinfo.com/wp-content/plugins/oiopub-direct/js.php#type=banner&align=center&zone=1&refresh=5"></script>
+			<script type="text/javascript" src="http://dev.obxsurfinfo.com/wp-content/plugins/oiopub-direct/js.php#type=banner&align=center&zone=1"></script>
 		</a>
 		<a class="obxad obx-sidebar-ad obx-mobile-ad">
-			<script type="text/javascript" src="http://dev.obxsurfinfo.com/wp-content/plugins/oiopub-direct/js.php#type=banner&align=center&zone=2&refresh=5"></script>
+			<script type="text/javascript" src="http://dev.obxsurfinfo.com/wp-content/plugins/oiopub-direct/js.php#type=banner&align=center&zone=2"></script>
 		</a>
 		<div class="latest-posts desktop-main single-more">
 			<h3>If you like this, you may also like:</h3>
@@ -195,16 +195,16 @@
 		<?php endwhile; endif; wp_reset_postdata(); ?>
 		</div>
 		<a href="#" class="obxad obx-sidebar-ad obx-desktop-ad">
-			<script type="text/javascript" src="http://dev.obxsurfinfo.com/wp-content/plugins/oiopub-direct/js.php#type=banner&align=center&zone=3&refresh=5"></script>
+			<script type="text/javascript" src="http://dev.obxsurfinfo.com/wp-content/plugins/oiopub-direct/js.php#type=banner&align=center&zone=3&repeats=false"></script>
 		</a>
 		<a href="#" class="obxad obx-sidebar-ad obx-desktop-ad">
-			<script type="text/javascript" src="http://dev.obxsurfinfo.com/wp-content/plugins/oiopub-direct/js.php#type=banner&align=center&zone=3&refresh=5"></script>
+			<script type="text/javascript" src="http://dev.obxsurfinfo.com/wp-content/plugins/oiopub-direct/js.php#type=banner&align=center&zone=3&repeats=false"></script>
 		</a>
 		<a href="#" class="obxad obx-sidebar-ad obx-desktop-ad">
-			<script type="text/javascript" src="http://dev.obxsurfinfo.com/wp-content/plugins/oiopub-direct/js.php#type=banner&align=center&zone=3&refresh=5"></script>
+			<script type="text/javascript" src="http://dev.obxsurfinfo.com/wp-content/plugins/oiopub-direct/js.php#type=banner&align=center&zone=3&repeats=false"></script>
 		</a>
 		<a href="#" class="obxad obx-sidebar-ad obx-desktop-ad">
-			<script type="text/javascript" src="http://dev.obxsurfinfo.com/wp-content/plugins/oiopub-direct/js.php#type=banner&align=center&zone=3&refresh=5"></script>
+			<script type="text/javascript" src="http://dev.obxsurfinfo.com/wp-content/plugins/oiopub-direct/js.php#type=banner&align=center&zone=3&repeats=false"></script>
 		</a>
 		<div class="ifyoulike">
 			<h3>If you like this, you might like:</h3>

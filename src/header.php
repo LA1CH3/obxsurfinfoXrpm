@@ -54,7 +54,7 @@
 	<body <?php body_class(); ?>>
 
 	<div class="preloader">
-	<img src="<?php echo get_template_directory_uri() . '/img/logo-blue.png'; ?>" alt="OBX Surf Info">
+	<img src="<?php echo get_template_directory_uri() . '/img/spinwheelicon.png'; ?>" alt="OBX Surf Info">
 		<span id="loading2">
                         <span id="outerCircle">
                         	

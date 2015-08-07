@@ -37,7 +37,9 @@
 						</ul>
 					</div>
 					<div>
-						<img src="<?php echo get_template_directory_uri() . '/img/logo-blue.png'; ?>" alt="">
+						<a href="<?php echo site_url(); ?>">
+							<img src="<?php echo get_template_directory_uri() . '/img/logo-blue.png'; ?>" alt="">
+						</a>
 					</div>
 				</div>
 				<div class="footer-mobile"></div>

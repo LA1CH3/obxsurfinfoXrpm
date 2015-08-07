@@ -288,7 +288,7 @@
 		
 		<h2 class="header-break">Find Your Break<span>click below for reports and data</span></h2>
 		<!-- <iframe class="surf-map" src="http://mapsengine.google.com/map/embed?mid=zLwzMpoYZbnw.kEvGYE-B2rHw" height="500" width="100%" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe> -->
-		<iframe class="surf-map" src="https://www.google.com/maps/d/embed?mid=z3-rd3vo__6g.kbhErvatmfuM" frameborder="0" width="100%" height="500"></iframe>
+		<iframe class="surf-map" src="https://www.google.com/maps/d/embed?mid=z0x55Mg3sPZ4.kDUIPa9f8QaM" frameborder="0" width="100%" height="500"></iframe>
 		<div class="subscribe-box subscribe-desktop">
 			<img src="<?php echo get_template_directory_uri() . '/img/header-subscribe.png'; ?>" alt="#">
 			<p>Be informed on what's happening on the Outer Banks and never miss an event. Subscribe today and we'll deliver all the goods directly to your email account. It's easy.</p>
@@ -304,19 +304,19 @@
 			
 		</a>
 		<a href="" class="obxad obx-sidebar-ad mob-zone2">
-		<script type="text/javascript" src="http://dev.obxsurfinfo.com/wp-content/plugins/oiopub-direct/js.php#type=banner&align=center&zone=3"></script>
+		<script type="text/javascript" src="http://dev.obxsurfinfo.com/wp-content/plugins/oiopub-direct/js.php#type=banner&align=center&zone=3&repeats=false"></script>
 			
 		</a>
 		<a href="" class="obxad obx-sidebar-ad">
-		<script type="text/javascript" src="http://dev.obxsurfinfo.com/wp-content/plugins/oiopub-direct/js.php#type=banner&align=center&zone=3"></script>
+		<script type="text/javascript" src="http://dev.obxsurfinfo.com/wp-content/plugins/oiopub-direct/js.php#type=banner&align=center&zone=3&repeats=false"></script>
 			
 		</a>
 		<a href="" class="obxad obx-sidebar-ad">
-		<script type="text/javascript" src="http://dev.obxsurfinfo.com/wp-content/plugins/oiopub-direct/js.php#type=banner&align=center&zone=3"></script>
+		<script type="text/javascript" src="http://dev.obxsurfinfo.com/wp-content/plugins/oiopub-direct/js.php#type=banner&align=center&zone=3&repeats=false"></script>
 			
 		</a>
 		<a href="" class="obxad obx-sidebar-ad">
-		<script type="text/javascript" src="http://dev.obxsurfinfo.com/wp-content/plugins/oiopub-direct/js.php#type=banner&align=center&zone=3"></script>
+		<script type="text/javascript" src="http://dev.obxsurfinfo.com/wp-content/plugins/oiopub-direct/js.php#type=banner&align=center&zone=3&repeats=false"></script>
 			
 		</a>
 		<div class="subscribe-box subscribe-mobile">

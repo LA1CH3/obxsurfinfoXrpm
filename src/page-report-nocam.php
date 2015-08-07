@@ -124,13 +124,13 @@ get_header(); ?>
 
 		<div class="row">
 			<a class="obxad obxad-report-long mob-zone1" href="#">
-				<script type="text/javascript" src="http://dev.obxsurfinfo.com/wp-content/plugins/oiopub-direct/js.php#type=banner&align=center&zone=1&refresh=5"></script>
+				<script type="text/javascript" src="http://dev.obxsurfinfo.com/wp-content/plugins/oiopub-direct/js.php#type=banner&align=center&zone=1&repeats=false"></script>
 			</a>
 			<a class="obxad obxad-report-long mob-zone2" href="#">
-				<script type="text/javascript" src="http://dev.obxsurfinfo.com/wp-content/plugins/oiopub-direct/js.php#type=banner&align=center&zone=2&refresh=5"></script>
+				<script type="text/javascript" src="http://dev.obxsurfinfo.com/wp-content/plugins/oiopub-direct/js.php#type=banner&align=center&zone=2&repeats=false"></script>
 			</a>
 			<a href="#" class="obxad obxad-report-short">
-				<script type="text/javascript" src="http://dev.obxsurfinfo.com/wp-content/plugins/oiopub-direct/js.php#type=banner&align=center&zone=3&refresh=5"></script>
+				<script type="text/javascript" src="http://dev.obxsurfinfo.com/wp-content/plugins/oiopub-direct/js.php#type=banner&align=center&zone=3&repeats=false"></script>
 			</a>
 		</div>
 
@@ -206,11 +206,11 @@ get_header(); ?>
 		</script>
 
 		<a class="obxad obxad-report-short" href="#">
-			<script type="text/javascript" src="http://dev.obxsurfinfo.com/wp-content/plugins/oiopub-direct/js.php#type=banner&align=center&zone=3&refresh=5"></script>
+			<script type="text/javascript" src="http://dev.obxsurfinfo.com/wp-content/plugins/oiopub-direct/js.php#type=banner&align=center&zone=3&repeats=false"></script>
 		</a>
 
 		<a class="obxad obxad-report-short" href="#">
-			<script type="text/javascript" src="http://dev.obxsurfinfo.com/wp-content/plugins/oiopub-direct/js.php#type=banner&align=center&zone=3&refresh=5"></script>
+			<script type="text/javascript" src="http://dev.obxsurfinfo.com/wp-content/plugins/oiopub-direct/js.php#type=banner&align=center&zone=3&repeats=false"></script>
 		</a>
 
 		<div class="subscribe-box subscribe-desktop">
@@ -338,18 +338,18 @@ wp_reset_postdata(); ?>
 </div>
 
 <?php if(have_posts()) : while(have_posts()) : the_post(); ?>
-	<a href="#" class="obxad obxad-report-short mobile-only"><script type="text/javascript" src="http://dev.obxsurfinfo.com/wp-content/plugins/oiopub-direct/js.php#type=banner&align=center&zone=2&refresh=5"></script></a>
+	<a href="#" class="obxad obxad-report-short mobile-only"><script type="text/javascript" src="http://dev.obxsurfinfo.com/wp-content/plugins/oiopub-direct/js.php#type=banner&align=center&zone=2&repeats=false"></script></a>
 	<a href="#" class="obxad obxad-report-short">
-		<script type="text/javascript" src="http://dev.obxsurfinfo.com/wp-content/plugins/oiopub-direct/js.php#type=banner&align=center&zone=4&refresh=5"></script>
+		<script type="text/javascript" src="http://dev.obxsurfinfo.com/wp-content/plugins/oiopub-direct/js.php#type=banner&align=center&zone=4&repeats=false"></script>
 	</a>
-	<a href="#" class="obxad obxad-report-short">
-		<script type="text/javascript" src="http://dev.obxsurfinfo.com/wp-content/plugins/oiopub-direct/js.php#type=banner&align=center&zone=4&refresh=5"></script>
+	<a href="<?php echo site_url('/advertise-with-us/'); ?>" class="obxad obxad-report-short" style="background-image:url(http://dev.obxsurfinfo.com/wp-content/themes/html5blank/src/img/AdPlaceholder.jpg);">
+		<!-- <script type="text/javascript" src="http://dev.obxsurfinfo.com/wp-content/plugins/oiopub-direct/js.php#type=banner&align=center&zone=4&repeats=false"></script> -->
 	</a>
-	<a href="#" class="obxad obxad-report-short">
-		<script type="text/javascript" src="http://dev.obxsurfinfo.com/wp-content/plugins/oiopub-direct/js.php#type=banner&align=center&zone=4&refresh=5"></script>
+	<a href="<?php echo site_url('/advertise-with-us/'); ?>" class="obxad obxad-report-short" style="background-image:url(http://dev.obxsurfinfo.com/wp-content/themes/html5blank/src/img/AdPlaceholder1.jpg);">
+		<!-- <script type="text/javascript" src="http://dev.obxsurfinfo.com/wp-content/plugins/oiopub-direct/js.php#type=banner&align=center&zone=4&repeats=false"></script> -->
 	</a>
-	<a href="#" class="obxad obxad-report-short">
-		<script type="text/javascript" src="http://dev.obxsurfinfo.com/wp-content/plugins/oiopub-direct/js.php#type=banner&align=center&zone=4&refresh=5"></script>
+	<a href="<?php echo site_url('/advertise-with-us/'); ?>" class="obxad obxad-report-short" style="background-image:url(http://dev.obxsurfinfo.com/wp-content/themes/html5blank/src/img/AdPlaceholder2.jpg);">
+		<!-- <script type="text/javascript" src="http://dev.obxsurfinfo.com/wp-content/plugins/oiopub-direct/js.php#type=banner&align=center&zone=4&repeats=false"></script> -->
 	</a>
 
 </div>
@@ -413,8 +413,8 @@ wp_reset_postdata(); ?>
 	</div>
 </div>
 <div class="row final-ads">
-	<a href="#" class="obxad obxad-report-short mobile-only"><script type="text/javascript" src="http://dev.obxsurfinfo.com/wp-content/plugins/oiopub-direct/js.php#type=banner&align=center&zone=3&refresh=5"></script></a>
-	<a href="#" class="obxad obxad-report-short mobile-only"><script type="text/javascript" src="http://dev.obxsurfinfo.com/wp-content/plugins/oiopub-direct/js.php#type=banner&align=center&zone=3&refresh=5"></script></a>
+	<a href="#" class="obxad obxad-report-short mobile-only"><script type="text/javascript" src="http://dev.obxsurfinfo.com/wp-content/plugins/oiopub-direct/js.php#type=banner&align=center&zone=3&repeats=false"></script></a>
+	<a href="#" class="obxad obxad-report-short mobile-only"><script type="text/javascript" src="http://dev.obxsurfinfo.com/wp-content/plugins/oiopub-direct/js.php#type=banner&align=center&zone=3&repeats=false"></script></a>
 </div>
 <?php endwhile; endif; wp_reset_postdata(); ?>
 <div class="mobile-footer">

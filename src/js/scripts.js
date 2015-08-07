@@ -102,8 +102,8 @@
 			success: function(resp){
 				console.log(resp);
 				var swellTemp = resp["current_observation"];
-				swellTemp = swellTemp["dewpoint_f"];
-				swellTemp += 6;
+				swellTemp = swellTemp["heat_index_f"];
+				swellTemp += 4;
 				swellTemp = swellTemp + "°F";
 				$(".duck-temp").html(swellTemp);
 			},

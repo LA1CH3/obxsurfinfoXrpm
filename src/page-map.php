@@ -31,7 +31,7 @@ get_header(); ?>
 
 	</div>
 	<a href="#" class="obxad full">
-		<script type="text/javascript" src="http://dev.obxsurfinfo.com/wp-content/plugins/oiopub-direct/js.php#type=banner&align=center&zone=2&refresh=5"></script>
+		<script type="text/javascript" src="http://dev.obxsurfinfo.com/wp-content/plugins/oiopub-direct/js.php#type=banner&align=center&zone=2&repeats=false"></script>
 	</a>
 	<div class="subscribe-box subscribe-desktop">
 		<img src="<?php echo get_template_directory_uri() . '/img/header-subscribe.png'; ?>" alt="#">
@@ -45,13 +45,13 @@ get_header(); ?>
 	</div>
 	<h2 class="header-break">Interactive Wave Map<span>click below for reports and data</span></h2>
 	<!-- <iframe src="http://mapsengine.google.com/map/embed?mid=zLwzMpoYZbnw.kEvGYE-B2rHw" height="1085" width="100%" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe> -->
-	<iframe class="surf-map" src="https://www.google.com/maps/d/embed?mid=z3-rd3vo__6g.kbhErvatmfuM" frameborder="0" width="100%" height="1085"></iframe>
+	<iframe class="surf-map" src="https://www.google.com/maps/d/embed?mid=z0x55Mg3sPZ4.kDUIPa9f8QaM" frameborder="0" width="100%" height="1085"></iframe>
 	<div class="sidebar-ads-wrap">
 		<a href="#" class="obxad obx-sidebar-ad obx-desktop-ad">
-			<script type="text/javascript" src="http://dev.obxsurfinfo.com/wp-content/plugins/oiopub-direct/js.php#type=banner&align=center&zone=3&refresh=5"></script>
+			<script type="text/javascript" src="http://dev.obxsurfinfo.com/wp-content/plugins/oiopub-direct/js.php#type=banner&align=center&zone=3&repeats=false"></script>
 		</a>
 		<a href="#" class="obxad obx-sidebar-ad obx-desktop-ad">
-			<script type="text/javascript" src="http://dev.obxsurfinfo.com/wp-content/plugins/oiopub-direct/js.php#type=banner&align=center&zone=3&refresh=5"></script>
+			<script type="text/javascript" src="http://dev.obxsurfinfo.com/wp-content/plugins/oiopub-direct/js.php#type=banner&align=center&zone=3&repeats=false"></script>
 		</a>
 		<div class="sub-list recent-list-left">
 			<h2>Latest Surf Reports</h2>
@@ -80,13 +80,13 @@ get_header(); ?>
 		<?php endwhile; endif; wp_reset_postdata(); ?>	
 	</div>
 	<a href="#" class="obxad obx-sidebar-ad obx-desktop-ad">
-		<script type="text/javascript" src="http://dev.obxsurfinfo.com/wp-content/plugins/oiopub-direct/js.php#type=banner&align=center&zone=3&refresh=5"></script>
+		<script type="text/javascript" src="http://dev.obxsurfinfo.com/wp-content/plugins/oiopub-direct/js.php#type=banner&align=center&zone=3&repeats=false"></script>
 	</a>
 	<a href="#" class="obxad obx-sidebar-ad obx-desktop-ad">
-		<script type="text/javascript" src="http://dev.obxsurfinfo.com/wp-content/plugins/oiopub-direct/js.php#type=banner&align=center&zone=3&refresh=5"></script>
+		<script type="text/javascript" src="http://dev.obxsurfinfo.com/wp-content/plugins/oiopub-direct/js.php#type=banner&align=center&zone=3&repeats=false"></script>
 	</a>
 	<a href="#" class="obxad obx-sidebar-ad obx-desktop-ad">
-		<script type="text/javascript" src="http://dev.obxsurfinfo.com/wp-content/plugins/oiopub-direct/js.php#type=banner&align=center&zone=4&refresh=5"></script>
+		<script type="text/javascript" src="http://dev.obxsurfinfo.com/wp-content/plugins/oiopub-direct/js.php#type=banner&align=center&zone=4&repeats=false"></script>
 	</a>
 	<a href="#" class="obxad obx-sidebar-ad obx-mobile-ad" style="background-image:url(<?php echo get_template_directory_uri() . '/img/Advertisers/Zone1/badbean.jpg'; ?>);">
 		
