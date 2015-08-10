@@ -646,6 +646,8 @@ main {
 			padding-left: 25px;
 			margin-bottom: 0;
 			display: none;
+			position: relative;
+			top: 90px;
 			input {
 				width: 60%;
 			}
@@ -656,7 +658,7 @@ main {
 				padding-left: 0 !important;
 			}
 			@include media(1200px){
-				@include span-columns(4.4);
+				@include span-columns(4.6);
 				@include omega;
 				padding-left: 45px !important;
 			}
@@ -1012,10 +1014,10 @@ main {
 			display: block;
 		}
 	}
-	#mediaspace_wrapper {
+	#mediaspace_wrapper, #mediaspace {
 		width: 100%;
 	}
-	#mediaspace_wrapper, #mediaspace1_wrapper, #mediaspace2_wrapper, .second-cam {
+	#mediaspace_wrapper, #mediaspace1_wrapper, #mediaspace2_wrapper, .second-cam, #mediaspace, #mediaspace1, #mediaspace2 {
 		width: 100% !important;
 	}
 	.mob {
@@ -1028,12 +1030,12 @@ main {
 		}
 	}
 	@include media(769px){
-		#mediaspace_wrapper {
+		#mediaspace_wrapper, #mediaspace {
 			@include span-columns(7.75);
 			width: 64.4% !important;
 			margin-right: 0.5% !important;
 		}
-		#mediaspace1_wrapper, #mediaspace2_wrapper {
+		#mediaspace1_wrapper, #mediaspace2_wrapper, #mediaspace1, #mediaspace2 {
 			@include span-columns(7.75);
 			width: 100% !important;
 			margin-right: 0.5%;
@@ -1062,6 +1064,9 @@ main {
 			padding-top: 15px;
 		}
 
+	}
+	object#mediaspace {
+		width: 100% !important;
 	}
 }
 

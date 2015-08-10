@@ -2011,6 +2011,8 @@ main {
   padding-left: 25px;
   margin-bottom: 0;
   display: none;
+  position: relative;
+  top: 90px;
 }
 .single .row .subscribe-desktop input {
   width: 60%;
@@ -2034,7 +2036,7 @@ main {
     float: left;
     display: block;
     margin-right: 2.3576515979%;
-    width: 35.1734873213%;
+    width: 36.8794481813%;
     margin-right: 0;
     padding-left: 45px !important;
   }
@@ -2459,10 +2461,10 @@ main {
     display: block;
   }
 }
-.surf-cams #mediaspace_wrapper {
+.surf-cams #mediaspace_wrapper, .surf-cams #mediaspace {
   width: 100%;
 }
-.surf-cams #mediaspace_wrapper, .surf-cams #mediaspace1_wrapper, .surf-cams #mediaspace2_wrapper, .surf-cams .second-cam {
+.surf-cams #mediaspace_wrapper, .surf-cams #mediaspace1_wrapper, .surf-cams #mediaspace2_wrapper, .surf-cams .second-cam, .surf-cams #mediaspace, .surf-cams #mediaspace1, .surf-cams #mediaspace2 {
   width: 100% !important;
 }
 .surf-cams .mob {
@@ -2477,7 +2479,7 @@ main {
   }
 }
 @media screen and (min-width: 769px) {
-  .surf-cams #mediaspace_wrapper {
+  .surf-cams #mediaspace_wrapper, .surf-cams #mediaspace {
     float: left;
     display: block;
     margin-right: 2.3576515979%;
@@ -2485,10 +2487,10 @@ main {
     width: 64.4% !important;
     margin-right: 0.5% !important;
   }
-  .surf-cams #mediaspace_wrapper:last-child {
+  .surf-cams #mediaspace_wrapper:last-child, .surf-cams #mediaspace:last-child {
     margin-right: 0;
   }
-  .surf-cams #mediaspace1_wrapper, .surf-cams #mediaspace2_wrapper {
+  .surf-cams #mediaspace1_wrapper, .surf-cams #mediaspace2_wrapper, .surf-cams #mediaspace1, .surf-cams #mediaspace2 {
     float: left;
     display: block;
     margin-right: 2.3576515979%;
@@ -2496,7 +2498,7 @@ main {
     width: 100% !important;
     margin-right: 0.5%;
   }
-  .surf-cams #mediaspace1_wrapper:last-child, .surf-cams #mediaspace2_wrapper:last-child {
+  .surf-cams #mediaspace1_wrapper:last-child, .surf-cams #mediaspace2_wrapper:last-child, .surf-cams #mediaspace1:last-child, .surf-cams #mediaspace2:last-child {
     margin-right: 0;
   }
   .surf-cams .second-cam {
@@ -2540,6 +2542,9 @@ main {
     padding: 0;
     padding-top: 15px;
   }
+}
+.surf-cams object#mediaspace {
+  width: 100% !important;
 }
 
 .page-template-default .row {
